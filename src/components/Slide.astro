@@ -2,15 +2,17 @@
 interface Props {
 	text: string;
 	bgColor: string;
+	bgImage: string;
 }
 
-const { text, bgColor } = Astro.props;
+const { text, bgColor, bgImage } = Astro.props;
 ---
 
 <div
 	class:list={[
-		"w-full h-screen flex items-center gap-12 p-10 bg-no-repeat bg-cover bg-[url('/public/agv-home-1.jpg')]",
+		"w-full h-screen flex items-center gap-12 p-10 bg-no-repeat bg-cover",
 		bgColor,
+		bgImage,
 	]}>
 	<slot />
 </div>

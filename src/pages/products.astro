@@ -1,6 +1,30 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Slide from "../components/Slide.astro";
 ---
+
+<Layout title="Algoup">
+	<main>
+		<div class="slide-container w-full h-screen">
+			<!-- <Slide
+				bgColor="bg-slate-700"
+				bgImage="bg-[url('/agv-home-1.jpg')]"
+				text="Powerful and Intelligent Solutions">
+				<div class="text-black text-5xl font-bold max-w-2xl">
+					Empowering Technology with End to End Solutions
+				</div>
+			</Slide> -->
+			<Slide
+				bgColor="bg-slate-700"
+				bgImage=""
+				text="Powerful and Intelligent Solutions">
+				<div class="text-white text-6xl font-bold max-w-4xl">
+					Empowering Technology with End to End Solutions
+				</div>
+			</Slide>
+		</div>
+	</main>
+</Layout>
 
 <Layout title="Products">
 	<div class="text-center">Automous Mobile Robots (AMRs)</div>
@@ -44,3 +68,9 @@ import Layout from "../layouts/Layout.astro";
 
 	<div class="text-center">Automous Guided Vehicles</div>
 </Layout>
+
+<style>
+	main {
+	}
+</style>
+--- import Layout from "../layouts/Layout.astro"; ---

@@ -1,0 +1,25 @@
+---
+import NavbarLink from "./NavbarLink.astro";
+---
+
+<nav class="fixed top-0 w-full bg-zinc-800">
+	<div class="flex justify-between py-6 px-5">
+		<NavbarLink link="/" text="ALGOUP" />
+
+		<div class="flex items-center gap-8">
+			<NavbarLink link="/" text="Home" />
+			<NavbarLink link="/products" text="Products" />
+			<NavbarLink link="/technology" text="Technology" />
+			<NavbarLink link="/manufacturing" text="Manufacturing Capability" />
+			<NavbarLink link="/service" text="Service" />
+			<NavbarLink link="/news" text="Projects" />
+			<NavbarLink link="/about" text="About Us" />
+			<button class="bg-white text-black text-xl p-2 rounded-lg"
+				>Contact Us</button
+			>
+			<div class="text-black bg-white px-3 py-1 rounded-2xl">
+				<a href="/contact">Contact Us</a>
+			</div>
+		</div>
+	</div>
+</nav>

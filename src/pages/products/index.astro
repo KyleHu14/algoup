@@ -1,0 +1,242 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import TableData from "../../components/TableData.astro";
+---
+
+<Layout title="Algoup">
+	<main class="relative">
+		<!-- Table 1 : AMRs -->
+		<table class="table-auto m-auto text-sm mt-10">
+			<thead>
+				<caption class="text-left font-bold text-2xl mb-2"
+					>Automous Mobile Robots (AMRs)</caption
+				>
+			</thead>
+			<tbody>
+				<tr id="row1">
+					<TableData
+						title="Model Name"
+						firstRow={true}
+						values={[
+							"PG-T 800",
+							"PG-T1200 & 1500",
+							"PG-ST",
+							"PG-ST",
+							"PG-ST",
+						]}
+					/>
+				</tr>
+				<tr id="row2" class="row colPadding">
+					<TableData
+						firstRow={false}
+						title="Max. Lifting Height (mm)"
+						values={["60", "60", "60", "60", "60"]}
+					/>
+				</tr>
+				<tr class="row colPadding">
+					<TableData
+						firstRow={false}
+						title="Max. Payload Weight (kg)"
+						values={[
+							"800",
+							"1200-1500",
+							"3000/5000",
+							"5000/10000",
+							"10000/50000",
+						]}
+					/>
+				</tr>
+				<!-- Hi im going to explain everything here -->
+				<tr class="row colPadding">
+					<TableData
+						firstRow={false}
+						title="Pallet Size (mm)"
+						values={[
+							"L1200*W1000",
+							"L1200*W1000",
+							"Customized",
+							"Customized",
+							"Customized",
+						]}
+					/>
+				</tr>
+				<tr class="row colPadding">
+					<TableData
+						firstRow={false}
+						title="Navigation"
+						values={["SLAM", "SLAM", "SLAM", "SLAM", "SLAM"]}
+					/>
+				</tr>
+				<tr class="row colPadding">
+					<TableData
+						firstRow={false}
+						title="Driving Type"
+						values={[
+							"Tow Steering Wheel Differential Driving",
+							"Tow Steering Wheel Differential Driving",
+							"Omnibearing Steering Wheel Differential Driving",
+							"Omnibearing Steering Wheel Differential Driving",
+							"Omnibearing Steering Wheel Differential Driving",
+						]}
+					/>
+				</tr>
+				<tr class="row colPadding">
+					<TableData
+						firstRow={false}
+						title="Motor Type"
+						values={[
+							"--",
+							"--",
+							"Servo Motor",
+							"Servo Motor",
+							"Servo Motor",
+						]}
+					/>
+				</tr>
+				<tr class="row colPadding">
+					<TableData
+						firstRow={false}
+						title="Obstacle Avoidance"
+						values={[
+							"Safety Lidar",
+							"Safety Lidar",
+							"Safety Lidar",
+							"Safety Lidar",
+							"Safety Lidar",
+						]}
+					/>
+				</tr>
+				<tr class="row colPadding">
+					<TableData
+						firstRow={false}
+						title="L/W/H (mm)"
+						values={[
+							"980/680/245",
+							"1160/860/245",
+							"Customized",
+							"Customized",
+							"Customized",
+						]}
+					/>
+				</tr>
+			</tbody>
+		</table>
+
+		<!-- Table 2 : AGVs -->
+		<table class="table-auto m-auto text-sm mt-10">
+			<thead>
+				<caption class="text-left font-bold text-2xl mb-2"
+					>Automous Guided Vehicles</caption
+				>
+			</thead>
+			<tbody>
+				<tr id="row1">
+					<TableData
+						title="Model Name"
+						firstRow={true}
+						values={[
+							"PG-T 800",
+							"PG-T1200 & 1500",
+							"PG-ST",
+							"PG-ST",
+							"PG-ST",
+						]}
+					/>
+				</tr>
+				<tr id="row2" class="row colPadding">
+					<TableData
+						firstRow={false}
+						title="Max. Lifting Height (mm)"
+						values={["60", "60", "60", "60", "60"]}
+					/>
+				</tr>
+				<tr class="row colPadding">
+					<TableData
+						firstRow={false}
+						title="Max. Payload Weight (kg)"
+						values={[
+							"800",
+							"1200-1500",
+							"3000/5000",
+							"5000/10000",
+							"10000/50000",
+						]}
+					/>
+				</tr>
+
+				<tr class="row colPadding">
+					<TableData
+						firstRow={false}
+						title="Pallet Size (mm)"
+						values={[
+							"L1200*W1000",
+							"L1200*W1000",
+							"Customized",
+							"Customized",
+							"Customized",
+						]}
+					/>
+				</tr>
+				<tr class="row colPadding">
+					<TableData
+						firstRow={false}
+						title="Navigation"
+						values={["SLAM", "SLAM", "SLAM", "SLAM", "SLAM"]}
+					/>
+				</tr>
+				<tr class="row colPadding">
+					<TableData
+						firstRow={false}
+						title="Driving Type"
+						values={[
+							"Tow Steering Wheel Differential Driving",
+							"Tow Steering Wheel Differential Driving",
+							"Omnibearing Steering Wheel Differential Driving",
+							"Omnibearing Steering Wheel Differential Driving",
+							"Omnibearing Steering Wheel Differential Driving",
+						]}
+					/>
+				</tr>
+				<tr class="row colPadding">
+					<TableData
+						firstRow={false}
+						title="Motor Type"
+						values={[
+							"--",
+							"--",
+							"Servo Motor",
+							"Servo Motor",
+							"Servo Motor",
+						]}
+					/>
+				</tr>
+				<tr class="row colPadding">
+					<TableData
+						firstRow={false}
+						title="Obstacle Avoidance"
+						values={[
+							"Safety Lidar",
+							"Safety Lidar",
+							"Safety Lidar",
+							"Safety Lidar",
+							"Safety Lidar",
+						]}
+					/>
+				</tr>
+				<tr class="row colPadding">
+					<TableData
+						firstRow={false}
+						title="L/W/H (mm)"
+						values={[
+							"980/680/245",
+							"1160/860/245",
+							"Customized",
+							"Customized",
+							"Customized",
+						]}
+					/>
+				</tr>
+			</tbody>
+		</table>
+	</main>
+</Layout>

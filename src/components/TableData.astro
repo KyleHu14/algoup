@@ -1,9 +1,24 @@
 ---
 interface Props {
-	text: string;
+	title: string;
+	values: string[];
+	firstRow: boolean;
 }
 
-const { text } = Astro.props;
+const { title, values, firstRow } = Astro.props;
 ---
 
-<td class="text-zinc-400">{text}</td>
+<td class="text-zinc-900 font-semibold border-t">{title}</td>
+{
+	!firstRow &&
+		values.map((tableValue) => (
+			<td class="border-t p-4 font-medium">{tableValue}</td>
+		))
+}
+
+{
+	firstRow &&
+		values.map((tableValue) => (
+			<td class="border-t p-4 font-semibold">{tableValue}</td>
+		))
+}

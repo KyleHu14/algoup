@@ -1,76 +1,110 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Slide from "../components/Slide.astro";
+import TableData from "../components/TableData.astro";
 ---
 
 <Layout title="Algoup">
-	<main>
-		<div class="slide-container w-full h-screen">
-			<!-- <Slide
-				bgColor="bg-slate-700"
-				bgImage="bg-[url('/agv-home-1.jpg')]"
-				text="Powerful and Intelligent Solutions">
-				<div class="text-black text-5xl font-bold max-w-2xl">
-					Empowering Technology with End to End Solutions
-				</div>
-			</Slide> -->
-			<Slide
-				bgColor="bg-slate-700"
-				bgImage=""
-				text="Powerful and Intelligent Solutions">
-				<div class="text-white text-6xl font-bold max-w-4xl">
-					Empowering Technology with End to End Solutions
-				</div>
-			</Slide>
-		</div>
+	<main class="relative">
+		<div class="text-center">Automous Mobile Robots (AMRs)</div>
+
+		<table class="mx-12 text-sm">
+			<tbody>
+				<tr id="row1">
+					<td>Model Name</td> 
+					<td>PG-T 800</td> 
+					<td>PG-T1200 & 1500</td> 
+					<td>PG-ST</td> 
+					<td>PG-ST</td> 
+					<td>PG-ST</td> 
+				</tr>
+				<tr id="row2" class="text-zinc-500">
+					<td class="text-zinc-900">Max. Lifting Height (mm)</td>
+					<td>60</td>
+					<td>60</td>
+					<td>60</td>
+					<td>60</td>
+					<td>60</td>
+				</tr>
+				<tr class="row text-zinc-500">
+					<td class="text-zinc-900">Max. Payload Weight (kg) </td>
+					<td>800</td>
+					<td>1200-1500</td>
+					<td>3000/5000</td>
+					<td>5000/10000</td>
+					<td>10000/50000</td>
+				</tr>
+				<!-- Hi im going to explain everything here -->
+				<tr class="row">
+					<td>Pallet Size (mm) </td>
+					<td>L1200*W1000</td>
+					<td>L1200*W1000</td>
+					<td>Customized</td>
+					<td>Customized</td>
+					<td>Customized</td>
+				</tr>
+				<tr class="row">
+					<td>Navigation </td>
+					<td>SLAM</td>
+					<td>SLAM</td>
+					<td>SLAM</td>
+					<td>SLAM</td>
+					<td>SLAM</td>
+				</tr>
+				<tr class="row">
+					<td>Driving Type </td>
+					<td>Tow Steering Wheel Differential Driving</td>
+					<td>Tow Steering Wheel Differential Driving</td>
+					<td>Omnibearing Steering Wheel Differential Driving</td>
+					<td>Omnibearing Steering Wheel Differential Driving</td>
+					<td>Omnibearing Steering Wheel Differential Driving</td>
+				</tr>
+				<tr class="row">
+					<td>Motor Type </td>
+					<td>--</td>
+					<td>--</td>
+					<td>Servo Motor</td>
+					<td>Servo Motor</td>
+					<td>Servo Motor</td>
+				</tr>
+				<tr class="row">
+					<td>Obstacle Avoidance </td>
+					<td>Safety Lidar</td>
+					<td>Safety Lidar</td>
+					<td>Safety Lidar</td>
+					<td>Safety Lidar</td>
+					<td>Safety Lidar</td>
+				</tr>
+				<tr class="row">
+					<td>L/W/H (mm) </td>
+					<td>980/680/245</td>
+					<td>1160/860/245</td>
+					<td>Customized</td>
+					<td>Customized</td>
+					<td>Customized</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class="text-center">Automous Guided Vehicles</div>
 	</main>
 </Layout>
 
-<Layout title="Products">
-	<div class="text-center">Automous Mobile Robots (AMRs)</div>
-
-	<table class="table-auto">
-		<thead>
-			<tr>
-				<th>AMRs</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Model Name</td>
-			</tr>
-			<tr>
-				<td>Max. Lifting Height (mm)</td>
-			</tr>
-			<tr>
-				<td>Max. Payload Weight (kg) </td>
-			</tr>
-			<tr>
-				<td>Pallet Size (mm) </td>
-			</tr>
-			<tr>
-				<td>Navigation </td>
-			</tr>
-			<tr>
-				<td>Driving Type </td>
-			</tr>
-			<tr>
-				<td>Motor Type </td>
-			</tr>
-			<tr>
-				<td>Obstacle Avoidance </td>
-			</tr>
-			<tr>
-				<td>L/W/H (mm) </td>
-			</tr>
-		</tbody>
-	</table>
-
-	<div class="text-center">Automous Guided Vehicles</div>
-</Layout>
-
 <style>
-	main {
-	}
+
+#row1 td{
+	padding-bottom: 0.75rem;
+}
+
+#row2 td{
+	border-top: 1px solid rgb(177, 177, 177);
+	padding-top:1rem;
+	padding-bottom:1rem;
+}
+
+.row td {
+	border-top: 1px solid rgb(219, 219, 219);
+	padding-top:1rem;
+	padding-bottom:1rem;
+}
+
 </style>
---- import Layout from "../layouts/Layout.astro"; ---

@@ -1,0 +1,70 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const pages = [
+	{
+		slug: "pgt800",
+		productName: "PGT 800",
+		productType: "PGT 800 SUBTITLE",
+		productDescription:
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra, lorem rhoncus vestibulum viverra, sapien dui pharetra quam, ornare ultrices dui diam eu ipsum. Curabitur consequat congue urna sit amet venenatis. Etiam in mauris eget sem gravida maximus eget eget lectus. Nullam a tellus at ante porttitor maximus. Nulla sagittis rhoncus est a placerat. Pellentesque non leo eget mauris tincidunt varius. Aenean semper tortor commodo mi molestie tristique ut in lorem. ",
+	},
+	{
+		slug: "pgt1215",
+		productName: "PG-T1200 & PG-T1500",
+		productType: "PG-T1200 & PG-T1500 SUBTITLE",
+		productDescription:
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra, lorem rhoncus vestibulum viverra, sapien dui pharetra quam, ornare ultrices dui diam eu ipsum. Curabitur consequat congue urna sit amet venenatis. Etiam in mauris eget sem gravida maximus eget eget lectus. Nullam a tellus at ante porttitor maximus. Nulla sagittis rhoncus est a placerat. Pellentesque non leo eget mauris tincidunt varius. Aenean semper tortor commodo mi molestie tristique ut in lorem. ",
+	},
+	{
+		slug: "pgst1",
+		productName: "PG-ST",
+		productType: "PG-ST SUBTITLE",
+		productDescription:
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra, lorem rhoncus vestibulum viverra, sapien dui pharetra quam, ornare ultrices dui diam eu ipsum. Curabitur consequat congue urna sit amet venenatis. Etiam in mauris eget sem gravida maximus eget eget lectus. Nullam a tellus at ante porttitor maximus. Nulla sagittis rhoncus est a placerat. Pellentesque non leo eget mauris tincidunt varius. Aenean semper tortor commodo mi molestie tristique ut in lorem. ",
+	},
+	{
+		slug: "pgst2",
+		productName: "PG-ST",
+		productType: "PG-ST SUBTITLE",
+		productDescription:
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra, lorem rhoncus vestibulum viverra, sapien dui pharetra quam, ornare ultrices dui diam eu ipsum. Curabitur consequat congue urna sit amet venenatis. Etiam in mauris eget sem gravida maximus eget eget lectus. Nullam a tellus at ante porttitor maximus. Nulla sagittis rhoncus est a placerat. Pellentesque non leo eget mauris tincidunt varius. Aenean semper tortor commodo mi molestie tristique ut in lorem. ",
+	},
+	{
+		slug: "pgst3",
+		productName: "PG-ST",
+		productType: "PG-ST SUBTITLE",
+		productDescription:
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra, lorem rhoncus vestibulum viverra, sapien dui pharetra quam, ornare ultrices dui diam eu ipsum. Curabitur consequat congue urna sit amet venenatis. Etiam in mauris eget sem gravida maximus eget eget lectus. Nullam a tellus at ante porttitor maximus. Nulla sagittis rhoncus est a placerat. Pellentesque non leo eget mauris tincidunt varius. Aenean semper tortor commodo mi molestie tristique ut in lorem. ",
+	},
+];
+
+const { slug } = Astro.params;
+const page = pages.find((page) => page.slug === slug);
+if (!page) return Astro.redirect("/404");
+const { productName, productType, productDescription } = page;
+---
+
+<Layout title={`Products | ${productName}`}>
+	<main>
+		<!-- {productName}
+		{text} -->
+
+		<div class="border-red-400 border m-5 max-w-[40rem]">
+			<!-- Product Title -->
+			<div class="border-b-gray-800 border flex flex-col gap-2 pb-2 mb-2">
+				<div class="font-bold text-4xl">{productName}</div>
+				<div class="text-xl">{productType}</div>
+			</div>
+
+			<!-- Product Description -->
+			<div>{productDescription}</div>
+
+			<!-- Button -->
+			<div
+				class="bg-orange-500 inline-block px-10 py-2 mt-5 text-white font-bold rounded">
+				<a href="/contact">Contact Us</a>
+			</div>
+		</div>
+	</main>
+</Layout>

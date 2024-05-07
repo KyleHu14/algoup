@@ -2,23 +2,25 @@
 interface Props {
 	title: string;
 	values: string[];
-	firstRow: boolean;
+	links: string[];
 }
 
-const { title, values, firstRow } = Astro.props;
+const { title, values, links } = Astro.props;
 ---
 
 <td class="text-zinc-900 font-semibold border-t">{title}</td>
 {
-	!firstRow &&
+	links.length === 0 &&
 		values.map((tableValue) => (
 			<td class="border-t p-4 font-medium">{tableValue}</td>
 		))
 }
 
 {
-	firstRow &&
-		values.map((tableValue) => (
-			<td class="border-t p-4 font-semibold">{tableValue}</td>
+	links.length > 0 &&
+		values.map((tableValue, index) => (
+			<td class="border-t p-4 font-semibold">
+				<a href={`/products/${links[index]}`}>{tableValue}</a>
+			</td>
 		))
 }

@@ -8,7 +8,7 @@ import TableData from "../../components/TableData.astro";
 		<!-- Table 1 : AMRs -->
 		<table class="table-auto m-auto text-sm mt-10">
 			<thead>
-				<caption class="text-left font-bold text-2xl mb-2"
+				<caption class="text-left font-bold text-2xl mb-4"
 					>Automous Mobile Robots (AMRs)</caption
 				>
 			</thead>
@@ -16,7 +16,7 @@ import TableData from "../../components/TableData.astro";
 				<tr id="row1">
 					<TableData
 						title="Model Name"
-						firstRow={true}
+						links={["pgt800", "pgt1215", "pgst1", "pgst2", "pgst3"]}
 						values={[
 							"PG-T 800",
 							"PG-T1200 & 1500",
@@ -28,14 +28,14 @@ import TableData from "../../components/TableData.astro";
 				</tr>
 				<tr id="row2" class="row colPadding">
 					<TableData
-						firstRow={false}
+						links={[]}
 						title="Max. Lifting Height (mm)"
 						values={["60", "60", "60", "60", "60"]}
 					/>
 				</tr>
 				<tr class="row colPadding">
 					<TableData
-						firstRow={false}
+						links={[]}
 						title="Max. Payload Weight (kg)"
 						values={[
 							"800",
@@ -49,7 +49,7 @@ import TableData from "../../components/TableData.astro";
 				<!-- Hi im going to explain everything here -->
 				<tr class="row colPadding">
 					<TableData
-						firstRow={false}
+						links={[]}
 						title="Pallet Size (mm)"
 						values={[
 							"L1200*W1000",
@@ -62,14 +62,14 @@ import TableData from "../../components/TableData.astro";
 				</tr>
 				<tr class="row colPadding">
 					<TableData
-						firstRow={false}
+						links={[]}
 						title="Navigation"
 						values={["SLAM", "SLAM", "SLAM", "SLAM", "SLAM"]}
 					/>
 				</tr>
 				<tr class="row colPadding">
 					<TableData
-						firstRow={false}
+						links={[]}
 						title="Driving Type"
 						values={[
 							"Tow Steering Wheel Differential Driving",
@@ -82,7 +82,7 @@ import TableData from "../../components/TableData.astro";
 				</tr>
 				<tr class="row colPadding">
 					<TableData
-						firstRow={false}
+						links={[]}
 						title="Motor Type"
 						values={[
 							"--",
@@ -95,7 +95,7 @@ import TableData from "../../components/TableData.astro";
 				</tr>
 				<tr class="row colPadding">
 					<TableData
-						firstRow={false}
+						links={[]}
 						title="Obstacle Avoidance"
 						values={[
 							"Safety Lidar",
@@ -108,7 +108,7 @@ import TableData from "../../components/TableData.astro";
 				</tr>
 				<tr class="row colPadding">
 					<TableData
-						firstRow={false}
+						links={[]}
 						title="L/W/H (mm)"
 						values={[
 							"980/680/245",
@@ -125,7 +125,7 @@ import TableData from "../../components/TableData.astro";
 		<!-- Table 2 : AGVs -->
 		<table class="table-auto m-auto text-sm mt-10">
 			<thead>
-				<caption class="text-left font-bold text-2xl mb-2"
+				<caption class="text-left font-bold text-2xl mb-4"
 					>Automous Guided Vehicles</caption
 				>
 			</thead>
@@ -133,106 +133,61 @@ import TableData from "../../components/TableData.astro";
 				<tr id="row1">
 					<TableData
 						title="Model Name"
-						firstRow={true}
+						links={[]}
 						values={[
-							"PG-T 800",
-							"PG-T1200 & 1500",
-							"PG-ST",
-							"PG-ST",
-							"PG-ST",
+							"PG-CD",
+							"PG-S",
+							"PG-CR",
+							"PG-L",
+							"PG-CP",
+							"PG-R",
+							"PG-CQD",
 						]}
 					/>
 				</tr>
 				<tr id="row2" class="row colPadding">
 					<TableData
-						firstRow={false}
+						links={[]}
 						title="Max. Lifting Height (mm)"
-						values={["60", "60", "60", "60", "60"]}
+						values={[
+							"120",
+							"1600",
+							"3000-5000",
+							"3800",
+							"3000",
+							"4500-8550",
+							"4500-8550",
+						]}
 					/>
 				</tr>
 				<tr class="row colPadding">
 					<TableData
-						firstRow={false}
+						links={[]}
 						title="Max. Payload Weight (kg)"
 						values={[
-							"800",
-							"1200-1500",
-							"3000/5000",
-							"5000/10000",
-							"10000/50000",
+							"2000-3000",
+							"1400",
+							"1500-2000",
+							"1400-1600",
+							"1500-2000",
+							"1400-1600",
+							"2000",
 						]}
 					/>
 				</tr>
 
 				<tr class="row colPadding">
 					<TableData
-						firstRow={false}
-						title="Pallet Size (mm)"
+						links={[]}
+						title="Aisle Width(mm)"
 						values={[
-							"L1200*W1000",
-							"L1200*W1000",
-							"Customized",
-							"Customized",
-							"Customized",
-						]}
-					/>
-				</tr>
-				<tr class="row colPadding">
-					<TableData
-						firstRow={false}
-						title="Navigation"
-						values={["SLAM", "SLAM", "SLAM", "SLAM", "SLAM"]}
-					/>
-				</tr>
-				<tr class="row colPadding">
-					<TableData
-						firstRow={false}
-						title="Driving Type"
-						values={[
-							"Tow Steering Wheel Differential Driving",
-							"Tow Steering Wheel Differential Driving",
-							"Omnibearing Steering Wheel Differential Driving",
-							"Omnibearing Steering Wheel Differential Driving",
-							"Omnibearing Steering Wheel Differential Driving",
-						]}
-					/>
-				</tr>
-				<tr class="row colPadding">
-					<TableData
-						firstRow={false}
-						title="Motor Type"
-						values={[
-							"--",
-							"--",
-							"Servo Motor",
-							"Servo Motor",
-							"Servo Motor",
-						]}
-					/>
-				</tr>
-				<tr class="row colPadding">
-					<TableData
-						firstRow={false}
-						title="Obstacle Avoidance"
-						values={[
-							"Safety Lidar",
-							"Safety Lidar",
-							"Safety Lidar",
-							"Safety Lidar",
-							"Safety Lidar",
-						]}
-					/>
-				</tr>
-				<tr class="row colPadding">
-					<TableData
-						firstRow={false}
-						title="L/W/H (mm)"
-						values={[
-							"980/680/245",
-							"1160/860/245",
-							"Customized",
-							"Customized",
-							"Customized",
+							"2900",
+							"2400",
+							"2900",
+							"2900",
+							"3100",
+							"3200",
+							"2830",
 						]}
 					/>
 				</tr>

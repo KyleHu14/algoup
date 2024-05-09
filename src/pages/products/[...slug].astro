@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import ParameterList from "../../components/ParameterList.astro";
 
 const pages = [
 	{
@@ -50,20 +51,71 @@ const { productName, productType, productDescription } = page;
 		<!-- {productName}
 		{text} -->
 
-		<div class="border-red-400 border m-5 max-w-[40rem]">
-			<!-- Product Title -->
-			<div class="border-b-gray-800 border flex flex-col gap-2 pb-2 mb-2">
-				<div class="font-bold text-4xl">{productName}</div>
-				<div class="text-xl">{productType}</div>
+		<div class="flex flex-col">
+			<!-- Main Intro Slide -->
+			<div class="flex justify-center mt-32">
+				<!-- Product Desc Box -->
+				<div class="m-5 max-w-[35rem]">
+					<!-- Product Title -->
+					<div
+						class="border-b-2 border-b-gray-800 flex flex-col gap-2 pb-2 mb-2">
+						<div class="font-bold text-4xl">{productName}</div>
+						<div class="text-xl">{productType}</div>
+					</div>
+
+					<!-- Product Description -->
+					<div>{productDescription}</div>
+
+					<!-- Button -->
+					<div
+						class="bg-orange-500 inline-block px-10 py-2 mt-5 text-white font-bold rounded">
+						<a href="/contact">Contact Us</a>
+					</div>
+				</div>
+
+				<!-- Product Image -->
+				<img src="/amr.png" />
 			</div>
 
-			<!-- Product Description -->
-			<div>{productDescription}</div>
-
-			<!-- Button -->
+			<!-- Advantages -->
 			<div
-				class="bg-orange-500 inline-block px-10 py-2 mt-5 text-white font-bold rounded">
-				<a href="/contact">Contact Us</a>
+				class="h-[80vh] flex flex-col gap-20 justify-center items-center">
+				<div class="text-center font-bold text-5xl">
+					Product Advantages
+				</div>
+
+				<div class="flex justify-center">
+					<img src="/amr.png" />
+					<div class="grid grid-cols-[15rem_15rem]">
+						<div
+							class="mr-[-1px] mb-[-1px] flex items-center justify-center border font-bold">
+							Safety
+						</div>
+						<div
+							class="mb-[-1px] flex items-center justify-center border font-bold">
+							High Flexibility
+						</div>
+						<div
+							class="mr-[-1px] flex items-center justify-center border font-bold">
+							Precise
+						</div>
+						<div
+							class="flex items-center justify-center border font-bold">
+							Efficient
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Parameters -->
+			<div
+				class="h-[80vh] flex flex-col gap-5 justify-center items-center">
+				<div class="text-center font-bold text-5xl">Parameters</div>
+				<div class="flex justify-center items-center gap-10">
+					<ParameterList />
+					<img src="/amr.png" />
+					<ParameterList />
+				</div>
 			</div>
 		</div>
 	</main>

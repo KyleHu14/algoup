@@ -1,0 +1,80 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Slide from "../components/Slide.astro";
+---
+
+<Layout title="Technology">
+	<main class="pb-52">
+		<Slide
+			center="items-center"
+			bgColor="bg-slate-700"
+			bgImage=""
+			text="Powerful and Intelligent Solutions">
+			<div class="text-white text-6xl font-bold max-w-3xl">
+				Our Technology
+			</div>
+		</Slide>
+
+		<!-- Text Left + Img Right -->
+		<div class="h-screen flex gap-24 justify-center items-center mx-80">
+			<!-- Text -->
+			<div>
+				<div class="font-bold text-5xl mb-10">
+					Robust Vehicle Design
+				</div>
+				<div class="text-gray-700 text-xl">
+					Adopting 3D laser hybrid sensors based on natural features
+					of the environment, rich in information and high accuracy as
+					the core sensors for navigation, it achieves highly robust
+					and high-precision positioning in a variety of scenarios,
+					indoor and outdoor, all-weather and highly dynamic, without
+					the need to modify the site environment and existing
+					business processes.
+				</div>
+			</div>
+
+			<!-- Image -->
+			<div>
+				<img src="/tech-1.jpg" />
+			</div>
+		</div>
+
+		<!-- Text Middle -->
+		<div
+			class="bg-orange-200 h-screen flex gap-24 justify-center items-center px-96">
+			<!-- Text -->
+			<div>
+				<div class="font-bold text-5xl mb-10 text-center">
+					Detailed Control System
+				</div>
+				<div class="text-gray-700 text-xl text-center">
+					Adopting 3D laser hybrid sensors based on natural features
+					of the environment, rich in information and high accuracy as
+					the core sensors for navigation, it achieves highly robust
+					and high-precision positioning in a variety of scenarios,
+					indoor and outdoor, all-weather and highly dynamic, without
+					the need to modify the site environment and existing
+					business processes.
+				</div>
+			</div>
+		</div>
+
+		<!-- Text Top Img Below -->
+		<div class="flex flex-col gap-10 px-80 pt-24">
+			<div class="flex items-center justify-center">
+				<div class="font-bold text-5xl">
+					High Precision Navigation System
+				</div>
+				<div class="text-gray-700 text-xl text-center max-w-[50rem]">
+					Based on vision perception technology, the unmanned forklift
+					can perform Max 6 degrees of freedom (6 DOF) movement
+					optimization in real time to achieve smooth multi-axis
+					combined movement, ensuring accurate and efficient execution
+					of fork end operations such as loading and unloading, pick
+					and place, stacking, etc.
+				</div>
+			</div>
+			<div><img src="/tech-2.jpg" /></div>
+		</div>
+	</main>
+</Layout>

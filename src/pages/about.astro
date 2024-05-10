@@ -45,7 +45,7 @@ import PARTNERS from "../../config";
 		<div>
 			<div class="text-5xl font-bold mb-10">Partners</div>
 
-			<div>
+			<div class="grid grid-cols-3 gap-5">
 				{PARTNERS.map((partner) => 
 					<PartnerCard 
 						companyName={partner.partnerName} 

@@ -12,7 +12,7 @@ import PARTNERS from "../../config";
 		<!-- About Us Description -->
 		<div class="flex gap-10">
 			<div class="font-bold text-6xl">About Algoup</div>
-			<div class="text-gray-700 text-2xl text-left max-w-[60rem]">
+			<div class="text-gray-700 text-2xl text-left">
 				ALGOUP Inc. is an automation solution provider based in Seattle,
 				WA, focusing on R&D, manufacturing and distribution of mobile
 				robots, intelligent equipment and associated services, providing
@@ -27,17 +27,19 @@ import PARTNERS from "../../config";
 		<!-- Company Statistics with Stats -->
 		<div class="flex gap-12">
 			<div class="flex flex-col gap-5 w-[25rem] justify-end">
-				<CompanyFact number="500" text="Team Members"/>
-				<CompanyFact number="70%" text="R&D Personnel"/>
-				<CompanyFact number="450+" text="Deployed Projects"/>
-				<CompanyFact number="30" text="Serving Countries"/>
+				<CompanyFact number="500" text="Team Members" />
+				<CompanyFact number="70%" text="R&D Personnel" />
+				<CompanyFact number="450+" text="Deployed Projects" />
+				<CompanyFact number="30" text="Serving Countries" />
 			</div>
 			<div class=""><img src="/company-hq.jpg" /></div>
 		</div>
 
 		<!-- Company Culture -->
 		<div>
-			<div class="text-center font-bold text-5xl">Algoup Company Culture</div>
+			<div class="text-center font-bold text-5xl">
+				Algoup Company Culture
+			</div>
 			<div>Image Carousel Here</div>
 		</div>
 
@@ -46,14 +48,15 @@ import PARTNERS from "../../config";
 			<div class="text-5xl font-bold mb-10">Partners</div>
 
 			<div class="grid grid-cols-3 gap-5">
-				{PARTNERS.map((partner) => 
-					<PartnerCard 
-						companyName={partner.partnerName} 
-						imageUrl={partner.imgUrl} 
-					/>
-				)}
+				{
+					PARTNERS.map((partner) => (
+						<PartnerCard
+							companyName={partner.partnerName}
+							imageUrl={partner.imgUrl}
+						/>
+					))
+				}
 			</div>
-			
 		</div>
 	</main>
 </Layout>

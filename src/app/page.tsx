@@ -26,7 +26,7 @@ export default function Home() {
 						type="video/mp4"
 					/>
 				</video>
-				<div className="absolute top-[45%] left-0 right-0 max-w-[50rem] mx-auto text-6xl font-bold text-white text-center">
+				<div className="absolute top-[45%] left-0 right-0 lg:max-w-[25rem] xl:max-w-[35rem] 2xl:max-w-[50rem] mx-auto lg:text-3xl xl:text-4xl 2xl:text-6xl font-bold text-white text-center">
 					Empowering Technology with End to End Solutions
 				</div>
 			</div>

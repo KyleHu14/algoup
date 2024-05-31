@@ -1,200 +1,99 @@
 import TableData from "@/components/Table/TableData";
 
+import Link from "next/link";
+
+import {
+    Table,
+    TableBody,
+    TableCaption,
+    TableCell,
+    TableFooter,
+    TableHead,
+    TableHeader,
+    TableRow,
+} from "@/components/ui/table";
+
+import { amrData } from "@/data/amrData";
+import { agvData } from "@/data/agvData";
+
 export default function ProductsHome() {
     return (
-        <main className="relative">
-            {/* Table 1 : AMRs */}
-            <table className="m-auto mt-10 table-auto text-sm">
-                <caption className="mb-4 text-left text-2xl font-bold">
-                    Automous Mobile Robots (AMRs)
-                </caption>
+        <main className="px-[9rem] pt-12">
+            {/* Table 1 AMRs */}
+            <Table>
+                <TableCaption>
+                    Automous Mobile Robots
+                    <div className="text-[1rem] font-medium text-gray-600">
+                        Powerful, self sustaining, high quality robots.
+                    </div>
+                </TableCaption>
+                <TableHeader>
+                    <TableRow>
+                        <TableHead>Model Name</TableHead>
+                        <TableHead>Max Lifting Height (mm)</TableHead>
+                        <TableHead>Max Payload Weight (kg)</TableHead>
+                        <TableHead>Pallet Size (mm)</TableHead>
+                        <TableHead>Navigation</TableHead>
+                        <TableHead>Driving Type</TableHead>
+                        <TableHead>Motor Type</TableHead>
+                        <TableHead>Obstacle Avoidance</TableHead>
+                        <TableHead>L/W/H (mm)</TableHead>
+                        {/* <TableHead className="text-right">Amount</TableHead> */}
+                    </TableRow>
+                </TableHeader>
+                <TableBody>
+                    {amrData.map((robot) => (
+                        <TableRow key={robot.id}>
+                            <TableCell className="font-semibold">
+                                <Link href={`/products/${robot.id}`}>
+                                    {robot.name}
+                                </Link>
+                            </TableCell>
+                            <TableCell>{robot.liftHeight}</TableCell>
+                            <TableCell>{robot.liftWeight}</TableCell>
+                            <TableCell>{robot.palletSize}</TableCell>
+                            <TableCell>{robot.navigation}</TableCell>
+                            <TableCell>{robot.drivingType}</TableCell>
+                            <TableCell>{robot.motorType}</TableCell>
+                            <TableCell>{robot.obstacleAvoidance}</TableCell>
+                            <TableCell>{robot.measurements}</TableCell>
+                        </TableRow>
+                    ))}
+                </TableBody>
+            </Table>
 
-                <tbody>
-                    <tr id="row1">
-                        <TableData
-                            title="Model Name"
-                            links={[
-                                "pgt800",
-                                "pgt1215",
-                                "pgst1",
-                                "pgst2",
-                                "pgst3",
-                            ]}
-                            values={[
-                                "PG-T 800",
-                                "PG-T1200 & 1500",
-                                "PG-ST",
-                                "PG-ST",
-                                "PG-ST",
-                            ]}
-                        />
-                    </tr>
-                    <tr id="row2" className="row colPadding">
-                        <TableData
-                            links={[]}
-                            title="Max. Lifting Height (mm)"
-                            values={["60", "60", "60", "60", "60"]}
-                        />
-                    </tr>
-                    <tr className="row colPadding">
-                        <TableData
-                            links={[]}
-                            title="Max. Payload Weight (kg)"
-                            values={[
-                                "800",
-                                "1200-1500",
-                                "3000/5000",
-                                "5000/10000",
-                                "10000/50000",
-                            ]}
-                        />
-                    </tr>
-                    {/* Hi im going to explain everything here */}
-                    <tr className="row colPadding">
-                        <TableData
-                            links={[]}
-                            title="Pallet Size (mm)"
-                            values={[
-                                "L1200*W1000",
-                                "L1200*W1000",
-                                "Customized",
-                                "Customized",
-                                "Customized",
-                            ]}
-                        />
-                    </tr>
-                    <tr className="row colPadding">
-                        <TableData
-                            links={[]}
-                            title="Navigation"
-                            values={["SLAM", "SLAM", "SLAM", "SLAM", "SLAM"]}
-                        />
-                    </tr>
-                    <tr className="row colPadding">
-                        <TableData
-                            links={[]}
-                            title="Driving Type"
-                            values={[
-                                "Tow Steering Wheel Differential Driving",
-                                "Tow Steering Wheel Differential Driving",
-                                "Omnibearing Steering Wheel Differential Driving",
-                                "Omnibearing Steering Wheel Differential Driving",
-                                "Omnibearing Steering Wheel Differential Driving",
-                            ]}
-                        />
-                    </tr>
-                    <tr className="row colPadding">
-                        <TableData
-                            links={[]}
-                            title="Motor Type"
-                            values={[
-                                "--",
-                                "--",
-                                "Servo Motor",
-                                "Servo Motor",
-                                "Servo Motor",
-                            ]}
-                        />
-                    </tr>
-                    <tr className="row colPadding">
-                        <TableData
-                            links={[]}
-                            title="Obstacle Avoidance"
-                            values={[
-                                "Safety Lidar",
-                                "Safety Lidar",
-                                "Safety Lidar",
-                                "Safety Lidar",
-                                "Safety Lidar",
-                            ]}
-                        />
-                    </tr>
-                    <tr className="row colPadding">
-                        <TableData
-                            links={[]}
-                            title="L/W/H (mm)"
-                            values={[
-                                "980/680/245",
-                                "1160/860/245",
-                                "Customized",
-                                "Customized",
-                                "Customized",
-                            ]}
-                        />
-                    </tr>
-                </tbody>
-            </table>
-
-            {/* Table 2 : AGVs */}
-            <table className="m-auto mt-10 table-auto text-sm">
-                <caption className="mb-4 text-left text-2xl font-bold">
+            {/* Table 2 AGVs */}
+            <Table className="mt-12">
+                <TableCaption>
                     Automous Guided Vehicles
-                </caption>
-
-                <tbody>
-                    <tr id="row1">
-                        <TableData
-                            title="Model Name"
-                            links={[]}
-                            values={[
-                                "PG-CD",
-                                "PG-S",
-                                "PG-CR",
-                                "PG-L",
-                                "PG-CP",
-                                "PG-R",
-                                "PG-CQD",
-                            ]}
-                        />
-                    </tr>
-                    <tr id="row2" className="row colPadding">
-                        <TableData
-                            links={[]}
-                            title="Max. Lifting Height (mm)"
-                            values={[
-                                "120",
-                                "1600",
-                                "3000-5000",
-                                "3800",
-                                "3000",
-                                "4500-8550",
-                                "4500-8550",
-                            ]}
-                        />
-                    </tr>
-                    <tr className="row colPadding">
-                        <TableData
-                            links={[]}
-                            title="Max. Payload Weight (kg)"
-                            values={[
-                                "2000-3000",
-                                "1400",
-                                "1500-2000",
-                                "1400-1600",
-                                "1500-2000",
-                                "1400-1600",
-                                "2000",
-                            ]}
-                        />
-                    </tr>
-
-                    <tr className="row colPadding">
-                        <TableData
-                            links={[]}
-                            title="Aisle Width(mm)"
-                            values={[
-                                "2900",
-                                "2400",
-                                "2900",
-                                "2900",
-                                "3100",
-                                "3200",
-                                "2830",
-                            ]}
-                        />
-                    </tr>
-                </tbody>
-            </table>
+                    <div className="text-[1rem] font-medium text-gray-600">
+                        Easy to operate, intuitive controls, and reliable.
+                    </div>
+                </TableCaption>
+                <TableHeader>
+                    <TableRow>
+                        <TableHead>Model Name</TableHead>
+                        <TableHead>Max Lifting Height</TableHead>
+                        <TableHead>Max Payload Weight</TableHead>
+                        <TableHead>Aisle Width</TableHead>
+                        {/* <TableHead className="text-right">Amount</TableHead> */}
+                    </TableRow>
+                </TableHeader>
+                <TableBody>
+                    {agvData.map((robot) => (
+                        <TableRow key={robot.id}>
+                            <TableCell className="font-semibold">
+                                <Link href={`/products/${robot.id}`}>
+                                    {robot.name}
+                                </Link>
+                            </TableCell>
+                            <TableCell>{robot.liftHeight}</TableCell>
+                            <TableCell>{robot.liftWeight}</TableCell>
+                            <TableCell>{robot.aisleWidth}</TableCell>
+                        </TableRow>
+                    ))}
+                </TableBody>
+            </Table>
         </main>
     );
 }

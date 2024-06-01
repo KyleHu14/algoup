@@ -1,4 +1,6 @@
-import TableData from "@/components/Table/TableData";
+import { ChevronRight } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
 
 import Link from "next/link";
 
@@ -13,8 +15,8 @@ import {
     TableRow,
 } from "@/components/ui/table";
 
-import { amrData } from "@/data/amrData";
-import { agvData } from "@/data/agvData";
+import { amrTableData } from "@/data/amrData";
+import { agvTableData } from "@/data/agvData";
 
 export default function ProductsHome() {
     return (
@@ -42,12 +44,10 @@ export default function ProductsHome() {
                     </TableRow>
                 </TableHeader>
                 <TableBody>
-                    {amrData.map((robot) => (
+                    {amrTableData.map((robot) => (
                         <TableRow key={robot.id}>
                             <TableCell className="font-semibold">
-                                <Link href={`/products/${robot.id}`}>
-                                    {robot.name}
-                                </Link>
+                                {robot.name}
                             </TableCell>
                             <TableCell>{robot.liftHeight}</TableCell>
                             <TableCell>{robot.liftWeight}</TableCell>
@@ -57,6 +57,13 @@ export default function ProductsHome() {
                             <TableCell>{robot.motorType}</TableCell>
                             <TableCell>{robot.obstacleAvoidance}</TableCell>
                             <TableCell>{robot.measurements}</TableCell>
+                            <TableCell>
+                                <Link href={`/products/${robot.id}`}>
+                                    <Button variant="outline" size="icon">
+                                        <ChevronRight className="h-4 w-4" />
+                                    </Button>
+                                </Link>
+                            </TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
@@ -80,7 +87,7 @@ export default function ProductsHome() {
                     </TableRow>
                 </TableHeader>
                 <TableBody>
-                    {agvData.map((robot) => (
+                    {agvTableData.map((robot) => (
                         <TableRow key={robot.id}>
                             <TableCell className="font-semibold">
                                 <Link href={`/products/${robot.id}`}>

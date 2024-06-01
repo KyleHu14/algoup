@@ -1,4 +1,4 @@
-export const agvData = [
+export const agvTableData = [
     {
         id: "pgt-cd",
         name: "PG CD",

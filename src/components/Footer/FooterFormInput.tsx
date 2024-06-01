@@ -1,21 +1,21 @@
 interface FooterFormInputProps {
-	labelText: string
-	placeholderText: string
+    labelText: string;
+    placeholderText: string;
 }
 
 export default function FooterFormInput({
-	labelText,
-	placeholderText,
+    labelText,
+    placeholderText,
 }: FooterFormInputProps) {
-	return (
-		<div className="w-full">
-			<label className="block mb-2 font-semibold 2xl:text-xl">
-				{labelText}
-			</label>
-			<input
-				className="w-full p-3 border-white rounded-md 2xl:text-lg bg-zinc-800 focus:border"
-				placeholder={placeholderText}
-			/>
-		</div>
-	)
+    return (
+        <div className="w-full">
+            <label className="mb-2 block font-semibold  2xl:text-lg 3xl:text-xl">
+                {labelText}
+            </label>
+            <input
+                className="w-full rounded-md border-white bg-zinc-800 p-3 focus:border 2xl:text-base 3xl:text-lg"
+                placeholder={placeholderText}
+            />
+        </div>
+    );
 }

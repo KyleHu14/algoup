@@ -107,7 +107,7 @@ export default function Footer() {
             {/* Form */}
             <form className="flex w-full flex-col gap-4 text-white">
                 <div>
-                    <div className="3xl:text-5xl mb-3 font-bold xl:text-3xl 2xl:text-4xl">
+                    <div className="mb-3 font-bold xl:text-3xl 2xl:text-4xl 3xl:text-5xl">
                         Contact Us
                     </div>
                     <div className="xl:text-lg 2xl:text-lg">

@@ -15,8 +15,8 @@ import {
     TableRow,
 } from "@/components/ui/table";
 
-import { amrTableData } from "@/data/amrData";
-import { agvTableData } from "@/data/agvData";
+import { amrTableData } from "@/data/amrTableData";
+import { agvTableData } from "@/data/agvTableData";
 
 export default function ProductsHome() {
     return (

@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Script from "next/script";
 
-import { amrProductData } from "@/data/amrData";
+import { productData } from "@/data/productData";
 
 import ParameterList from "@/components/ParameterList/ParameterList";
 
 export default function ProductSlug({ params }: { params: { slug: string } }) {
-    const product = amrProductData[params.slug];
+    const product = productData[params.slug];
 
     return (
         <main>

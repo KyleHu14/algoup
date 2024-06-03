@@ -1,6 +1,6 @@
 export const agvTableData = [
     {
-        id: "pgt-cd",
+        id: "pg-cd",
         name: "PG-CD",
         liftHeight: "120",
         liftWeight: "2000-3000",

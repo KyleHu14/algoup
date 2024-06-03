@@ -1,35 +1,22 @@
 export default function Home() {
-	return (
-		<main>
-			<div className="w-full h-screen slide-container">
-				{/* <Slide
-				bgColor="bg-slate-700"
-				bgImage="bg-[url('/agv-home-1.jpg')]"
-				text="Powerful and Intelligent Solutions">
-				<div class="text-black text-5xl font-bold max-w-2xl">
-					Empowering Technology with End to End Solutions
-				</div>
-			</Slide>*/}
-				{/* <Slide center="items-center" bgColor="bg-slate-700" bgImage="">
-					<div className="max-w-3xl text-6xl font-bold text-white">
-						Empowering Technology with End to End Solutions
-					</div>
-				</Slide> */}
-				<video
-					className="relative object-cover w-screen h-screen"
-					autoPlay
-					loop
-					muted
-					poster="https://assets.codepen.io/6093409/river.jpg">
-					<source
-						src="https://assets.codepen.io/6093409/river.mp4"
-						type="video/mp4"
-					/>
-				</video>
-				<div className="absolute top-[45%] left-0 right-0 lg:max-w-[25rem] xl:max-w-[35rem] 2xl:max-w-[50rem] mx-auto lg:text-3xl xl:text-4xl 2xl:text-6xl font-bold text-white text-center">
-					Empowering Technology with End to End Solutions
-				</div>
-			</div>
-		</main>
-	)
+    return (
+        <main>
+            <div className="slide-container h-screen w-full">
+                <video
+                    className="relative h-screen w-screen object-cover"
+                    autoPlay
+                    loop
+                    muted
+                >
+                    <source
+                        src="https://assets.codepen.io/6093409/river.mp4"
+                        type="video/mp4"
+                    />
+                </video>
+                <div className="absolute left-0 right-0 top-[45%] mx-auto text-center font-bold text-white lg:max-w-[25rem] lg:text-3xl xl:max-w-[35rem] xl:text-4xl 2xl:max-w-[50rem] 2xl:text-6xl">
+                    Empowering Technology with End to End Solutions
+                </div>
+            </div>
+        </main>
+    );
 }

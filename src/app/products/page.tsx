@@ -20,7 +20,7 @@ import { agvTableData } from "@/data/agvTableData";
 
 export default function ProductsHome() {
     return (
-        <main className="px-[9rem] pt-12">
+        <main className="px-[9rem] py-12">
             {/* Table 1 AMRs */}
             <Table>
                 <TableCaption>

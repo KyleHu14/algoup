@@ -21,9 +21,10 @@ export default function ProductSlug({ params }: { params: { slug: string } }) {
 
     return (
         <main>
-            <div className="flex flex-col items-center">
+            {/* Main Container */}
+            <div className="my-32 flex flex-col items-center gap-40">
                 {/*  Main Intro Slide  */}
-                <div className="mt-32 flex items-center justify-center gap-24 rounded-sm border border-zinc-300 p-20 shadow-xl">
+                <div className="flex items-center justify-center gap-24 rounded-sm border border-zinc-300 p-20 shadow-xl">
                     {/*  Product Image  */}
                     <div className="relative h-96 w-80">
                         {product.imageUrl === "" ? (
@@ -70,23 +71,22 @@ export default function ProductSlug({ params }: { params: { slug: string } }) {
             </div> */}
 
                 {/*  Parameters  */}
-                <div className="flex h-[80vh] flex-col items-center justify-center gap-5">
-                    <div className="text-center text-5xl font-bold">
-                        Parameters
+                <div className="flex h-[80vh] flex-col items-center justify-center gap-5 rounded-sm border border-zinc-300 px-20 shadow-xl">
+                    {/* Title */}
+                    <div className="text-center text-4xl font-bold">
+                        Model Parameters
                     </div>
                     <div className="flex items-center justify-center gap-10">
-                        <ParameterList />
-                        {/* <div className="relative h-72 w-96">
-                        <Image src="/amr.png" alt="amr image" fill={true} />
-                    </div> */}
+                        <ParameterList align="left" />
                         {/*  360 View  */}
                         <div className="w-[20rem]">
                             <ReactImageTurntable
                                 images={images}
                                 autoRotate={{ disabled: true }}
+                                movementSensitivity={35}
                             />
                         </div>
-                        <ParameterList />
+                        <ParameterList align="right" />
                     </div>
                 </div>
             </div>

@@ -1,26 +1,33 @@
-export default function ParameterList() {
+export default function ParameterList({ align }: { align: string }) {
     return (
-        <div className="flex flex-col gap-12">
-            <div>
-                <div className="text-3xl font-bold">Parameter 1</div>
-                <div className="text-xl text-gray-700">
-                    Parameter 1 description here
-                </div>
-            </div>
+        <div className={`flex flex-col gap-12 text-${align}`}>
+            <Parameter
+                title="Parameter Title"
+                description="1400kg max weight of 100 knots"
+            />
+            <Parameter
+                title="Parameter Title"
+                description="1400kg max weight"
+            />
+            <Parameter
+                title="Parameter Title"
+                description="1400kg max weight"
+            />
+        </div>
+    );
+}
 
-            <div>
-                <div className="text-3xl font-bold">Parameter 2</div>
-                <div className="text-xl text-gray-700">
-                    Parameter 2 description here
-                </div>
-            </div>
-
-            <div>
-                <div className="text-3xl font-bold">Parameter 3</div>
-                <div className="text-xl text-gray-700">
-                    Parameter 3 description here
-                </div>
-            </div>
+function Parameter({
+    title,
+    description,
+}: {
+    title: string;
+    description: string;
+}) {
+    return (
+        <div>
+            <div className="text-2xl font-semibold">{title}</div>
+            <div className="text-lg text-gray-700">{description}</div>
         </div>
     );
 }

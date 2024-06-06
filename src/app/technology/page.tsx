@@ -2,12 +2,21 @@ import Slide from "@/components/Slide/Slide";
 
 export default function Technology() {
     return (
-        <main className="pb-52">
-            <Slide center="items-center" bgColor="bg-slate-700" bgImage="">
-                <div className="max-w-3xl text-6xl font-bold text-white">
-                    Our Technology
+        <main className="py-20">
+            {/* Introduction w/ subtitle */}
+            <div className="flex flex-col gap-5 px-32">
+                <div className="max-w-3xl text-6xl font-bold text-black">
+                    Technology
                 </div>
-            </Slide>
+                <div className="max-w-[50rem] text-xl font-normal text-zinc-600">
+                    <span className="font-semibold">
+                        The Foundation of Algoup :
+                    </span>{" "}
+                    From the designs, capabilities, software, andspecifications,
+                    learn about the powerful technology that powers our
+                    products.
+                </div>
+            </div>
 
             {/* Text Left + Img Right */}
             <div className="flex h-screen items-center justify-center gap-24 xl:mx-24 2xl:mx-80">

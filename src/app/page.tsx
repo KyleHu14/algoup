@@ -14,7 +14,7 @@ export default function Home() {
                     />
                 </video>
                 <div className="absolute left-0 right-0 top-[45%] mx-auto text-center font-bold text-white lg:max-w-[25rem] lg:text-3xl xl:max-w-[35rem] xl:text-4xl 2xl:max-w-[50rem] 2xl:text-6xl">
-                    Empowering Technology with End to End Solutions
+                    Empowering Your Business with Robotics
                 </div>
             </div>
         </main>

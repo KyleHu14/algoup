@@ -105,7 +105,7 @@ export default function Footer() {
             </div>
 
             {/* Form */}
-            <form className="flex w-full flex-col gap-4 text-white">
+            <form action="#" className="flex w-full flex-col gap-4 text-white">
                 <div>
                     <div className="mb-3 font-bold xl:text-3xl 2xl:text-4xl 3xl:text-5xl">
                         Contact Us

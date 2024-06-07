@@ -1,4 +1,4 @@
-import { PARTNERS } from "@/data/partners";
+import { PARTNERS } from "../../../data/partners";
 
 import PartnerCarousel from "@/components/PartnerCarousel/PartnerCarousel";
 

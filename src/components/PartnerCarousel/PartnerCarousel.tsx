@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { PARTNERS } from "@/data/partners";
+import { PARTNERS } from "../../../data/partners";
 
 import {
     Carousel,

@@ -1,21 +1,28 @@
-import { PARTNERS } from "../../../data/partners";
+import LogoDisplayCarousel from "@/components/PartnerCarousel/PartnerCarousel"
 
-import PartnerCarousel from "@/components/PartnerCarousel/PartnerCarousel";
+import Image from "next/image"
 
-import Image from "next/image";
+import { PARTNERS } from "../../../data/partners"
 
 export default function AboutUs() {
     return (
         <main className="flex flex-col gap-24 px-[9rem] py-24">
             <div className="flex gap-16">
                 {/* About Us Description */}
-                <div className="relative h-[35rem] w-[400rem]">
-                    <Image src="/seattle.jpeg" fill={true} alt="Seattle city" />
+                <div className="relative 2xl:h-[22rem] 2xl:w-[250rem] 3xl:h-[35rem] 3xl:w-[400rem]">
+                    <Image
+                        className="rounded"
+                        src="/seattle.jpeg"
+                        fill={true}
+                        alt="Seattle city"
+                    />
                 </div>
 
                 <div className="flex flex-col justify-center gap-5">
-                    <div className="text-5xl font-bold">About Algoup</div>
-                    <div className="text-left text-xl text-gray-500">
+                    <div className="font-bold 2xl:text-4xl 3xl:text-5xl">
+                        About Algoup
+                    </div>
+                    <div className="text-left text-gray-500 2xl:text-lg 3xl:text-xl">
                         ALGOUP Inc. is an automation solution provider based in
                         Seattle, WA, focusing on R&D, manufacturing and
                         distribution of mobile robots, intelligent equipment and
@@ -41,14 +48,29 @@ export default function AboutUs() {
 
             {/* Partners */}
             <div className="flex flex-col items-center">
-                <div className="mb-10 text-center text-3xl font-bold">
-                    Partnered with industry-leading organizations
-                </div>
+                <h1 className="text-2xl 3xl:mb-10 3xl:text-3xl">
+                    Partnered with{" "}
+                    <span className="font-bold text-orange-400">
+                        industry-leading
+                    </span>{" "}
+                    organizations
+                </h1>
 
-                <PartnerCarousel />
+                <LogoDisplayCarousel logos={PARTNERS} />
+            </div>
+
+            {/* Customers */}
+            <div className="flex flex-col items-center">
+                <h1 className="text-2xl 3xl:mb-10 3xl:text-3xl">
+                    Serving a{" "}
+                    <span className="font-bold text-orange-400">diverse</span>{" "}
+                    array of industries
+                </h1>
+
+                <LogoDisplayCarousel logos={PARTNERS} />
             </div>
         </main>
-    );
+    )
 }
 
 function CompanyFact({ number, text }: { number: string; text: string }) {
@@ -57,15 +79,15 @@ function CompanyFact({ number, text }: { number: string; text: string }) {
             <div className="text-3xl font-bold">{number}</div>
             <div className="my-3 text-xl">{text}</div>
         </div>
-    );
+    )
 }
 
 function PartnerCard({
     imageUrl,
     companyName,
 }: {
-    imageUrl: string;
-    companyName: string;
+    imageUrl: string
+    companyName: string
 }) {
     return (
         <div className="flex w-[20rem] flex-col items-center justify-center bg-gray-100 px-10 py-5">
@@ -77,5 +99,5 @@ function PartnerCard({
 
             <div className="font-semibold">{companyName}</div>
         </div>
-    );
+    )
 }

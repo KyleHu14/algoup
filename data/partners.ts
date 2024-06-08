@@ -10,4 +10,4 @@ export const PARTNERS: string[] = [
     "/partners/sick.png",
     "/partners/siemens.png",
     "/partners/te-connectivity.png",
-];
+]

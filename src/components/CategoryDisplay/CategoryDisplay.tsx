@@ -24,11 +24,8 @@ interface CategoryDisplayProps {
     categoryData: ProductCategoryType[]
 }
 
-export default function CategoryDisplay({
-    title,
-    subTitle,
-    categoryData,
-}: CategoryDisplayProps) {
+// prettier-ignore
+export default function CategoryDisplay({title, subTitle, categoryData,}: CategoryDisplayProps) {
     return (
         <div className="flex flex-col gap-5">
             <ProductHeader title={title} subTitle={subTitle} />

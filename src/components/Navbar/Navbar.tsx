@@ -7,9 +7,12 @@ export default function DashboardNavbar() {
     return (
         <nav className="w-ful sticky top-0 z-50 border-b-zinc-300 bg-white py-4 shadow-md xl:px-14 2xl:px-28">
             <div className="flex justify-between">
-                <div className="relative xl:h-[45px] xl:w-[170px] 2xl:h-[65px] 2xl:w-[260px]">
+                <Link
+                    href="/"
+                    className="relative xl:h-[45px] xl:w-[170px] 2xl:h-[65px] 2xl:w-[260px]"
+                >
                     <Image src="/logo.png" fill={true} alt="Company Logo" />
-                </div>
+                </Link>
 
                 {/* <Link
                     className="flex items-center tracking-widest text-white 2xl:text-[1.7rem]"
@@ -18,7 +21,7 @@ export default function DashboardNavbar() {
                     ALGOUP
                 </Link> */}
 
-                <div className="flex items-center xl:gap-6 2xl:gap-8">
+                <div className="flex items-center xl:gap-6 3xl:gap-8">
                     <NavbarLink link="/" text="Home" />
                     <NavbarLink link="/technology" text="Technology" />
                     <NavbarLink link="/products" text="Products" />

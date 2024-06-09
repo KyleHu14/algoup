@@ -3,6 +3,7 @@ import LogoDisplayCarousel from "@/components/PartnerCarousel/PartnerCarousel"
 import Image from "next/image"
 
 import { PARTNERS } from "../../../data/partners"
+import { CUSTOMERS } from "../../../data/customers"
 
 export default function AboutUs() {
     return (
@@ -67,7 +68,7 @@ export default function AboutUs() {
                     array of industries
                 </h1>
 
-                <LogoDisplayCarousel logos={PARTNERS} />
+                <LogoDisplayCarousel logos={CUSTOMERS} />
             </div>
         </main>
     )

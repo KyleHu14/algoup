@@ -37,7 +37,7 @@ export default function LogoDisplayCarousel({ logos }: LogoDisplayCarouselProps)
                             <Image
                                 src={partnerSrc}
                                 width={350}
-                                height={200}
+                                height={150}
                                 alt="Partner Logo"
                             />
                         </div>

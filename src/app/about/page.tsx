@@ -10,7 +10,7 @@ export default function AboutUs() {
         <main className="flex flex-col gap-24 px-[9rem] py-24">
             <div className="flex gap-16">
                 {/* About Us Description */}
-                <div className="relative 2xl:h-[22rem] 2xl:w-[250rem] 3xl:h-[35rem] 3xl:w-[400rem]">
+                <div className="relative 2xl:h-[22rem] 2xl:w-[250rem] 3xl:h-[35rem] 3xl:w-[300rem]">
                     <Image
                         className="rounded"
                         src="/seattle.jpeg"
@@ -24,15 +24,21 @@ export default function AboutUs() {
                         About Algoup
                     </div>
                     <div className="text-left text-gray-500 2xl:text-lg 3xl:text-xl">
-                        ALGOUP Inc. is an automation solution provider based in
-                        Seattle, WA, focusing on R&D, manufacturing and
-                        distribution of mobile robots, intelligent equipment and
-                        associated services, providing end-to-end cost
-                        beneficial solutions with close-to-edge technologies.
-                        Over the years, the company has developed a series of
-                        robot products, incl. AGVs and AMRs, as well as
-                        intelligent software systems, e.g., RCS (robot control
-                        system), WMS (warehouse management system) etc.
+                        <span className="font-semibold text-orange-400">
+                            ALGOUP Inc.
+                        </span>{" "}
+                        is an automation solution provider based in Seattle, WA
+                        that focuses on R&D, manufacturing and distribution of
+                        mobile robots, intelligent equipment and associated
+                        services. We provide end-to-end cost beneficial
+                        solutions with close-to-edge technologies. Over the
+                        years,{" "}
+                        <span className="font-semibold text-orange-400">
+                            ALGOUP
+                        </span>{" "}
+                        has developed AGVs, AMRs, intelligent software systems,
+                        e.g., RCS (robot control system), and WMS (warehouse
+                        management system).
                     </div>
                 </div>
             </div>

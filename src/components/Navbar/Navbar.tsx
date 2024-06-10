@@ -11,7 +11,11 @@ export default function DashboardNavbar() {
                     href="/"
                     className="relative xl:h-[45px] xl:w-[170px] 2xl:h-[65px] 2xl:w-[260px]"
                 >
-                    <Image src="/logo.png" fill={true} alt="Company Logo" />
+                    <Image
+                        src="/logo-full.png"
+                        fill={true}
+                        alt="Company Logo"
+                    />
                 </Link>
 
                 {/* <Link

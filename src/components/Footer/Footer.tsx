@@ -1,11 +1,11 @@
 // Importing Components
-import FooterIcon from "./FooterIcon";
-import FooterLink from "./FooterLink";
-import FooterFormInput from "./FooterFormInput";
+import FooterIcon from "./FooterIcon"
+import FooterLink from "./FooterLink"
+import FooterFormInput from "./FooterFormInput"
 
 export default function Footer() {
     return (
-        <div className="flex bg-zinc-900 pb-12 pt-[5rem] lg:gap-[5rem] lg:px-[5rem] xl:gap-[8rem] xl:px-[10rem] 2xl:gap-[12rem] 2xl:px-[15rem]">
+        <footer className="flex bg-zinc-900 pb-12 pt-[5rem] lg:gap-[5rem] lg:px-[5rem] xl:gap-[8rem] xl:px-[10rem] 2xl:gap-[12rem] 2xl:px-[15rem]">
             {/* Contact Numbers */}
             <div>
                 {/* Contact Information */}
@@ -155,6 +155,6 @@ export default function Footer() {
                     Send
                 </button>
             </form>
-        </div>
-    );
+        </footer>
+    )
 }

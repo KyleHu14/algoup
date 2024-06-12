@@ -1,19 +1,7 @@
-export default function ProductTable() {
-    const specifications = [
-        {
-            type: "Max Lifting Height",
-            PG_T_800: "60mm",
-            PG_T_1200: "60mm",
-            PG_T_1500: "60mm",
-        },
-        {
-            type: "Max Payload Weight",
-            PG_T_800: "800 kg",
-            PG_T_1200: "1200 kg",
-            PG_T_1500: "1500 kg",
-        },
-    ]
+import { columnHeaders } from "../../../data/specifications/pgt-light"
+import { specifications } from "../../../data/specifications/pgt-light"
 
+export default function ProductTable() {
     return (
         <table>
             <thead>
@@ -21,15 +9,16 @@ export default function ProductTable() {
                     <th className="border-b-2 border-b-zinc-800 p-2 text-left font-semibold">
                         PG-T Light
                     </th>
-                    <th className="border-b-2 border-b-zinc-800 p-2 text-left font-medium">
-                        PG-T 800
-                    </th>
-                    <th className="border-b-2 border-b-zinc-800 p-2 text-left font-medium">
-                        PG-T 1200
-                    </th>
-                    <th className="border-b-2 border-b-zinc-800 p-2 text-left font-medium">
-                        PG-T 1500
-                    </th>
+                    {columnHeaders.map((entry, index) => {
+                        return (
+                            <th
+                                key={index}
+                                className="border-b-2 border-b-zinc-800 p-2 text-left font-medium"
+                            >
+                                {entry}
+                            </th>
+                        )
+                    })}
                 </tr>
             </thead>
             <tbody>

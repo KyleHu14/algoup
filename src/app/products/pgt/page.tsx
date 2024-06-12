@@ -5,6 +5,7 @@ import OrangeSemibold from "@/components/Typography/OrangeSemibold"
 
 import { Grid2X2, Ruler, Weight } from "lucide-react"
 import ImageContainer from "@/components/ImageContainer/ImageContainer"
+import ProductTable from "@/components/ProductTable/ProductTable"
 
 export default function PGSTpage() {
     return (
@@ -96,11 +97,12 @@ export default function PGSTpage() {
             </section>
 
             {/* Navigation */}
-            <section className="flex h-[85vh] flex-col items-center gap-5">
+            <section className="flex h-[75vh] flex-col items-center gap-5">
                 {/* Title */}
                 <h1 className="text-5xl text-zinc-800">
                     <UnderlineSpan text="Accurate" /> Navigation
                 </h1>
+
                 {/* Description */}
                 <p className="max-w-[55rem] text-center text-zinc-700 3xl:text-xl">
                     Utilizing <OrangeSemibold text="SLAM navigation" /> , safety{" "}
@@ -117,6 +119,16 @@ export default function PGSTpage() {
                     alt="AMR Navigation"
                     rounded={true}
                 />
+            </section>
+
+            {/* Technical Specifications */}
+            <section className="flex flex-col gap-5 px-96 pb-32">
+                {/* Title */}
+                <h1 className="text-center text-4xl text-zinc-800">
+                    Technical Specifications
+                </h1>
+
+                <ProductTable />
             </section>
         </main>
     )

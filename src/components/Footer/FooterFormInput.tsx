@@ -1,6 +1,6 @@
 interface FooterFormInputProps {
-    labelText: string;
-    placeholderText: string;
+    labelText: string
+    placeholderText: string
 }
 
 export default function FooterFormInput({
@@ -9,7 +9,7 @@ export default function FooterFormInput({
 }: FooterFormInputProps) {
     return (
         <div className="w-full">
-            <label className="mb-2 block font-semibold  2xl:text-lg 3xl:text-xl">
+            <label className="mb-2 block font-semibold 2xl:text-lg 3xl:text-xl">
                 {labelText}
             </label>
             <input
@@ -17,5 +17,5 @@ export default function FooterFormInput({
                 placeholder={placeholderText}
             />
         </div>
-    );
+    )
 }

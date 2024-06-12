@@ -1,4 +1,4 @@
-export const amrTableData = [
+const amrTableData = [
     {
         id: "pgt-800",
         name: "PG-T 800",
@@ -59,4 +59,43 @@ export const amrTableData = [
         obstacleAvoidance: "Safety Lidar",
         measurements: "Custom",
     },
-];
+]
+
+const pgtLight = [
+    {
+        id: "pgt-800",
+        name: "PG-T 800",
+        liftHeight: "60",
+        liftWeight: "80",
+        palletSize: "L1200*W1000",
+        navigation: "SLAM",
+        drivingType: "Tow Steering Wheel Differential Driving",
+        motorType: "N/A",
+        obstacleAvoidance: "Safety Lidar",
+        measurements: "960/680/245",
+    },
+    {
+        id: "pgt-1200",
+        name: "PG-T1200",
+        liftHeight: "60",
+        liftWeight: "1200",
+        palletSize: "L1200*W1000",
+        navigation: "SLAM",
+        drivingType: "Tow Steering Wheel Differential Driving",
+        motorType: "N/A",
+        obstacleAvoidance: "Safety Lidar",
+        measurements: "1160/860/245",
+    },
+    {
+        id: "pgt-1500",
+        name: "PG-T1500",
+        liftHeight: "60",
+        liftWeight: "1500",
+        palletSize: "L1200*W1000",
+        navigation: "SLAM",
+        drivingType: "Tow Steering Wheel Differential Driving",
+        motorType: "N/A",
+        obstacleAvoidance: "Safety Lidar",
+        measurements: "1160/860/ 245",
+    },
+]

@@ -1,23 +1,23 @@
-"use client";
+"use client"
 
-import Image from "next/image";
-import Script from "next/script";
+import Image from "next/image"
+import Script from "next/script"
 
-import { productData } from "../../../../data/productData";
+import { productData } from "../../../data/productData"
 
-import ParameterList from "@/components/ParameterList/ParameterList";
+import ParameterList from "@/components/ParameterList/ParameterList"
 
-import { ReactImageTurntable } from "react-image-turntable";
+import { ReactImageTurntable } from "react-image-turntable"
 
 export default function ProductSlug({ params }: { params: { slug: string } }) {
-    const product = productData[params.slug];
+    const product = productData[params.slug]
     const images = [
         "/360-images/iPhone1.jpg",
         "/360-images/iPhone2.jpg",
         "/360-images/iPhone3.jpg",
         "/360-images/iPhone4.jpg",
         "/360-images/iPhone5.jpg",
-    ];
+    ]
 
     return (
         <main>
@@ -91,5 +91,5 @@ export default function ProductSlug({ params }: { params: { slug: string } }) {
                 </div>
             </div>
         </main>
-    );
+    )
 }

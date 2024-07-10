@@ -1,5 +1,5 @@
-import { columnHeaders } from "../../../data/specifications/pgt-light"
-import { specifications } from "../../../data/specifications/pgt-light"
+import { columnHeaders } from "../../data/specifications/pgt-light"
+import { pgtLightSpecs } from "../../data/specifications/pgt-light"
 
 export default function ProductTable() {
     return (
@@ -22,7 +22,7 @@ export default function ProductTable() {
                 </tr>
             </thead>
             <tbody>
-                {specifications.map((spec, index) => (
+                {/* {pgtLightSpecs.map((spec, index) => (
                     <tr key={index}>
                         <td className="border-b-[1px] border-b-zinc-600 px-2 py-10 text-xl font-semibold">
                             {spec.type}
@@ -37,7 +37,7 @@ export default function ProductTable() {
                             {spec.PG_T_1500}
                         </td>
                     </tr>
-                ))}
+                ))} */}
             </tbody>
         </table>
     )

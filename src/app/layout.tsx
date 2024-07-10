@@ -1,23 +1,22 @@
 // Next Imports
-import type { Metadata } from "next";
+import type { Metadata } from "next"
 // import { Inter } from "next/font/google"
-import "./globals.css";
+import "./globals.css"
 // const inter = Inter({ subsets: ["latin"] })
 
 // Importing of Components
-import Navbar from "@/components/Navbar/Navbar";
-import Footer from "@/components/Footer/Footer";
-import Script from "next/script";
+import Navbar from "@/components/Navbar/Navbar"
+import Footer from "@/components/Footer/Footer"
 
 export const metadata: Metadata = {
     title: "Algoup",
     description: "Algoup company website",
-};
+}
 
 export default function RootLayout({
     children,
 }: Readonly<{
-    children: React.ReactNode;
+    children: React.ReactNode
 }>) {
     return (
         <html lang="en">
@@ -27,5 +26,5 @@ export default function RootLayout({
                 <Footer />
             </body>
         </html>
-    );
+    )
 }

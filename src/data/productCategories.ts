@@ -22,25 +22,19 @@ const amrCategories: ProductCategoryType[] = [
 
 const agvCategories: ProductCategoryType[] = [
     {
-        name: "AGV Category 1",
+        name: "Tractor AGV",
+        description: "Description, adjective, adjective",
+        imageSrc: "",
+        href: "/agv/tractor",
+    },
+    {
+        name: "Latent AGV",
         description: "Description, adjective, adjective",
         imageSrc: "",
         href: "/",
     },
     {
-        name: "AGV Category 2",
-        description: "Description, adjective, adjective",
-        imageSrc: "",
-        href: "/",
-    },
-    {
-        name: "AGV Category 3",
-        description: "Description, adjective, adjective",
-        imageSrc: "",
-        href: "/",
-    },
-    {
-        name: "AGV Category 4",
+        name: "Lifting AGV",
         description: "Description, adjective, adjective",
         imageSrc: "",
         href: "/",

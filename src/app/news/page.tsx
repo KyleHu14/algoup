@@ -1,8 +1,15 @@
 import { Button } from "@/components/ui/button"
-import { Hammer, Leaf, SearchCheck } from "lucide-react"
+import ArticlePreview from "@/components/ArticlePreview/ArticlePreview"
+import { getAllArticles } from "@/lib/newsUtils"
 import Image from "next/image"
 
 export default function News() {
+    const allArticles = getAllArticles()
+
+    const featuredArticle = allArticles[0]
+
+    const moreArticles = allArticles.slice(1)
+
     return (
         <main>
             {/* Header */}
@@ -15,7 +22,7 @@ export default function News() {
                     </p>
                 </div>
 
-                {/* Image */}
+                {/* Featured Article */}
                 <div className="flex gap-5">
                     <div className="relative 2xl:h-[22rem] 2xl:w-[250rem] 3xl:h-[20rem] 3xl:w-[35rem]">
                         <Image
@@ -29,11 +36,10 @@ export default function News() {
                             Featured Article
                         </div>
                         <div className="mt-3 text-3xl text-white">
-                            Algoup website goes live!
+                            {featuredArticle.title}
                         </div>
                         <div className="mt-2 w-[28rem] text-lg text-zinc-300">
-                            The algoup website has just gone live, learn about
-                            how its built and organized.
+                            {featuredArticle.excerpt}
                         </div>
                         <Button className="mt-5 bg-zinc-100 text-lg text-black hover:bg-zinc-300">
                             Read More
@@ -43,7 +49,22 @@ export default function News() {
             </div>
 
             {/* News Body */}
-            <div className="flex flex-col gap-10 bg-white px-[20rem] py-[6rem]"></div>
+
+            <div className="bg-white px-[20rem] py-[3rem]">
+                <h1 className="text-4xl font-bold">Browse All Articles</h1>
+                <div className="mt-[1rem] flex gap-10">
+                    {moreArticles.map((article, index) => {
+                        return (
+                            <ArticlePreview
+                                key={index}
+                                title={article.title}
+                                date={article.date}
+                                img={article.coverImage}
+                            />
+                        )
+                    })}
+                </div>
+            </div>
         </main>
     )
 }

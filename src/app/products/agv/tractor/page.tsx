@@ -122,7 +122,7 @@ export default function PGSTpage() {
             <section className="flex flex-col gap-5 px-96 pb-32">
                 {/* Title */}
                 <h1 className="text-center text-4xl text-zinc-800">
-                    Technical Specifications
+                    Tractor AGV Technical Specifications
                 </h1>
 
                 <ProductTable />

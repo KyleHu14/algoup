@@ -10,7 +10,7 @@ import ParameterList from "@/components/ParameterList/ParameterList"
 import { ReactImageTurntable } from "react-image-turntable"
 
 export default function ProductSlug({ params }: { params: { slug: string } }) {
-    const product = productData[params.slug]
+    // const product = productData[params.slug]
     const images = [
         "/360-images/iPhone1.jpg",
         "/360-images/iPhone2.jpg",
@@ -23,53 +23,6 @@ export default function ProductSlug({ params }: { params: { slug: string } }) {
         <main>
             {/* Main Container */}
             <div className="my-32 flex flex-col items-center gap-40">
-                {/*  Main Intro Slide  */}
-                <div className="flex items-center justify-center gap-24 rounded-sm border border-zinc-300 p-20 shadow-xl">
-                    {/*  Product Image  */}
-                    <div className="relative h-96 w-80">
-                        {product.imageUrl === "" ? (
-                            <Image src="/amr.png" alt="amr image" fill={true} />
-                        ) : (
-                            <Image
-                                src={product.imageUrl}
-                                alt="amr image"
-                                fill={true}
-                            />
-                        )}
-                    </div>
-
-                    {/*  Product Desc Box  */}
-                    <div className="max-w-[35rem]">
-                        <div className="flex flex-col gap-2">
-                            {/*  Product Title  */}
-                            <div className="text-3xl font-semibold">
-                                {product.name}
-                            </div>
-                            {/*  Product SubTitle  */}
-                            <div className="text-lg text-zinc-600">
-                                {product.subTitle}
-                            </div>
-
-                            {/*  Product Description  */}
-                            <div className="text-zinc-500">
-                                {product.description}
-                            </div>
-                        </div>
-
-                        {/*  Button  */}
-                        <div className="mt-5 inline-block rounded bg-gray-700 px-10 py-2 font-semibold text-white">
-                            <a href="/contact">Contact Us</a>
-                        </div>
-                    </div>
-                </div>
-
-                {/*  Advantages  */}
-                {/* <div className="flex h-[80vh] flex-col items-center justify-center gap-20"></div> */}
-                {/* <div>
-                <div>Advantage 1</div>
-                <div>Advantage 1</div>
-            </div> */}
-
                 {/*  Parameters  */}
                 <div className="flex h-[80vh] flex-col items-center justify-center gap-5 rounded-sm border border-zinc-300 px-20 shadow-xl">
                     {/* Title */}

@@ -1,4 +1,4 @@
-import { amrCategories, agvCategories } from "../../data/productCategories"
+import { amrCategories, agvCategories } from "../../data/product/categories"
 
 import CategoryDisplay from "@/components/CategoryDisplay/CategoryDisplay"
 

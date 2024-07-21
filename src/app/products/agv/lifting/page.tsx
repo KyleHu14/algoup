@@ -3,9 +3,14 @@ import { Button } from "@/components/ui/button"
 import UnderlineSpan from "@/components/Typography/UnderlineSpan"
 import OrangeSemibold from "@/components/Typography/OrangeSemibold"
 
-import { Grid2X2, Ruler, Weight } from "lucide-react"
+import { Rabbit, Undo2, Weight } from "lucide-react"
 import ImageContainer from "@/components/ImageContainer/ImageContainer"
 import ProductTable from "@/components/ProductTable/ProductTable"
+
+import {
+    columnHeaders,
+    tractorData,
+} from "../../../../data/product/specifications/lifting-series"
 
 export default function PGSTpage() {
     return (
@@ -13,14 +18,13 @@ export default function PGSTpage() {
             {/* Title Section */}
             <section className="flex h-[90vh] flex-col items-center gap-4 bg-zinc-100 pt-14">
                 {/* Main Title */}
-                <h1 className="text-4xl text-zinc-800">PG-T</h1>
+                <h1 className="text-4xl text-zinc-800">Lifting AGV</h1>
                 {/* prettier-ignore */}
                 <h1 className="text-5xl text-zinc-800 mb-3">
-                    Our <UnderlineSpan text="lightweight" /> and <UnderlineSpan text="reliable" /> AMR.
+                    A <UnderlineSpan text="robust" /> and <UnderlineSpan text="reliable" /> AGV.
                 </h1>
                 <h2 className="text-xl">
-                    Perfect for scenarios for frequent handling of light cargo
-                    or loads.
+                    Perfect for frequent handling of large cargo.
                 </h2>
 
                 {/* Learn More Button */}
@@ -30,18 +34,19 @@ export default function PGSTpage() {
 
                 {/* PGT Image */}
                 <ImageContainer
-                    className="h-[20rem] w-[30rem]"
-                    src="/amr/pgt/pgt-main.jpg"
-                    alt="Pgt Image"
-                    rounded={true}
+                    className="h-[25rem] w-[40rem]"
+                    src="/agv/lifting/ddseries-1.png"
+                    alt="T series tractor"
+                    rounded={false}
                 />
             </section>
 
             {/* Specification Summary */}
-            <section className="flex h-[85vh] flex-col items-center gap-16 pt-28">
+            <section className="flex h-[80vh] flex-col items-center gap-16 pt-28">
                 {/* Title */}
                 <h1 className="text-5xl text-zinc-800">
-                    Designed for <UnderlineSpan text="general purpose" /> use
+                    Designed for <UnderlineSpan text="heavy duty" />{" "}
+                    applications.
                 </h1>
 
                 {/* Content */}
@@ -50,60 +55,58 @@ export default function PGSTpage() {
                     <div className="flex max-w-[25rem] flex-col gap-5">
                         {/* Max Weight */}
                         <div>
-                            <SpecHeader title="Max Weight">
+                            <SpecHeader title="Max Payload Weight">
                                 <Weight />
                             </SpecHeader>
 
                             <SpecDescription>
-                                The PG-T can carry up to a maximum of{" "}
-                                <OrangeSemibold text="1500kg" /> making it
-                                suitable for general purpose use.
+                                Our tractor AGV can carry up to a maximum of{" "}
+                                <OrangeSemibold text="4 tons" /> making it
+                                suitable for carrying heavy loads.
                             </SpecDescription>
                         </div>
 
                         {/* Max Lifting Height */}
                         <div>
-                            <SpecHeader title="Max Lifting Height">
-                                <Ruler />
+                            <SpecHeader title="Max Speed">
+                                <Rabbit />
                             </SpecHeader>
                             <SpecDescription>
-                                With a max lifting height of{" "}
-                                <OrangeSemibold text="60mm" />, the PG-T can
-                                accomplish simple lifting with ease.
+                                With a max speed of{" "}
+                                <OrangeSemibold text="1 meter / second" />, the
+                                tractor can move heavy cargo at efficient
+                                speeds.
                             </SpecDescription>
                         </div>
 
                         {/* Pallet Size */}
                         <div>
-                            <SpecHeader title="Pallet Size">
-                                <Grid2X2 />
+                            <SpecHeader title="Turning Radius">
+                                <Undo2 />
                             </SpecHeader>
                             <SpecDescription>
-                                Having a pallet size of{" "}
-                                <OrangeSemibold text="1200mm by 1000mm" />{" "}
-                                allows for maximum versatility.
+                                Having a turning radius{" "}
+                                <OrangeSemibold text="800mm" /> allows the
+                                tractor to have maximum versatility.
                             </SpecDescription>
                         </div>
                     </div>
 
                     {/* PG-T Image */}
                     <ImageContainer
-                        className="h-[20rem] w-[25rem]"
-                        src="/amr.png"
-                        alt="Amr Image"
+                        className="h-[15rem] w-[40rem]"
+                        src="/agv/lifting/ddseries-2.png"
+                        alt="AGV Tractor image"
                         rounded={false}
                     />
                 </div>
             </section>
 
-            {/* Navigation */}
-            <section className="flex h-[75vh] flex-col items-center gap-5">
-                {/* Title */}
+            {/* <section className="flex h-[75vh] flex-col items-center gap-5">
                 <h1 className="text-5xl text-zinc-800">
                     <UnderlineSpan text="Accurate" /> Navigation
                 </h1>
 
-                {/* Description */}
                 <p className="max-w-[55rem] text-center text-zinc-700 3xl:text-xl">
                     Utilizing <OrangeSemibold text="SLAM navigation" /> , safety{" "}
                     <OrangeSemibold text="LIDAR" /> obstacle avoidance, and{" "}
@@ -112,23 +115,24 @@ export default function PGSTpage() {
                     scenarios.
                 </p>
 
-                {/* Navigation Image */}
                 <ImageContainer
                     className="h-[20rem] w-[25rem]"
                     src="/navigation.jpg"
                     alt="AMR Navigation"
                     rounded={true}
                 />
-            </section>
+            </section> */}
 
             {/* Technical Specifications */}
             <section className="flex flex-col gap-5 px-96 pb-32">
                 {/* Title */}
                 <h1 className="text-center text-4xl text-zinc-800">
-                    Technical Specifications
+                    Lifting AGV Technical Specifications
                 </h1>
-
-                <ProductTable />
+                <ProductTable
+                    columnHeaders={columnHeaders}
+                    data={tractorData}
+                />
             </section>
         </main>
     )

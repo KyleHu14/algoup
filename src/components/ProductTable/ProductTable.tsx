@@ -1,7 +1,9 @@
-import { columnHeaders } from "../../data/specifications/tractor-series"
-import { tractorData } from "../../data/specifications/tractor-series"
+interface Props {
+    columnHeaders: string[]
+    data: string[][]
+}
 
-export default function ProductTable() {
+export default function ProductTable({ columnHeaders, data }: Props) {
     return (
         <table>
             <thead>
@@ -19,7 +21,7 @@ export default function ProductTable() {
                 </tr>
             </thead>
             <tbody>
-                {tractorData.map((specList, index) => (
+                {data.map((specList, index) => (
                     <tr key={index}>
                         {specList.map((specData, index) => (
                             <td

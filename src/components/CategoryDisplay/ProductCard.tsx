@@ -29,16 +29,16 @@ export default function ProductCard({
     href,
 }: ProductCardProps) {
     return (
-        <Card className="w-[290px]">
+        <Card className="">
             <CardHeader>
                 <CardTitle>{name}</CardTitle>
                 <CardDescription>{description}</CardDescription>
             </CardHeader>
             <CardContent>
                 <Image
-                    src="/amr.png"
-                    width={180}
-                    height={180}
+                    src={imageSrc}
+                    width={200}
+                    height={200}
                     alt="Category Image"
                 />
             </CardContent>

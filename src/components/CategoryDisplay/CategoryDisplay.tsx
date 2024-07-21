@@ -1,6 +1,6 @@
 import ProductCard from "./ProductCard"
 
-import { ProductCategoryType } from "../../data/productCategories"
+import { ProductCategoryType } from "../../data/product/categories"
 
 interface ProductHeaderProps {
     title: string

@@ -10,7 +10,7 @@ import ProductTable from "@/components/ProductTable/ProductTable"
 import {
     columnHeaders,
     tractorData,
-} from "../../../../data/product/specifications/tractor-series"
+} from "../../../../data/product/specifications/latent-series"
 
 export default function PGSTpage() {
     return (
@@ -18,7 +18,7 @@ export default function PGSTpage() {
             {/* Title Section */}
             <section className="flex h-[90vh] flex-col items-center gap-4 bg-zinc-100 pt-14">
                 {/* Main Title */}
-                <h1 className="text-4xl text-zinc-800">Tractor AGV</h1>
+                <h1 className="text-4xl text-zinc-800">Latent AGV</h1>
                 {/* prettier-ignore */}
                 <h1 className="text-5xl text-zinc-800 mb-3">
                     A <UnderlineSpan text="robust" /> and <UnderlineSpan text="reliable" /> AGV.
@@ -35,7 +35,7 @@ export default function PGSTpage() {
                 {/* PGT Image */}
                 <ImageContainer
                     className="h-[25rem] w-[40rem]"
-                    src="/agv/tractor/tseries-1.png"
+                    src="/agv/latent/qseries-1.png"
                     alt="T series tractor"
                     rounded={false}
                 />
@@ -94,8 +94,8 @@ export default function PGSTpage() {
 
                     {/* PG-T Image */}
                     <ImageContainer
-                        className="h-[20rem] w-[35rem]"
-                        src="/agv/tractor/tseries-2.png"
+                        className="h-[20rem] w-[40rem]"
+                        src="/agv/latent/qseries-2.png"
                         alt="AGV Tractor image"
                         rounded={false}
                     />
@@ -127,8 +127,9 @@ export default function PGSTpage() {
             <section className="flex flex-col gap-5 px-96 pb-32">
                 {/* Title */}
                 <h1 className="text-center text-4xl text-zinc-800">
-                    Tractor AGV Technical Specifications
+                    Latent AGV Technical Specifications
                 </h1>
+
                 <ProductTable
                     columnHeaders={columnHeaders}
                     data={tractorData}

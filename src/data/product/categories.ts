@@ -24,20 +24,20 @@ const agvCategories: ProductCategoryType[] = [
     {
         name: "Tractor AGV",
         description: "Description, adjective, adjective",
-        imageSrc: "",
+        imageSrc: "/agv/tractor/tseries-1.png",
         href: "/agv/tractor",
     },
     {
         name: "Latent AGV",
         description: "Description, adjective, adjective",
-        imageSrc: "",
-        href: "/",
+        imageSrc: "/agv/latent/qseries-1.png",
+        href: "/agv/latent",
     },
     {
         name: "Lifting AGV",
         description: "Description, adjective, adjective",
-        imageSrc: "",
-        href: "/",
+        imageSrc: "/agv/lifting/dcseries-1.png",
+        href: "/agv/lifting",
     },
 ]
 

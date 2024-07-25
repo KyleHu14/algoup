@@ -2,8 +2,8 @@ import LogoDisplayCarousel from "@/components/PartnerCarousel/PartnerCarousel"
 
 import Image from "next/image"
 
-import { PARTNERS } from "../../data/partners"
-import { CUSTOMERS } from "../../data/customers"
+import { PARTNERS } from "../../data/about-us/partners"
+import { CUSTOMERS } from "../../data/about-us/customers"
 
 export default function AboutUs() {
     return (

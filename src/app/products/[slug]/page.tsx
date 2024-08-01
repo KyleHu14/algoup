@@ -7,11 +7,11 @@ import { ReactImageTurntable } from "react-image-turntable"
 export default function ProductSlug({ params }: { params: { slug: string } }) {
     // const product = productData[params.slug]
     const images = [
-        "/360-images/iPhone1.jpg",
-        "/360-images/iPhone2.jpg",
-        "/360-images/iPhone3.jpg",
-        "/360-images/iPhone4.jpg",
-        "/360-images/iPhone5.jpg",
+        "/agv/tractor/test-1.png",
+        "/agv/tractor/test-2.png",
+        "/agv/tractor/test-3.png",
+        "/agv/tractor/test-4.png",
+        "/agv/tractor/test-5.png",
     ]
 
     return (

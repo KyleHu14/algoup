@@ -1,4 +1,4 @@
-import LogoDisplayCarousel from "@/components/PartnerCarousel/PartnerCarousel"
+import LogoDisplayCarousel from "@/components/LogoDisplayCarousel/LogoDisplayCarousel"
 
 import Image from "next/image"
 
@@ -7,8 +7,8 @@ import { CUSTOMERS } from "../../data/about-us/customers"
 
 export default function AboutUs() {
     return (
-        <main className="flex flex-col gap-24 px-[9rem] py-24">
-            <div className="flex gap-16">
+        <main className="flex flex-col gap-24 px-[9rem] pb-24">
+            <div className="mt-[-5rem] flex h-screen items-center justify-center gap-16">
                 {/* About Us Description */}
                 <div className="relative 2xl:h-[22rem] 2xl:w-[250rem] 3xl:h-[35rem] 3xl:w-[300rem]">
                     <Image

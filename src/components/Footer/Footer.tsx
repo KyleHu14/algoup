@@ -1,28 +1,35 @@
+"use client"
+
+import { usePathname } from "next/navigation"
+
 // Importing Components
 import FooterIcon from "./FooterIcon"
 import FooterLink from "./FooterLink"
 import FooterFormInput from "./FooterFormInput"
 
 export default function Footer() {
+    const pathname = usePathname()
+
+    if (pathname.includes("contact")) {
+        return
+    }
+
     return (
         <footer className="flex bg-zinc-900 pb-12 pt-[5rem] lg:gap-[5rem] lg:px-[5rem] xl:gap-[8rem] xl:px-[10rem] 2xl:gap-[12rem] 2xl:px-[15rem]">
             {/* Contact Numbers */}
             <div>
                 {/* Contact Information */}
-                <div className="xl:min-w-[20rem] 2xl:min-w-[25rem]">
-                    <div className="font-bold text-white xl:text-3xl 2xl:text-4xl">
-                        +1 123-456-789
+                <div className="flex flex-col gap-3 xl:min-w-[20rem] 2xl:min-w-[25rem]">
+                    <div className="text-white">
+                        <h1 className="font-semibold 2xl:text-3xl">Phone</h1>
+                        <p className="2xl:text-2xl">US: +1 202 664 4153</p>
+                        <p className="2xl:text-2xl">CN: + 86 182 0190 0625</p>
                     </div>
-                    <div className="pt-5 text-white 2xl:text-2xl">
-                        Mail: info@algoup.com
-                    </div>
-
-                    <div className="mt-5 text-zinc-500 2xl:text-xl">
-                        <div>AUS: +61 123 456 789</div>
-                        <div>EUR: +31 123 456 789</div>
-                        <div>Hong Kong: +852 1234 5678</div>
-                        <div>Singapore: +65 1234 5678</div>
-                        <div>Address : 1 Street, City, State, 123456</div>
+                    <div className="text-white">
+                        <h1 className="font-semibold 2xl:text-3xl">Other</h1>
+                        <p className="2xl:text-2xl">
+                            Email: bill@algoupinc.com
+                        </p>
                     </div>
                 </div>
 
@@ -112,8 +119,8 @@ export default function Footer() {
                     </div>
                     <div className="xl:text-lg 2xl:text-lg">
                         Send us a message and embark on your automation journey.
-                        We will respond ASAP and we look forward to hearing from
-                        you.
+                        We will respond in 24 hours and we look forward to
+                        hearing from you.
                     </div>
                 </div>
 

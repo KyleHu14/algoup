@@ -79,7 +79,7 @@ export default function Manufacturing() {
                     <div className="relative 2xl:h-[22rem] 2xl:w-[250rem] 3xl:h-[20rem] 3xl:w-[40rem]">
                         <Image
                             className="rounded"
-                            src="/manufacturing/facility-outer.jpg"
+                            src="/manufacturing/manufacturing-2.png"
                             fill={true}
                             alt="Seattle city"
                         />
@@ -110,7 +110,7 @@ export default function Manufacturing() {
                     <div className="relative 2xl:h-[22rem] 2xl:w-[250rem] 3xl:h-[20rem] 3xl:w-[40rem]">
                         <Image
                             className="rounded"
-                            src="/manufacturing/facility-outer.jpg"
+                            src="/manufacturing/manufacturing-1.jpg"
                             fill={true}
                             alt="Seattle city"
                         />

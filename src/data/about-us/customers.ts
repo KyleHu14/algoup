@@ -6,6 +6,6 @@ export const CUSTOMERS: string[] = [
     "/customers/kimberly-clark.png",
     "/customers/sew.png",
     "/customers/state-grid.png",
-    "/customers/volkswagen.png",
     "/customers/zijin.png",
+    "/customers/volkswagen.png",
 ]

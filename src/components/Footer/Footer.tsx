@@ -26,10 +26,8 @@ export default function Footer() {
                         <p className="2xl:text-2xl">CN: + 86 182 0190 0625</p>
                     </div>
                     <div className="text-white">
-                        <h1 className="font-semibold 2xl:text-3xl">Other</h1>
-                        <p className="2xl:text-2xl">
-                            Email: bill@algoupinc.com
-                        </p>
+                        <h1 className="font-semibold 2xl:text-3xl">Email</h1>
+                        <p className="2xl:text-2xl">bill@algoupinc.com</p>
                     </div>
                 </div>
 

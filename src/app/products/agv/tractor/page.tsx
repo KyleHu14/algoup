@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 
 import UnderlineSpan from "@/components/Typography/UnderlineSpan"
@@ -12,7 +14,17 @@ import {
     tractorData,
 } from "../../../../data/product/specifications/tractor-series"
 
+import { ReactImageTurntable } from "react-image-turntable"
+
 export default function PGSTpage() {
+    const images = [
+        "/agv/tractor/tseries-360-1.png",
+        "/agv/tractor/tseries-360-2.png",
+        "/agv/tractor/tseries-360-3.png",
+        "/agv/tractor/tseries-360-4.png",
+        "/agv/tractor/tseries-360-5.png",
+    ]
+
     return (
         <main>
             {/* Title Section */}
@@ -93,11 +105,17 @@ export default function PGSTpage() {
                     </div>
 
                     {/* PG-T Image */}
-                    <ImageContainer
+                    {/* <ImageContainer
                         className="h-[20rem] w-[35rem]"
                         src="/agv/tractor/tseries-2.png"
                         alt="AGV Tractor image"
                         rounded={false}
+                    /> */}
+                    <ReactImageTurntable
+                        className="h-[20rem] w-[35rem]"
+                        images={images}
+                        autoRotate={{ disabled: true }}
+                        movementSensitivity={35}
                     />
                 </div>
             </section>

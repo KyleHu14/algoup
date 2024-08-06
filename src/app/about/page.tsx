@@ -27,18 +27,25 @@ export default function AboutUs() {
                         <span className="font-semibold text-orange-400">
                             ALGOUP Inc.
                         </span>{" "}
-                        is an automation solution provider based in Seattle, WA
-                        that focuses on R&D, manufacturing and distribution of
-                        mobile robots, intelligent equipment and associated
-                        services. We provide end-to-end cost beneficial
-                        solutions with close-to-edge technologies. Over the
-                        years,{" "}
+                        , headquartered in Seattle, WA, specializes in
+                        automation solutions encompassing research and
+                        development, manufacturing, and distribution of mobile
+                        robots, intelligent equipment, sensors, and related
+                        services. The company is dedicated to delivering
+                        comprehensive, cost-effective solutions utilizing
+                        state-of-the-art technologies positioned at the edge.
+                        <br></br>
+                        <br></br>
                         <span className="font-semibold text-orange-400">
-                            ALGOUP
+                            ALGOUP Inc.
                         </span>{" "}
-                        has developed AGVs, AMRs, intelligent software systems,
-                        e.g., RCS (robot control system), and WMS (warehouse
-                        management system).
+                        has cultivated a portfolio of advanced robot products,
+                        including humanoid, hexapod robots, AGVs, AMRs, and
+                        cutting-edge sensors. These offerings cater to a diverse
+                        clientele across both enterprise (B2B) and consumer
+                        (B2C) sectors, underscoring the company’s commitment to
+                        innovation and excellence in the automation and retail
+                        industry.
                     </div>
                 </div>
             </div>

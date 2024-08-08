@@ -1,13 +1,13 @@
 ---
 title: "Algoup Website is Live!"
 excerpt: "The algoup website has just gone live, learn about how its built and organized."
-coverImage: "/assets/blog/dynamic-routing/cover.jpg"
+coverImage: "/news/news-placeholder.png"
 date: "2024-07-17"
 author:
     name: JJ Kasper
     picture: "/assets/blog/authors/jj.jpeg"
 ogImage:
-    url: "/assets/blog/dynamic-routing/cover.jpg"
+    url: "/news/news-placeholder.png"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.

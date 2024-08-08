@@ -1,19 +1,27 @@
+import Image from "next/image"
 import DateFormatter from "../DateFormatter/DateFormatter"
+import Link from "next/link"
 
 interface ArticlePreviewParams {
-    key: number
     date: string
     title: string
     img: string
+    slug: string
 }
 
-// prettier-ignore
-export default function ArticlePreview({key, date, title, img} : ArticlePreviewParams) {
+export default function ArticlePreview({
+    date,
+    title,
+    img,
+    slug,
+}: ArticlePreviewParams) {
     return (
-        <div key={key}>
-            <DateFormatter dateString={date}/>
-            <h1>{title}</h1>
-            <h1>{img}</h1>
-        </div>
+        <>
+            <div className="relative h-[10rem]">
+                <Image src={img} alt="Article Cover Image" fill={true} />
+            </div>
+            <h1 className="font-bold">{title}</h1>
+            <DateFormatter dateString={date} />
+        </>
     )
 }

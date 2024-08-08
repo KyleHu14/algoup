@@ -8,5 +8,10 @@ export default function DateFormatter({ dateString }: Props) {
     const day = ("0" + date.getDate()).slice(-2)
     const year = date.getFullYear()
 
-    return <time dateTime={dateString}>{`${month}-${day}-${year}`}</time>
+    return (
+        <time
+            className="font-semibold text-zinc-800"
+            dateTime={dateString}
+        >{`${month}-${day}-${year}`}</time>
+    )
 }

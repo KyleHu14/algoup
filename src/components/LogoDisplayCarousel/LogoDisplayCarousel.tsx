@@ -31,8 +31,8 @@ export default function LogoDisplayCarousel({
                             <div className="flex aspect-square items-center justify-center">
                                 <Image
                                     src={partnerSrc}
-                                    width={100}
-                                    height={50}
+                                    width={60}
+                                    height={40}
                                     alt="Partner Logo"
                                 />
                             </div>

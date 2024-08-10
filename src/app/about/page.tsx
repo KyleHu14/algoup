@@ -9,22 +9,22 @@ export default function AboutUs() {
     return (
         <main className="flex flex-col gap-24 pb-24">
             {/* Main About Us Section */}
-            <section className="mt-[-5rem] flex h-screen items-center justify-center gap-16 px-[9rem]">
+            <section className="mt-[-5rem] flex h-screen items-center justify-center gap-10 px-7 2xl:gap-16">
                 {/* About Us Description */}
-                <div className="relative 2xl:h-[22rem] 2xl:w-[250rem] 3xl:h-[35rem] 3xl:w-[300rem]">
+                <div className="relative h-[30rem] w-[60rem]">
                     <Image
-                        className="rounded"
+                        className="rounded object-cover"
                         src="/about/seattle.jpeg"
                         fill={true}
                         alt="Seattle city"
                     />
                 </div>
 
-                <div className="flex flex-col justify-center gap-5">
-                    <div className="font-bold 2xl:text-4xl 3xl:text-5xl">
+                <div className="flex w-[40rem] flex-col justify-center gap-5">
+                    <div className="text-3xl font-bold 2xl:text-4xl 3xl:text-5xl">
                         About Algoup
                     </div>
-                    <div className="text-left text-gray-500 2xl:text-lg 3xl:text-xl">
+                    <div className="text-md text-left text-gray-500 2xl:text-lg 3xl:text-xl">
                         <span className="font-semibold text-orange-400">
                             ALGOUP Inc.
                         </span>{" "}
@@ -53,9 +53,11 @@ export default function AboutUs() {
 
             {/* Our Team Section */}
             <section className="flex w-screen gap-20 bg-zinc-800 p-20 text-white">
-                <div className="flex flex-col gap-5">
-                    <h1 className="text-5xl font-bold">Our Team</h1>
-                    <div className="flex flex-col gap-3 text-2xl">
+                <div className="flex w-[40rem] flex-col gap-5">
+                    <h1 className="text-3xl font-bold 2xl:text-4xl 3xl:text-5xl">
+                        Our Team
+                    </h1>
+                    <div className="flex flex-col gap-3 text-left text-lg 3xl:text-xl">
                         <p>
                             At ALGOUP, our team is composed of dedicated and
                             skilled professionals driven to provide
@@ -78,9 +80,9 @@ export default function AboutUs() {
                         </p>
                     </div>
                 </div>
-                <div className="relative 2xl:h-[22rem] 2xl:w-[250rem] 3xl:h-[35rem] 3xl:w-[300rem]">
+                <div className="relative h-[30rem] w-[50rem]">
                     <Image
-                        className="rounded"
+                        className="rounded object-cover"
                         src="/about/team.jpg"
                         fill={true}
                         alt="Seattle city"

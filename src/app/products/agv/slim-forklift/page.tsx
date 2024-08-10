@@ -12,11 +12,11 @@ import ProductTable from "@/components/ProductTable/ProductTable"
 import {
     columnHeaders,
     tractorData,
-} from "../../../../data/product/specifications/tractor"
+} from "../../../../data/product/specifications/slim-forklift"
 
 import { ReactImageTurntable } from "react-image-turntable"
 
-export default function TractorPage() {
+export default function SlimForkliftPage() {
     const images = [
         "/agv/tractor/tseries-360-1.png",
         "/agv/tractor/tseries-360-2.png",
@@ -30,10 +30,10 @@ export default function TractorPage() {
             {/* Title Section */}
             <section className="flex h-[90vh] flex-col items-center gap-4 bg-zinc-100 pt-14">
                 {/* Main Title */}
-                <h1 className="text-4xl text-zinc-800">Tractor AGV</h1>
+                <h1 className="text-4xl text-zinc-800">Slim Forklift AGV</h1>
                 {/* prettier-ignore */}
                 <h1 className="text-5xl text-zinc-800 mb-3">
-                    <UnderlineSpan text="Unique" /> Design for <UnderlineSpan text="Tracking" /> Applications.
+                    <UnderlineSpan text="Cost Beneficial" /> Mobility Solution.
                 </h1>
                 <h2 className="text-xl">
                     Perfect for frequent handling of large cargo.

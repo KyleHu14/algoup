@@ -12,12 +12,12 @@ import ProductTable from "@/components/ProductTable/ProductTable"
 import {
     columnHeaders,
     tractorData,
-} from "../../../../data/product/specifications/lifting-series"
+} from "../../../../data/product/specifications/lifting"
 
 import ProductDisplayCarousel from "@/components/ProductDisplayCarousel/ProductDisplayCarousel"
 import { ReactImageTurntable } from "react-image-turntable"
 
-export default function PGSTpage() {
+export default function LiftingPage() {
     const carouselImages: string[] = [
         "/agv/lifting/dcseries-1.png",
         "/agv/lifting/ddseries-1.png",

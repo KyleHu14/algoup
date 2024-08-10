@@ -7,13 +7,14 @@ import { CUSTOMERS } from "../../data/about-us/customers"
 
 export default function AboutUs() {
     return (
-        <main className="flex flex-col gap-24 px-[9rem] pb-24">
-            <div className="mt-[-5rem] flex h-screen items-center justify-center gap-16">
+        <main className="flex flex-col gap-24 pb-24">
+            {/* Main About Us Section */}
+            <section className="mt-[-5rem] flex h-screen items-center justify-center gap-16 px-[9rem]">
                 {/* About Us Description */}
                 <div className="relative 2xl:h-[22rem] 2xl:w-[250rem] 3xl:h-[35rem] 3xl:w-[300rem]">
                     <Image
                         className="rounded"
-                        src="/seattle.jpeg"
+                        src="/about/seattle.jpeg"
                         fill={true}
                         alt="Seattle city"
                     />
@@ -48,20 +49,47 @@ export default function AboutUs() {
                         industry.
                     </div>
                 </div>
-            </div>
+            </section>
 
-            {/* Company Statistics with Stats */}
-            {/* <div className="flex gap-12">
-                <div className="flex w-[25rem] flex-col justify-end gap-5">
-                    <CompanyFact number="500" text="Team Members" />
-                    <CompanyFact number="70%" text="R&D Personnel" />
-                    <CompanyFact number="450+" text="Deployed Projects" />
-                    <CompanyFact number="30" text="Serving Countries" />
+            {/* Our Team Section */}
+            <section className="flex w-screen gap-20 bg-zinc-800 p-20 text-white">
+                <div className="flex flex-col gap-5">
+                    <h1 className="text-5xl font-bold">Our Team</h1>
+                    <div className="flex flex-col gap-3 text-2xl">
+                        <p>
+                            At ALGOUP, our team is composed of dedicated and
+                            skilled professionals driven to provide
+                            industry-leading robotics solutions. Our team
+                            members include engineers, designers, programmers,
+                            project managers, and safety specialists who
+                            collaborate closely to achieve our mission. With
+                            years of collective experience, we have successfully
+                            partnered with clients across diverse sectors such
+                            as logistics, manufacturing, healthcare, retail and
+                            automotive.
+                        </p>
+                        <p>
+                            We specialize in custom robotics system design and
+                            development, meticulous programming and maintenance,
+                            and the efficient deployment of large-scale
+                            projects. Our commitment to innovation ensures that
+                            we deliver solutions tailored to meet the evolving
+                            demands of our clients and their industries.
+                        </p>
+                    </div>
                 </div>
-            </div> */}
+                <div className="relative 2xl:h-[22rem] 2xl:w-[250rem] 3xl:h-[35rem] 3xl:w-[300rem]">
+                    <Image
+                        className="rounded"
+                        src="/about/team.jpg"
+                        fill={true}
+                        alt="Seattle city"
+                    />
+                </div>
+            </section>
 
             {/* Partners */}
-            <div className="flex flex-col items-center">
+            <section className="flex flex-col items-center">
                 <h1 className="text-2xl 3xl:mb-10 3xl:text-3xl">
                     Partnered with{" "}
                     <span className="font-bold text-orange-400">
@@ -71,10 +99,10 @@ export default function AboutUs() {
                 </h1>
 
                 <LogoDisplayCarousel logos={PARTNERS} />
-            </div>
+            </section>
 
             {/* Customers */}
-            <div className="flex flex-col items-center">
+            <section className="flex flex-col items-center">
                 <h1 className="text-2xl 3xl:mb-10 3xl:text-3xl">
                     Serving a{" "}
                     <span className="font-bold text-orange-400">diverse</span>{" "}
@@ -82,7 +110,7 @@ export default function AboutUs() {
                 </h1>
 
                 <LogoDisplayCarousel logos={CUSTOMERS} />
-            </div>
+            </section>
         </main>
     )
 }

@@ -1,4 +1,5 @@
 "use client"
+
 import { Button } from "@/components/ui/button"
 
 import UnderlineSpan from "@/components/Typography/UnderlineSpan"
@@ -11,16 +12,17 @@ import ProductTable from "@/components/ProductTable/ProductTable"
 import {
     columnHeaders,
     tractorData,
-} from "../../../../data/product/specifications/latent-series"
+} from "../../../../data/product/specifications/tractor"
+
 import { ReactImageTurntable } from "react-image-turntable"
 
-export default function PGSTpage() {
+export default function CounterbalancePage() {
     const images = [
-        "/agv/latent/qseries-360-1.png",
-        "/agv/latent/qseries-360-2.png",
-        "/agv/latent/qseries-360-3.png",
-        "/agv/latent/qseries-360-4.png",
-        "/agv/latent/qseries-360-5.png",
+        "/agv/tractor/tseries-360-1.png",
+        "/agv/tractor/tseries-360-2.png",
+        "/agv/tractor/tseries-360-3.png",
+        "/agv/tractor/tseries-360-4.png",
+        "/agv/tractor/tseries-360-5.png",
     ]
 
     return (
@@ -28,10 +30,10 @@ export default function PGSTpage() {
             {/* Title Section */}
             <section className="flex h-[90vh] flex-col items-center gap-4 bg-zinc-100 pt-14">
                 {/* Main Title */}
-                <h1 className="text-4xl text-zinc-800">Latent AGV</h1>
+                <h1 className="text-4xl text-zinc-800">Counterbalance AGV</h1>
                 {/* prettier-ignore */}
                 <h1 className="text-5xl text-zinc-800 mb-3">
-                    A <UnderlineSpan text="robust" /> and <UnderlineSpan text="reliable" /> AGV.
+                    <UnderlineSpan text="Unique" /> Design for <UnderlineSpan text="Tracking" /> Applications.
                 </h1>
                 <h2 className="text-xl">
                     Perfect for frequent handling of large cargo.
@@ -45,7 +47,7 @@ export default function PGSTpage() {
                 {/* PGT Image */}
                 <ImageContainer
                     className="h-[25rem] w-[40rem]"
-                    src="/agv/latent/qseries-1.png"
+                    src="/agv/tractor/tseries-1.png"
                     alt="T series tractor"
                     rounded={false}
                 />
@@ -103,11 +105,17 @@ export default function PGSTpage() {
                     </div>
 
                     {/* PG-T Image */}
+                    {/* <ImageContainer
+                        className="h-[20rem] w-[35rem]"
+                        src="/agv/tractor/tseries-2.png"
+                        alt="AGV Tractor image"
+                        rounded={false}
+                    /> */}
                     <ReactImageTurntable
                         className="h-[20rem] w-[35rem]"
                         images={images}
                         autoRotate={{ disabled: true }}
-                        movementSensitivity={35}
+                        movementSensitivity={100}
                     />
                 </div>
             </section>
@@ -137,9 +145,8 @@ export default function PGSTpage() {
             <section className="flex flex-col gap-5 px-96 pb-32">
                 {/* Title */}
                 <h1 className="text-center text-4xl text-zinc-800">
-                    Latent AGV Technical Specifications
+                    Tractor AGV Technical Specifications
                 </h1>
-
                 <ProductTable
                     columnHeaders={columnHeaders}
                     data={tractorData}

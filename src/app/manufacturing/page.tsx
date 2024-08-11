@@ -27,7 +27,7 @@ export default function Manufacturing() {
             </div>
 
             {/* Body */}
-            <div className="flex flex-col gap-10 bg-white px-[20rem] py-[6rem]">
+            <div className="flex flex-col gap-10 bg-white px-36 py-[6rem] 2xl:px-[20rem]">
                 {/* Robust Production */}
                 <div className="flex items-center justify-between gap-10">
                     <div className="max-w-[35rem]">

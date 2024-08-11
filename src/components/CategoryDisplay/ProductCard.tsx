@@ -35,12 +35,14 @@ export default function ProductCard({
                 <CardDescription>{description}</CardDescription>
             </CardHeader>
             <CardContent>
-                <Image
-                    src={imageSrc}
-                    width={200}
-                    height={200}
-                    alt="Category Image"
-                />
+                <div className="relative h-[150px] w-[150px]">
+                    <Image
+                        className="object-contain"
+                        src={imageSrc}
+                        fill={true}
+                        alt="Category Image"
+                    />
+                </div>
             </CardContent>
             <CardFooter className="">
                 <Link href={href}>

@@ -36,19 +36,19 @@ const agvCategories: ProductCategoryType[] = [
     {
         name: "Slim Forklift",
         description: "",
-        imageSrc: "/agv/lifting/dcseries-1.png",
+        imageSrc: "/agv/fork-lift/pg-cd-1.png",
         href: "/agv/slim-forklift",
     },
     {
         name: "Pallet Stacker",
         description: "",
-        imageSrc: "/agv/lifting/dcseries-1.png",
+        imageSrc: "/agv/pallet-stacker/pg-cr-1.png",
         href: "/agv/pallet-stacker",
     },
     {
         name: "Counterbalance",
         description: "",
-        imageSrc: "/agv/counterbalance/counterbalance-1.png",
+        imageSrc: "/agv/counterbalance/pg-cp-1.png",
         href: "/agv/counterbalance",
     },
 ]

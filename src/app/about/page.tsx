@@ -24,7 +24,7 @@ export default function AboutUs() {
                     <div className="text-3xl font-bold 2xl:text-4xl 3xl:text-5xl">
                         About Algoup
                     </div>
-                    <div className="text-md text-left text-gray-500 2xl:text-lg 3xl:text-xl">
+                    <div className="text-left text-lg text-gray-500 2xl:text-lg 3xl:text-xl">
                         <span className="font-semibold text-orange-400">
                             ALGOUP Inc.
                         </span>{" "}

@@ -21,13 +21,23 @@ export default function Footer() {
                 {/* Contact Information */}
                 <div className="flex flex-col gap-3 xl:min-w-[20rem] 2xl:min-w-[25rem]">
                     <div className="text-white">
-                        <h1 className="font-semibold 2xl:text-3xl">Phone</h1>
-                        <p className="2xl:text-2xl">US: +1 202 664 4153</p>
-                        <p className="2xl:text-2xl">CN: + 86 182 0190 0625</p>
+                        <h1 className="text-2xl font-semibold 2xl:text-3xl">
+                            Phone
+                        </h1>
+                        <p className="text-lg 2xl:text-2xl">
+                            US: +1 202 664 4153
+                        </p>
+                        <p className="text-lg 2xl:text-2xl">
+                            CN: + 86 182 0190 0625
+                        </p>
                     </div>
                     <div className="text-white">
-                        <h1 className="font-semibold 2xl:text-3xl">Email</h1>
-                        <p className="2xl:text-2xl">bill@algoupinc.com</p>
+                        <h1 className="text-2xl font-semibold 2xl:text-3xl">
+                            Email
+                        </h1>
+                        <p className="text-lg 2xl:text-2xl">
+                            bill@algoupinc.com
+                        </p>
                     </div>
                 </div>
 

@@ -37,7 +37,7 @@ export default function DashboardNavbar() {
                     <NavbarLink link="/news" text="News" />
                     <NavbarLink link="/about" text="About Us" />
                     <Link href="/contact">
-                        <button className="= rounded-xl bg-orange-400 p-2 font-semibold text-white transition duration-300 ease-in-out hover:bg-orange-500 xl:text-[0.9rem] 2xl:text-[1.1rem]">
+                        <button className="= rounded-xl bg-orange-400 p-2 font-semibold text-white transition duration-300 ease-in-out hover:bg-orange-500 xl:text-lg 2xl:text-[1.1rem]">
                             Contact Us
                         </button>
                     </Link>

@@ -47,11 +47,11 @@ export default function LiftingPage() {
     ]
 
     const q360Images = [
-        "/agv/latent/qseries-360-1.png",
-        "/agv/latent/qseries-360-2.png",
-        "/agv/latent/qseries-360-3.png",
-        "/agv/latent/qseries-360-4.png",
-        "/agv/latent/qseries-360-5.png",
+        "/agv/lifting/qseries-360-1.png",
+        "/agv/lifting/qseries-360-2.png",
+        "/agv/lifting/qseries-360-3.png",
+        "/agv/lifting/qseries-360-4.png",
+        "/agv/lifting/qseries-360-5.png",
     ]
 
     return (

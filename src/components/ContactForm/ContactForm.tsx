@@ -42,14 +42,9 @@ export default function Contact() {
             >
                 <div className="flex w-full gap-5">
                     <FormInput
-                        name="first-name"
-                        labelText="First Name"
-                        placeholder="Bill"
-                    />
-                    <FormInput
-                        name="last-name"
-                        labelText="Last Name"
-                        placeholder="Smith"
+                        name="name"
+                        labelText="Name"
+                        placeholder="Bill Smith"
                     />
                 </div>
 

@@ -1,6 +1,7 @@
 "use client"
 
 import { usePathname } from "next/navigation"
+import { useState } from "react"
 
 // Importing Components
 import FooterIcon from "./FooterIcon"
@@ -9,9 +10,36 @@ import FooterFormInput from "./FooterFormInput"
 
 export default function Footer() {
     const pathname = usePathname()
+    const [result, setResult] = useState("")
 
     if (pathname.includes("contact")) {
         return
+    }
+
+    const onSubmit = async (event: any) => {
+        event.preventDefault()
+        setResult("Sending Your Message...")
+        const formData = new FormData(event.target)
+
+        formData.append(
+            "access_key",
+            process.env.NEXT_PUBLIC_FORM_ACCESS_KEY || "",
+        )
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData,
+        })
+
+        const data = await response.json()
+
+        if (data.success) {
+            setResult("Your Message was Submitted Successfully!")
+            event.target.reset()
+        } else {
+            console.log("Error : ", data)
+            setResult(data.message)
+        }
     }
 
     return (
@@ -120,12 +148,15 @@ export default function Footer() {
             </div>
 
             {/* Form */}
-            <form action="#" className="flex w-full flex-col gap-4 text-white">
+            <form
+                onSubmit={onSubmit}
+                className="flex w-full flex-col gap-4 text-white"
+            >
                 <div>
                     <div className="mb-3 font-bold xl:text-3xl 2xl:text-4xl 3xl:text-5xl">
                         Contact Us
                     </div>
-                    <div className="xl:text-lg 2xl:text-lg">
+                    <div className="xl:text-lg">
                         Send us a message and embark on your automation journey.
                         We will respond in 24 hours and we look forward to
                         hearing from you.
@@ -134,41 +165,42 @@ export default function Footer() {
 
                 <div className="flex gap-5">
                     <FooterFormInput
+                        name="name"
                         labelText="Name*"
                         placeholderText="What's your name?"
                     />
+                </div>
+                <div className="flex gap-5">
                     <FooterFormInput
-                        labelText="Country or State"
-                        placeholderText="USA / California"
+                        name="email"
+                        labelText="Email*"
+                        placeholderText="So we can contact you!"
                     />
                     <FooterFormInput
-                        labelText="Company"
-                        placeholderText="Company name"
+                        name="phone-number"
+                        labelText="Phone Number"
+                        placeholderText="+1 123-456-789"
                     />
                 </div>
 
-                <FooterFormInput
-                    labelText="Email*"
-                    placeholderText="So we can contact you!"
-                />
-                <FooterFormInput
-                    labelText="Phone Number"
-                    placeholderText="+1 123-456-789"
-                />
-
                 <div>
                     <label className="mb-2 block text-xl font-semibold">
-                        Message
+                        Message*
                     </label>
                     <textarea
+                        name="message"
                         className="w-full resize-y rounded-md border-white bg-zinc-800 p-3 text-lg focus:border"
                         placeholder="Write your message here!"
                     />
                 </div>
 
-                <button className="max-w-24 rounded-md bg-[#3f4a5c] py-2 text-lg">
+                <button
+                    type="submit"
+                    className="max-w-24 rounded-md bg-[#3f4a5c] py-2 text-lg"
+                >
                     Send
                 </button>
+                <span className="text-center xl:text-lg">{result}</span>
             </form>
         </footer>
     )

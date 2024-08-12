@@ -1,12 +1,14 @@
-interface FooterFormInputProps {
+interface Props {
     labelText: string
     placeholderText: string
+    name: string
 }
 
 export default function FooterFormInput({
     labelText,
     placeholderText,
-}: FooterFormInputProps) {
+    name,
+}: Props) {
     return (
         <div className="w-full">
             <label className="mb-2 block font-semibold 2xl:text-lg 3xl:text-xl">

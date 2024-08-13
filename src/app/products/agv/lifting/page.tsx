@@ -6,14 +6,14 @@ import UnderlineSpan from "@/components/General/UnderlineSpan"
 import OrangeSemibold from "@/components/General/OrangeSemibold"
 
 import { Rabbit, Undo2, Weight } from "lucide-react"
-import ProductTable from "@/components/Product/ProductTable"
+import ProductTable from "@/components/Product/Table"
 
 import {
     columnHeaders,
     tractorData,
 } from "../../../../data/product/specifications/lifting"
 
-import ProductDisplayCarousel from "@/components/Product/ProductDisplayCarousel"
+import ProductDisplayCarousel from "@/components/Product/DisplayCarousel"
 import { ReactImageTurntable } from "react-image-turntable"
 import { useRef } from "react"
 

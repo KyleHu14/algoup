@@ -6,8 +6,8 @@ import UnderlineSpan from "@/components/General/UnderlineSpan"
 import OrangeSemibold from "@/components/General/OrangeSemibold"
 
 import { Rabbit, Undo2, Weight } from "lucide-react"
-import ProductCoverImage from "@/components/Product/ProductCoverImage"
-import ProductTable from "@/components/Product/ProductTable"
+import ProductCoverImage from "@/components/Product/CoverImage"
+import ProductTable from "@/components/Product/Table"
 
 import {
     columnHeaders,

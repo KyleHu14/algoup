@@ -31,11 +31,13 @@ export default function ProductCard({
     return (
         <Card className="">
             <CardHeader>
-                <CardTitle>{name}</CardTitle>
+                <CardTitle className="text-center text-xl font-semibold">
+                    {name}
+                </CardTitle>
                 <CardDescription>{description}</CardDescription>
             </CardHeader>
             <CardContent>
-                <div className="relative h-[150px] w-[150px]">
+                <div className="relative flex h-[130px] w-[120px] items-center justify-center 2xl:h-[150px] 2xl:w-[150px]">
                     <Image
                         className="object-contain"
                         src={imageSrc}
@@ -44,7 +46,7 @@ export default function ProductCard({
                     />
                 </div>
             </CardContent>
-            <CardFooter className="">
+            <CardFooter className="flex items-center justify-center">
                 <Link href={href}>
                     <Button variant="outline">
                         View More <ChevronsRight />

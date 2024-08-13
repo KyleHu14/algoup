@@ -9,9 +9,9 @@ export default function AboutUs() {
     return (
         <main className="flex flex-col gap-24 pb-24">
             {/* Main About Us Section */}
-            <section className="mt-[-5rem] flex h-screen items-center justify-center gap-10 px-7 2xl:gap-16">
+            <section className="flex h-screen items-center justify-center gap-10 px-7 2xl:gap-16">
                 {/* About Us Description */}
-                <div className="relative h-[30rem] w-[60rem]">
+                <div className="relative h-[20rem] w-[40rem] 2xl:h-[30rem] 2xl:w-[60rem]">
                     <Image
                         className="rounded object-cover"
                         src="/about/seattle.jpeg"
@@ -21,10 +21,10 @@ export default function AboutUs() {
                 </div>
 
                 <div className="flex w-[40rem] flex-col justify-center gap-5">
-                    <div className="text-3xl font-bold 2xl:text-4xl 3xl:text-5xl">
+                    <div className="text-2xl font-bold xl:text-3xl 2xl:text-4xl 3xl:text-5xl">
                         About Algoup
                     </div>
-                    <div className="text-left text-lg text-gray-500 2xl:text-lg 3xl:text-xl">
+                    <div className="xl:text-md text-left text-gray-500 2xl:text-lg 3xl:text-xl">
                         <span className="font-semibold text-orange-400">
                             ALGOUP Inc.
                         </span>{" "}

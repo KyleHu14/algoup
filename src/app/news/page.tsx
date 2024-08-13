@@ -51,7 +51,7 @@ export default function News() {
             </section>
 
             {/* News Body */}
-            <section className="bg-white px-[20rem] py-[3rem]">
+            <section className="bg-white py-[3rem] xl:px-[15rem] 2xl:px-[20rem]">
                 <h1 className="text-4xl font-bold">Browse All Articles</h1>
                 <div className="mt-[1rem] flex gap-10">
                     {moreArticles.map((article, index) => {

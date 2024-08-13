@@ -10,10 +10,8 @@ interface ProductHeaderProps {
 function ProductHeader({ title, subTitle }: ProductHeaderProps) {
     return (
         <div>
-            <h1 className="font-semibold xl:text-2xl">{title}</h1>
-            <h2 className="text-[1rem] font-normal text-gray-500">
-                {subTitle}
-            </h2>
+            <h1 className="font-semibold xl:text-2xl 2xl:text-3xl">{title}</h1>
+            <h2 className="text-xl font-light text-gray-500">{subTitle}</h2>
         </div>
     )
 }

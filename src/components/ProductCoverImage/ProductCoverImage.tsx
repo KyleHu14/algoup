@@ -1,13 +1,13 @@
 import Image from "next/image"
 
-interface ImageContainerProps {
+interface Props {
     src: string
     alt: string
     className?: string
     rounded: boolean
 }
 // prettier-ignore
-export default function ImageContainer({ src, alt, className, rounded}: ImageContainerProps) {
+export default function ProductCoverImage({ src, alt, className, rounded}: Props) {
     if (rounded){
         return (
             <div className={`relative ${className}`}>
@@ -21,8 +21,9 @@ export default function ImageContainer({ src, alt, className, rounded}: ImageCon
         )
     }
     return (
-        <div className={`relative ${className}`}>
+        <div className="relative h-[15rem] w-[25rem] border">
             <Image
+                className="object-fill"
                 src={src}
                 fill={true}
                 alt={alt}

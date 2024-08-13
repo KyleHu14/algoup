@@ -6,7 +6,7 @@ import UnderlineSpan from "@/components/Typography/UnderlineSpan"
 import OrangeSemibold from "@/components/Typography/OrangeSemibold"
 
 import { Rabbit, Undo2, Weight } from "lucide-react"
-import ImageContainer from "@/components/ImageContainer/ImageContainer"
+import ProductCoverImage from "@/components/ProductCoverImage/ProductCoverImage"
 import ProductTable from "@/components/ProductTable/ProductTable"
 
 import {
@@ -55,7 +55,7 @@ export default function SlimForkliftPage() {
                 </Button>
 
                 {/* PGT Image */}
-                <ImageContainer
+                <ProductCoverImage
                     className="h-[25rem] w-[40rem]"
                     src="/agv/tractor/tseries-1.png"
                     alt="T series tractor"

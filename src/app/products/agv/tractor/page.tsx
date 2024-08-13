@@ -6,7 +6,6 @@ import UnderlineSpan from "@/components/Typography/UnderlineSpan"
 import OrangeSemibold from "@/components/Typography/OrangeSemibold"
 
 import { Rabbit, Undo2, Weight } from "lucide-react"
-import ImageContainer from "@/components/ImageContainer/ImageContainer"
 import ProductTable from "@/components/ProductTable/ProductTable"
 
 import {
@@ -16,6 +15,7 @@ import {
 
 import { ReactImageTurntable } from "react-image-turntable"
 import { useRef } from "react"
+import ProductCoverImage from "@/components/ProductCoverImage/ProductCoverImage"
 
 export default function TractorPage() {
     const specsRef = useRef<null | HTMLDivElement>(null)
@@ -55,8 +55,7 @@ export default function TractorPage() {
                 </Button>
 
                 {/* PGT Image */}
-                <ImageContainer
-                    className="h-[25rem] w-[40rem]"
+                <ProductCoverImage
                     src="/agv/tractor/tseries-1.png"
                     alt="T series tractor"
                     rounded={false}

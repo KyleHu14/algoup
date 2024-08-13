@@ -6,7 +6,7 @@ import UnderlineSpan from "@/components/Typography/UnderlineSpan"
 import OrangeSemibold from "@/components/Typography/OrangeSemibold"
 
 import { Rabbit, Undo2, Weight } from "lucide-react"
-import ImageContainer from "@/components/ImageContainer/ImageContainer"
+import ProductCoverImage from "@/components/ProductCoverImage/ProductCoverImage"
 import ProductTable from "@/components/ProductTable/ProductTable"
 
 import {
@@ -55,7 +55,7 @@ export default function CounterbalancePage() {
                 </Button>
 
                 {/* PGT Image */}
-                <ImageContainer
+                <ProductCoverImage
                     className="h-[25rem] w-[40rem]"
                     src="/agv/tractor/tseries-1.png"
                     alt="T series tractor"
@@ -118,7 +118,7 @@ export default function CounterbalancePage() {
                     </div>
 
                     {/* PG-T Image */}
-                    {/* <ImageContainer
+                    {/* <ProductCoverImage
                         className="h-[20rem] w-[35rem]"
                         src="/agv/tractor/tseries-2.png"
                         alt="AGV Tractor image"
@@ -146,7 +146,7 @@ export default function CounterbalancePage() {
                     scenarios.
                 </p>
 
-                <ImageContainer
+                <ProductCoverImage
                     className="h-[20rem] w-[25rem]"
                     src="/navigation.jpg"
                     alt="AMR Navigation"

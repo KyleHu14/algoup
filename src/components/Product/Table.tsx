@@ -3,7 +3,7 @@ interface Props {
     data: string[][]
 }
 
-export default function ProductTable({ columnHeaders, data }: Props) {
+export default function Table({ columnHeaders, data }: Props) {
     return (
         <table>
             <thead>

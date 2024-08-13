@@ -19,7 +19,7 @@ interface Props {
 }
 
 // prettier-ignore
-export default function ProductDisplayCarousel({
+export default function DisplayCarousel({
     images,
 }: Props) {
 

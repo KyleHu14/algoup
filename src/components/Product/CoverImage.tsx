@@ -7,7 +7,7 @@ interface Props {
     rounded: boolean
 }
 // prettier-ignore
-export default function ProductCoverImage({ src, alt, className, rounded}: Props) {
+export default function CoverImage({ src, alt, className, rounded}: Props) {
     if (rounded){
         return (
             <div className={`relative ${className}`}>

@@ -6,7 +6,6 @@ import UnderlineSpan from "@/components/Typography/UnderlineSpan"
 import OrangeSemibold from "@/components/Typography/OrangeSemibold"
 
 import { Rabbit, Undo2, Weight } from "lucide-react"
-import ImageContainer from "@/components/ImageContainer/ImageContainer"
 import ProductTable from "@/components/ProductTable/ProductTable"
 
 import {
@@ -16,8 +15,15 @@ import {
 
 import ProductDisplayCarousel from "@/components/ProductDisplayCarousel/ProductDisplayCarousel"
 import { ReactImageTurntable } from "react-image-turntable"
+import { useRef } from "react"
 
 export default function LiftingPage() {
+    const specsRef = useRef<null | HTMLDivElement>(null)
+
+    const scrollToSpecs = () => {
+        specsRef.current?.scrollIntoView({ behavior: "smooth" })
+    }
+
     const carouselImages: string[] = [
         "/agv/lifting/dcseries-1.png",
         "/agv/lifting/ddseries-1.png",
@@ -69,7 +75,10 @@ export default function LiftingPage() {
                 </h2>
 
                 {/* Learn More Button */}
-                <Button className="mb-12 w-fit bg-orange-400 text-xl hover:bg-orange-500">
+                <Button
+                    onClick={scrollToSpecs}
+                    className="mb-12 w-fit bg-orange-400 text-xl hover:bg-orange-500"
+                >
                     Learn More
                 </Button>
 
@@ -77,7 +86,10 @@ export default function LiftingPage() {
             </section>
 
             {/* Specification Summary - DC */}
-            <section className="flex h-[80vh] flex-col items-center justify-center gap-16">
+            <section
+                ref={specsRef}
+                className="flex h-[100vh] flex-col items-center justify-center gap-16"
+            >
                 {/* Title */}
                 <h1 className="text-5xl text-zinc-800">DC-Series Overview</h1>
 
@@ -134,7 +146,7 @@ export default function LiftingPage() {
             </section>
 
             {/* Specification Summary - DD */}
-            <section className="flex h-[80vh] flex-col items-center justify-center gap-16">
+            <section className="flex h-[100vh] flex-col items-center justify-center gap-16">
                 {/* Title */}
                 <h1 className="text-5xl text-zinc-800">DD-Series Overview</h1>
 
@@ -183,7 +195,7 @@ export default function LiftingPage() {
 
                     {/* PG-T Image */}
                     <ReactImageTurntable
-                        className="h-[15rem] w-[50rem]"
+                        className="h-[15rem] w-[35rem]"
                         images={dd360Images}
                         autoRotate={{ disabled: true }}
                         movementSensitivity={100}
@@ -192,7 +204,7 @@ export default function LiftingPage() {
             </section>
 
             {/* Specification Summary - Q */}
-            <section className="flex h-[80vh] flex-col items-center gap-16 pt-28">
+            <section className="flex h-[100vh] flex-col items-center gap-16 pt-28">
                 {/* Title */}
                 <h1 className="text-5xl text-zinc-800">Q-Series Overview</h1>
 

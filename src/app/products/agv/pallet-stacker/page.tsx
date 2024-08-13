@@ -15,8 +15,15 @@ import {
 } from "../../../../data/product/specifications/tractor"
 
 import { ReactImageTurntable } from "react-image-turntable"
+import { useRef } from "react"
 
 export default function PalletStackerPage() {
+    const specsRef = useRef<null | HTMLDivElement>(null)
+
+    const scrollToSpecs = () => {
+        specsRef.current?.scrollIntoView({ behavior: "smooth" })
+    }
+
     const images = [
         "/agv/tractor/tseries-360-1.png",
         "/agv/tractor/tseries-360-2.png",
@@ -40,7 +47,10 @@ export default function PalletStackerPage() {
                 </h2>
 
                 {/* Learn More Button */}
-                <Button className="mb-12 w-fit bg-orange-400 text-xl hover:bg-orange-500">
+                <Button
+                    onClick={scrollToSpecs}
+                    className="mb-12 w-fit bg-orange-400 text-xl hover:bg-orange-500"
+                >
                     Learn More
                 </Button>
 
@@ -54,7 +64,10 @@ export default function PalletStackerPage() {
             </section>
 
             {/* Specification Summary */}
-            <section className="flex h-[80vh] flex-col items-center gap-16 pt-28">
+            <section
+                ref={specsRef}
+                className="flex h-[80vh] flex-col items-center gap-16 pt-28"
+            >
                 {/* Title */}
                 <h1 className="text-5xl text-zinc-800">
                     Designed for <UnderlineSpan text="heavy duty" />{" "}

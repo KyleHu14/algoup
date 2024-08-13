@@ -21,9 +21,9 @@ export default function ProductCoverImage({ src, alt, className, rounded}: Props
         )
     }
     return (
-        <div className="relative h-[15rem] w-[25rem] border">
+        <div className="relative h-[20rem] w-[35rem] 2xl:h-[20rem] 2xl:w-[40rem]">
             <Image
-                className="object-fill"
+                className="object-cover"
                 src={src}
                 fill={true}
                 alt={alt}

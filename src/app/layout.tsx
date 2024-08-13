@@ -5,8 +5,8 @@ import "./globals.css"
 // const inter = Inter({ subsets: ["latin"] })
 
 // Importing of Components
-import Navbar from "@/components/Navbar/Navbar"
-import Footer from "@/components/Footer/Footer"
+import Navbar from "@/components/General/Navbar"
+import Footer from "@/components/General/Footer/Footer"
 
 export const metadata: Metadata = {
     title: "Algoup",

@@ -1,4 +1,4 @@
-import DateFormatter from "../DateFormatter/DateFormatter"
+import DateFormatter from "../DateFormatter"
 import markdownStyles from "./article-styles.module.css"
 
 type Props = {

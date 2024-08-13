@@ -1,6 +1,6 @@
 "use client"
 
-import ParameterList from "@/components/ParameterList/ParameterList"
+// import ParameterList from "@/components/ParameterList/ParameterList"
 
 import { ReactImageTurntable } from "react-image-turntable"
 
@@ -25,7 +25,7 @@ export default function ProductSlug({ params }: { params: { slug: string } }) {
                         Model Parameters
                     </div>
                     <div className="flex items-center justify-center gap-10">
-                        <ParameterList align="left" />
+                        {/* <ParameterList align="left" /> */}
                         {/*  360 View  */}
                         <div className="w-[20rem]">
                             <ReactImageTurntable
@@ -34,7 +34,7 @@ export default function ProductSlug({ params }: { params: { slug: string } }) {
                                 movementSensitivity={35}
                             />
                         </div>
-                        <ParameterList align="right" />
+                        {/* <ParameterList align="right" /> */}
                     </div>
                 </div>
             </div>

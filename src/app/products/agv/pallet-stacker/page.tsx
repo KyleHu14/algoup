@@ -2,12 +2,12 @@
 
 import { Button } from "@/components/ui/button"
 
-import UnderlineSpan from "@/components/Typography/UnderlineSpan"
-import OrangeSemibold from "@/components/Typography/OrangeSemibold"
+import UnderlineSpan from "@/components/General/UnderlineSpan"
+import OrangeSemibold from "@/components/General/OrangeSemibold"
 
 import { Rabbit, Undo2, Weight } from "lucide-react"
-import ProductCoverImage from "@/components/ProductCoverImage/ProductCoverImage"
-import ProductTable from "@/components/ProductTable/ProductTable"
+import ProductCoverImage from "@/components/Product/ProductCoverImage"
+import ProductTable from "@/components/Product/ProductTable"
 
 import {
     columnHeaders,

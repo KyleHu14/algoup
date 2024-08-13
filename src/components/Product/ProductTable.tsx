@@ -7,7 +7,7 @@ export default function ProductTable({ columnHeaders, data }: Props) {
     return (
         <table>
             <thead>
-                <tr className="text-2xl">
+                <tr className="text-xl 2xl:text-2xl">
                     {columnHeaders.map((entry, index) => {
                         return (
                             <th
@@ -26,7 +26,7 @@ export default function ProductTable({ columnHeaders, data }: Props) {
                         {specList.map((specData, index) => (
                             <td
                                 key={index}
-                                className={`border-b-[1px] border-b-zinc-600 py-10 text-xl ${index === 0 ? "font-semibold" : "font-medium"}`}
+                                className={`border-b-[1px] border-b-zinc-600 py-10 text-lg 2xl:text-xl ${index === 0 ? "font-semibold" : "font-light"}`}
                             >
                                 {specData}
                             </td>

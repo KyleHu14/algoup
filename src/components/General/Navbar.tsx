@@ -1,8 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
 
-import NavbarLink from "./NavbarLink"
-
 export default function DashboardNavbar() {
     return (
         <nav className="w-ful sticky top-0 z-50 border-b-zinc-300 bg-white py-4 shadow-md xl:px-14 2xl:px-28">
@@ -44,5 +42,21 @@ export default function DashboardNavbar() {
                 </div>
             </div>
         </nav>
+    )
+}
+
+interface NavbarLinkProps {
+    text: string
+    link: string
+}
+
+function NavbarLink({ text, link }: NavbarLinkProps) {
+    return (
+        <Link
+            className="font-semibold text-black transition duration-300 ease-in-out hover:text-orange-400 xl:text-lg 2xl:text-[1.2rem]"
+            href={link}
+        >
+            {text}
+        </Link>
     )
 }

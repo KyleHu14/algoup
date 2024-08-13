@@ -2,18 +2,18 @@
 
 import { Button } from "@/components/ui/button"
 
-import UnderlineSpan from "@/components/Typography/UnderlineSpan"
-import OrangeSemibold from "@/components/Typography/OrangeSemibold"
+import UnderlineSpan from "@/components/General/UnderlineSpan"
+import OrangeSemibold from "@/components/General/OrangeSemibold"
 
 import { Rabbit, Undo2, Weight } from "lucide-react"
-import ProductTable from "@/components/ProductTable/ProductTable"
+import ProductTable from "@/components/Product/ProductTable"
 
 import {
     columnHeaders,
     tractorData,
 } from "../../../../data/product/specifications/lifting"
 
-import ProductDisplayCarousel from "@/components/ProductDisplayCarousel/ProductDisplayCarousel"
+import ProductDisplayCarousel from "@/components/Product/ProductDisplayCarousel"
 import { ReactImageTurntable } from "react-image-turntable"
 import { useRef } from "react"
 

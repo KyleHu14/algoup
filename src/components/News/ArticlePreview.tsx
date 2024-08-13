@@ -1,5 +1,5 @@
 import Image from "next/image"
-import DateFormatter from "../DateFormatter/DateFormatter"
+import DateFormatter from "./DateFormatter"
 import Link from "next/link"
 
 interface ArticlePreviewParams {

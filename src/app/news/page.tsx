@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import ArticlePreview from "@/components/ArticlePreview/ArticlePreview"
+import ArticlePreview from "@/components/News/ArticlePreview"
 import { getAllArticles } from "@/lib/newsUtils"
 import Image from "next/image"
 import Link from "next/link"

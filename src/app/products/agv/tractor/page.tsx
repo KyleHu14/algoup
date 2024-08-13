@@ -2,11 +2,11 @@
 
 import { Button } from "@/components/ui/button"
 
-import UnderlineSpan from "@/components/Typography/UnderlineSpan"
-import OrangeSemibold from "@/components/Typography/OrangeSemibold"
+import UnderlineSpan from "@/components/General/UnderlineSpan"
+import OrangeSemibold from "@/components/General/OrangeSemibold"
 
 import { Rabbit, Undo2, Weight } from "lucide-react"
-import ProductTable from "@/components/ProductTable/ProductTable"
+import ProductTable from "@/components/Product/ProductTable"
 
 import {
     columnHeaders,
@@ -15,7 +15,7 @@ import {
 
 import { ReactImageTurntable } from "react-image-turntable"
 import { useRef } from "react"
-import ProductCoverImage from "@/components/ProductCoverImage/ProductCoverImage"
+import ProductCoverImage from "@/components/Product/ProductCoverImage"
 
 export default function TractorPage() {
     const specsRef = useRef<null | HTMLDivElement>(null)
@@ -35,11 +35,13 @@ export default function TractorPage() {
     return (
         <main>
             {/* Title Section */}
-            <section className="flex h-[90vh] flex-col items-center gap-4 bg-zinc-100 pt-14">
+            <section className="flex flex-col items-center justify-center gap-4 bg-zinc-100 py-14 2xl:h-[90vh] 2xl:py-0">
                 {/* Main Title */}
-                <h1 className="text-4xl text-zinc-800">Tractor AGV</h1>
+                <h1 className="text-3xl text-zinc-800 2xl:text-4xl">
+                    Tractor AGV
+                </h1>
                 {/* prettier-ignore */}
-                <h1 className="text-5xl text-zinc-800 mb-3">
+                <h1 className="text-4xl 2xl:text-5xl text-zinc-800 mb-3">
                     <UnderlineSpan text="Unique" /> Design for <UnderlineSpan text="Tracking" /> Applications.
                 </h1>
                 <h2 className="text-xl">
@@ -49,7 +51,7 @@ export default function TractorPage() {
                 {/* Learn More Button */}
                 <Button
                     onClick={scrollToSpecs}
-                    className="mb-12 w-fit bg-orange-400 text-xl hover:bg-orange-500"
+                    className="w-fit bg-orange-400 text-xl hover:bg-orange-500 2xl:mb-12"
                 >
                     Learn More
                 </Button>
@@ -68,7 +70,7 @@ export default function TractorPage() {
                 className="flex h-[100vh] flex-col items-center justify-center gap-16"
             >
                 {/* Title */}
-                <h1 className="text-5xl text-zinc-800">
+                <h1 className="text-4xl text-zinc-800 2xl:text-5xl">
                     Designed for <UnderlineSpan text="heavy duty" />{" "}
                     applications.
                 </h1>
@@ -123,40 +125,24 @@ export default function TractorPage() {
                         alt="AGV Tractor image"
                         rounded={false}
                     /> */}
-                    <ReactImageTurntable
-                        className="h-[20rem] w-[35rem]"
-                        images={images}
-                        autoRotate={{ disabled: true }}
-                        movementSensitivity={100}
-                    />
+                    <div>
+                        <ReactImageTurntable
+                            className="h-[17rem] w-[25rem] 2xl:h-[20rem] 2xl:w-[35rem]"
+                            images={images}
+                            autoRotate={{ disabled: true }}
+                            movementSensitivity={100}
+                        />
+                        <h1 className="text-center font-bold text-orange-400">
+                            Click and Drag for 360 View.
+                        </h1>
+                    </div>
                 </div>
             </section>
 
-            {/* <section className="flex h-[75vh] flex-col items-center gap-5">
-                <h1 className="text-5xl text-zinc-800">
-                    <UnderlineSpan text="Accurate" /> Navigation
-                </h1>
-
-                <p className="max-w-[55rem] text-center text-zinc-700 3xl:text-xl">
-                    Utilizing <OrangeSemibold text="SLAM navigation" /> , safety{" "}
-                    <OrangeSemibold text="LIDAR" /> obstacle avoidance, and{" "}
-                    <OrangeSemibold text="tow steer wheel differential driving" />
-                    , the PG-T is able to swiftly navigate through a variety of
-                    scenarios.
-                </p>
-
-                <ImageContainer
-                    className="h-[20rem] w-[25rem]"
-                    src="/navigation.jpg"
-                    alt="AMR Navigation"
-                    rounded={true}
-                />
-            </section> */}
-
             {/* Technical Specifications */}
-            <section className="flex flex-col gap-5 px-96 pb-32">
+            <section className="flex flex-col gap-5 px-40 pb-32 2xl:px-96">
                 {/* Title */}
-                <h1 className="text-center text-4xl text-zinc-800">
+                <h1 className="text-center text-3xl text-zinc-800 2xl:text-4xl">
                     Tractor AGV Technical Specifications
                 </h1>
                 <ProductTable
@@ -173,7 +159,11 @@ interface SpecDescriptionProps {
 }
 
 function SpecDescription({ children }: SpecDescriptionProps) {
-    return <p className="text-lg font-medium text-zinc-700">{children}</p>
+    return (
+        <p className="text-md font-medium text-zinc-700 2xl:text-lg">
+            {children}
+        </p>
+    )
 }
 
 interface SpecHeaderProps {
@@ -183,7 +173,7 @@ interface SpecHeaderProps {
 
 function SpecHeader({ title, children }: SpecHeaderProps) {
     return (
-        <h1 className="flex items-center gap-2 text-2xl font-bold">
+        <h1 className="flex items-center gap-2 text-xl font-bold 2xl:text-2xl">
             {children}
             {title}
         </h1>

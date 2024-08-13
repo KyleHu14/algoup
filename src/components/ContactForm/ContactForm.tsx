@@ -12,26 +12,27 @@ export default function Contact() {
         event.preventDefault()
         setResult("Sending Your Message...")
         const formData = new FormData(event.target)
+        if (process.env.NEXT_PUBLIC_FORM_ACCESS_KEY) {
+            formData.append(
+                "access_key",
+                process.env.NEXT_PUBLIC_FORM_ACCESS_KEY,
+            )
 
-        formData.append(
-            "access_key",
-            process.env.NEXT_PUBLIC_FORM_ACCESS_KEY ||
-                "c18b7497-dd33-4b95-aa23-0f9f3b67fddc",
-        )
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData,
+            })
 
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData,
-        })
-
-        const data = await response.json()
-
-        if (data.success) {
-            setResult("Your Message was Submitted Successfully!")
-            event.target.reset()
+            const data = await response.json()
+            if (data.success) {
+                setResult("Your Message was Submitted Successfully!")
+                event.target.reset()
+            } else {
+                console.log("Error : ", data)
+                setResult(data.message)
+            }
         } else {
-            console.log("Error : ", data)
-            setResult(data.message)
+            setResult("Error : Contact form connection is not working.")
         }
     }
 

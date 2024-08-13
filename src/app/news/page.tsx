@@ -25,8 +25,9 @@ export default function News() {
 
                 {/* Featured Article */}
                 <div className="flex gap-5">
-                    <div className="relative 2xl:h-[22rem] 2xl:w-[250rem] 3xl:h-[20rem] 3xl:w-[35rem]">
+                    <div className="relative h-[18rem] w-[30rem] 2xl:h-[22rem] 2xl:w-[33rem] 3xl:h-[20rem] 3xl:w-[35rem]">
                         <Image
+                            className="object-cover"
                             src={featuredArticle.coverImage}
                             fill={true}
                             alt="News Placeholder"

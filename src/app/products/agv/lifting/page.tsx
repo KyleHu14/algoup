@@ -16,6 +16,7 @@ import {
 import ProductDisplayCarousel from "@/components/Product/DisplayCarousel"
 import { ReactImageTurntable } from "react-image-turntable"
 import { useRef } from "react"
+import TitleSection from "@/components/Product/TitleSection"
 
 export default function LiftingPage() {
     const specsRef = useRef<null | HTMLDivElement>(null)
@@ -62,28 +63,20 @@ export default function LiftingPage() {
 
     return (
         <main>
-            {/* Title Section */}
-            <section className="flex h-[90vh] flex-col items-center gap-4 bg-zinc-100 pt-14">
-                {/* Main Title */}
-                <h1 className="text-4xl text-zinc-800">Lifting AGV</h1>
-                {/* prettier-ignore */}
-                <h1 className="text-5xl text-zinc-800 mb-3">
-                    Special Design for <UnderlineSpan text="Heavy Lifting" />.
-                </h1>
-                <h2 className="text-xl">
-                    Perfect for frequent handling of large cargo.
-                </h2>
-
-                {/* Learn More Button */}
-                <Button
-                    onClick={scrollToSpecs}
-                    className="mb-12 w-fit bg-orange-400 text-xl hover:bg-orange-500"
-                >
-                    Learn More
-                </Button>
-
-                <ProductDisplayCarousel images={carouselImages} />
-            </section>
+            <TitleSection
+                title="Lifting AGV"
+                subDesc="Perfect for frequent handling of large cargo."
+                specsRef={specsRef}
+                mainDesc={
+                    <>
+                        Special Design for{" "}
+                        <UnderlineSpan text="Heavy Lifting" />.
+                    </>
+                }
+                productImage={
+                    <ProductDisplayCarousel images={carouselImages} />
+                }
+            ></TitleSection>
 
             {/* Specification Summary - DC */}
             <section

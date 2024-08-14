@@ -39,7 +39,7 @@ export default function ProductCard({
             <CardContent>
                 <div className="relative flex h-[130px] w-[120px] items-center justify-center 2xl:h-[150px] 2xl:w-[150px]">
                     <Image
-                        className="object-contain"
+                        className="object-cover"
                         src={imageSrc}
                         fill={true}
                         alt="Category Image"

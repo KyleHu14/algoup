@@ -21,9 +21,9 @@ export default function CoverImage({ src, alt, className, rounded}: Props) {
         )
     }
     return (
-        <div className="relative h-[20rem] w-[35rem] 2xl:h-[20rem] 2xl:w-[40rem]">
+        <div className={`relative ${className}`}>
             <Image
-                className="object-cover"
+                className="object-contain"
                 src={src}
                 fill={true}
                 alt={alt}

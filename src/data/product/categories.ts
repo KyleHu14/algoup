@@ -36,7 +36,7 @@ const agvCategories: ProductCategoryType[] = [
     {
         name: "Slim Forklift",
         description: "",
-        imageSrc: "/agv/fork-lift/pg-cd-1.png",
+        imageSrc: "/agv/fork-lift/pg-cd-15/1.png",
         href: "/agv/slim-forklift",
     },
     {

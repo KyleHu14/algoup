@@ -22,6 +22,8 @@ import {
     columnHeaders,
     tractorData,
 } from "../../../../data/product/specifications/slim-forklift"
+import SpecHeader from "@/components/Product/SpecificationHeader"
+import { SpecDescription } from "@/components/Product/SpecificationDescription"
 
 export default function Content() {
     const specsRef = useRef<null | HTMLDivElement>(null)
@@ -198,27 +200,5 @@ export default function Content() {
                 data={tractorData}
             />
         </main>
-    )
-}
-
-interface SpecDescriptionProps {
-    children: React.ReactNode
-}
-
-function SpecDescription({ children }: SpecDescriptionProps) {
-    return <p className="text-lg font-medium text-zinc-700">{children}</p>
-}
-
-interface SpecHeaderProps {
-    title: string
-    children: React.ReactNode
-}
-
-function SpecHeader({ title, children }: SpecHeaderProps) {
-    return (
-        <h1 className="flex items-center gap-2 text-2xl font-bold">
-            {children}
-            {title}
-        </h1>
     )
 }

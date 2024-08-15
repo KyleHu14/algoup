@@ -1,14 +1,12 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-
 import OrangeSemibold from "@/components/General/OrangeSemibold"
 
 import { Rabbit, Undo2, Weight } from "lucide-react"
 
 import {
     columnHeaders,
-    tractorData,
+    data,
 } from "../../../../data/product/specifications/tractor"
 
 import { ReactImageTurntable } from "react-image-turntable"
@@ -23,10 +21,6 @@ import { SpecDescription } from "@/components/Product/SpecificationDescription"
 
 export default function Content() {
     const specsRef = useRef<null | HTMLDivElement>(null)
-
-    const scrollToSpecs = () => {
-        specsRef.current?.scrollIntoView({ behavior: "smooth" })
-    }
 
     const images = [
         "/agv/tractor/tseries-360-1.png",
@@ -123,7 +117,7 @@ export default function Content() {
             <SpecificationTable
                 title="Tractor AGV Technical Specifications"
                 columnHeaders={columnHeaders}
-                data={tractorData}
+                data={data}
             />
         </main>
     )

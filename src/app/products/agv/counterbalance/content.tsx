@@ -5,12 +5,11 @@ import OrangeSemibold from "@/components/General/OrangeSemibold"
 
 import { Rabbit, Undo2, Weight } from "lucide-react"
 import ProductCoverImage from "@/components/Product/CoverImage"
-import ProductTable from "@/components/Product/Table"
 
 import {
     columnHeaders,
-    tractorData,
-} from "../../../../data/product/specifications/tractor"
+    data,
+} from "../../../../data/product/specifications/counterbalance"
 
 import { ReactImageTurntable } from "react-image-turntable"
 import { useRef } from "react"
@@ -22,10 +21,6 @@ import SpecificationTable from "@/components/Product/SpecificationTable"
 
 export default function Content() {
     const specsRef = useRef<null | HTMLDivElement>(null)
-
-    const scrollToSpecs = () => {
-        specsRef.current?.scrollIntoView({ behavior: "smooth" })
-    }
 
     const images360 = [
         "/agv/counterbalance/1.png",
@@ -119,7 +114,7 @@ export default function Content() {
             <SpecificationTable
                 title="Counter Balance AGV Technical Specifications"
                 columnHeaders={columnHeaders}
-                data={tractorData}
+                data={data}
             />
         </main>
     )

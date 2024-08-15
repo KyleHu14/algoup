@@ -1,82 +1,92 @@
 "use client"
 
-// React
-import { useRef } from "react"
-
-// Icons
-import { Rabbit, Undo2, Weight } from "lucide-react"
-
-// 360 View
-import { ReactImageTurntable } from "react-image-turntable"
-
-// Components
 import UnderlineSpan from "@/components/General/UnderlineSpan"
 import OrangeSemibold from "@/components/General/OrangeSemibold"
-import CoverImage from "@/components/Product/CoverImage"
-import TitleSection from "@/components/Product/TitleSection"
-import SpecificationSummary from "@/components/Product/SpecificationSummary"
-import SpecificationTable from "@/components/Product/SpecificationTable"
 
-// Data
+import { Rabbit, Undo2, Weight } from "lucide-react"
+
 import {
     columnHeaders,
     data,
-} from "../../../../data/product/specifications/slim-forklift"
+} from "../../../../data/product/specifications/lifting"
+
+import ProductDisplayCarousel from "@/components/Product/DisplayCarousel"
+import { ReactImageTurntable } from "react-image-turntable"
+import { useRef } from "react"
+import TitleSection from "@/components/Product/TitleSection"
+import SpecificationSummary from "@/components/Product/SpecificationSummary"
 import SpecHeader from "@/components/Product/SpecificationHeader"
 import { SpecDescription } from "@/components/Product/SpecificationDescription"
+import SpecificationTable from "@/components/Product/SpecificationTable"
 
 export default function Content() {
     const specsRef = useRef<null | HTMLDivElement>(null)
 
-    const pgcd15Images = [
-        "/agv/fork-lift/pg-cd-15/1.png",
-        "/agv/fork-lift/pg-cd-15/2.png",
-        "/agv/fork-lift/pg-cd-15/3.png",
-        "/agv/fork-lift/pg-cd-15/4.png",
-        "/agv/fork-lift/pg-cd-15/5.png",
-        "/agv/fork-lift/pg-cd-15/6.png",
-        "/agv/fork-lift/pg-cd-15/7.png",
-        "/agv/fork-lift/pg-cd-15/8.png",
+    const carouselImages: string[] = [
+        "/agv/lifting/dcseries-1.png",
+        "/agv/lifting/ddseries-1.png",
+        "/agv/lifting/qseries-1.png",
+        "/agv/lifting/dcseries-2.png",
+        "/agv/lifting/ddseries-2.png",
+        "/agv/lifting/qseries-2.png",
+        "/agv/lifting/dcseries-3.png",
+        "/agv/lifting/ddseries-3.png",
+        "/agv/lifting/qseries-3.png",
     ]
 
-    const pgcd20Images = [
-        "/agv/fork-lift/pg-cd-20/1.png",
-        "/agv/fork-lift/pg-cd-20/2.png",
-        "/agv/fork-lift/pg-cd-20/3.png",
-        "/agv/fork-lift/pg-cd-20/4.png",
-        "/agv/fork-lift/pg-cd-20/5.png",
-        "/agv/fork-lift/pg-cd-20/6.png",
-        "/agv/fork-lift/pg-cd-20/7.png",
-        "/agv/fork-lift/pg-cd-20/8.png",
+    const dc360Images: string[] = [
+        "/agv/lifting/dc/1.jpg",
+        "/agv/lifting/dc/2.jpg",
+        "/agv/lifting/dc/3.jpg",
+        "/agv/lifting/dc/4.jpg",
+        "/agv/lifting/dc/5.jpg",
+        "/agv/lifting/dc/6.jpg",
+        "/agv/lifting/dc/7.jpg",
+        "/agv/lifting/dc/8.jpg",
+    ]
+
+    const dd360Images: string[] = [
+        "/agv/lifting/dd/1.jpg",
+        "/agv/lifting/dd/2.jpg",
+        "/agv/lifting/dd/3.jpg",
+        "/agv/lifting/dd/4.jpg",
+        "/agv/lifting/dd/5.jpg",
+        "/agv/lifting/dd/6.jpg",
+        "/agv/lifting/dd/7.jpg",
+        "/agv/lifting/dd/8.jpg",
+    ]
+
+    const q360Images = [
+        "/agv/lifting/q/1.jpg",
+        "/agv/lifting/q/2.jpg",
+        "/agv/lifting/q/3.jpg",
+        "/agv/lifting/q/4.jpg",
+        "/agv/lifting/q/5.jpg",
+        "/agv/lifting/q/6.jpg",
+        "/agv/lifting/q/7.jpg",
+        "/agv/lifting/q/8.jpg",
     ]
 
     return (
         <main>
             <TitleSection
-                title="Slim Forklift AGV"
+                title="Lifting AGV"
                 subDesc="Perfect for frequent handling of large cargo."
                 specsRef={specsRef}
                 mainDesc={
                     <>
-                        <UnderlineSpan text="Cost Beneficial" /> Mobility
-                        Solution.
+                        Special Design for{" "}
+                        <UnderlineSpan text="Heavy Lifting" />.
                     </>
                 }
                 productImage={
-                    <div className="mt-5 flex items-center justify-center">
-                        <CoverImage
-                            className="h-[20rem] w-[35rem]"
-                            src="/agv/fork-lift/pg-cd-15/1.png"
-                            alt="PG-CD 15 Cover Image"
-                            rounded={false}
-                        />
-                    </div>
+                    <ProductDisplayCarousel images={carouselImages} />
                 }
             ></TitleSection>
 
-            {/* PG-CD-15 */}
+            {/* Specification Summary - DC */}
             <SpecificationSummary
-                title={<>PG-CD 15 Overview</>}
+                title={<>DC-Series Overview</>}
                 specsRef={specsRef}
                 specifications={
                     <>
@@ -121,17 +131,17 @@ export default function Content() {
                 }
                 productView={
                     <ReactImageTurntable
-                        className="h-[17rem] w-[25rem] 2xl:h-[20rem] 2xl:w-[35rem]"
-                        images={pgcd15Images}
+                        className="h-[20rem] w-[35rem]"
+                        images={dc360Images}
                         autoRotate={{ disabled: true }}
-                        movementSensitivity={40}
+                        movementSensitivity={120}
                     />
                 }
             />
 
-            {/* PG-CD-20 */}
+            {/* Specification Summary - DD */}
             <SpecificationSummary
-                title={<>PG-CD 20 Overview</>}
+                title={<>DD-Series Overview</>}
                 specifications={
                     <>
                         {/* Max Weight */}
@@ -175,17 +185,70 @@ export default function Content() {
                 }
                 productView={
                     <ReactImageTurntable
-                        className="h-[17rem] w-[20rem] 2xl:h-[22rem] 2xl:w-[23rem]"
-                        images={pgcd20Images}
+                        className="h-[20rem] w-[35rem]"
+                        images={dd360Images}
                         autoRotate={{ disabled: true }}
-                        movementSensitivity={40}
+                        movementSensitivity={140}
                     />
                 }
             />
 
-            {/* Technical Specifications */}
+            {/* Specification Summary - Q */}
+            <SpecificationSummary
+                title={<>Q-Series Overview</>}
+                specifications={
+                    <>
+                        {/* Max Weight */}
+                        <div>
+                            <SpecHeader title="Max Payload Weight">
+                                <Weight />
+                            </SpecHeader>
+
+                            <SpecDescription>
+                                Our tractor AGV can carry up to a maximum of{" "}
+                                <OrangeSemibold text="4 tons" /> making it
+                                suitable for carrying heavy loads.
+                            </SpecDescription>
+                        </div>
+
+                        {/* Max Lifting Height */}
+                        <div>
+                            <SpecHeader title="Max Speed">
+                                <Rabbit />
+                            </SpecHeader>
+                            <SpecDescription>
+                                With a max speed of{" "}
+                                <OrangeSemibold text="1 meter / second" />, the
+                                tractor can move heavy cargo at efficient
+                                speeds.
+                            </SpecDescription>
+                        </div>
+
+                        {/* Pallet Size */}
+                        <div>
+                            <SpecHeader title="Turning Radius">
+                                <Undo2 />
+                            </SpecHeader>
+                            <SpecDescription>
+                                Having a turning radius{" "}
+                                <OrangeSemibold text="800mm" /> allows the
+                                tractor to have maximum versatility.
+                            </SpecDescription>
+                        </div>
+                    </>
+                }
+                productView={
+                    <ReactImageTurntable
+                        className="h-[20rem] w-[35rem]"
+                        images={q360Images}
+                        autoRotate={{ disabled: true }}
+                        movementSensitivity={140}
+                    />
+                }
+            />
+
             <SpecificationTable
-                title="Slim Forklift AGV Technical Specifications"
+                title="Lifting AGV Technical Specifications"
                 columnHeaders={columnHeaders}
                 data={data}
             />

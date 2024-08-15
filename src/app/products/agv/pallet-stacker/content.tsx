@@ -20,8 +20,8 @@ import SpecificationTable from "@/components/Product/SpecificationTable"
 // Data
 import {
     columnHeaders,
-    tractorData,
-} from "../../../../data/product/specifications/slim-forklift"
+    data,
+} from "../../../../data/product/specifications/pallet-stacker"
 import SpecHeader from "@/components/Product/SpecificationHeader"
 import { SpecDescription } from "@/components/Product/SpecificationDescription"
 
@@ -120,7 +120,7 @@ export default function Content() {
             <SpecificationTable
                 title="Pallet Stacker AGV Technical Specifications"
                 columnHeaders={columnHeaders}
-                data={tractorData}
+                data={data}
             />
         </main>
     )

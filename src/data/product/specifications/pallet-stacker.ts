@@ -1,4 +1,4 @@
-export const columnHeaders: string[] = ["Specs", "T-Series"]
+export const columnHeaders: string[] = ["Specs", "PG-CR 16"]
 
 export const data = [
     ["Dimensions (L/W/H, mm)", "1100*540*550-1300*600*650"],

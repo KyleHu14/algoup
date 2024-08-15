@@ -5,7 +5,7 @@ export const columnHeaders: string[] = [
     "Q-Series",
 ]
 
-export const tractorData = [
+export const data = [
     [
         "Dimensions (L/W/H, mm)",
         "950*700*260-1500*900*350",

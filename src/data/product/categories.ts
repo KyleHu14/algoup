@@ -48,7 +48,7 @@ const agvCategories: ProductCategoryType[] = [
     {
         name: "Counterbalance",
         description: "",
-        imageSrc: "/agv/counterbalance/pg-cp-1.png",
+        imageSrc: "/agv/counterbalance/1.png",
         href: "/agv/counterbalance",
     },
 ]

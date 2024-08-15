@@ -1,4 +1,4 @@
-export const columnHeaders: string[] = ["Specs", "PG-CD 20", "PG-CD 15"]
+export const columnHeaders: string[] = ["Specs", "PG-CD 15", "PG-CD 20"]
 
 export const tractorData = [
     [

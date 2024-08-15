@@ -63,17 +63,11 @@ export default function Content() {
                     </>
                 }
                 productImage={
-                    <div className="flex">
+                    <div className="mt-5 flex items-center justify-center">
                         <CoverImage
-                            className="mr-[-20rem] h-[22rem] w-[35rem]"
+                            className="h-[20rem] w-[35rem]"
                             src="/agv/fork-lift/pg-cd-15/1.png"
-                            alt="T series tractor"
-                            rounded={false}
-                        />
-                        <CoverImage
-                            className="h-[20rem] w-[35rem] 2xl:w-[50rem]"
-                            src="/agv/fork-lift/pg-cd-20/3.png"
-                            alt="T series tractor"
+                            alt="PG-CD 15 Cover Image"
                             rounded={false}
                         />
                     </div>
@@ -181,7 +175,7 @@ export default function Content() {
                 }
                 productView={
                     <ReactImageTurntable
-                        className="h-[17rem] w-[25rem] 2xl:h-[20rem] 2xl:w-[35rem]"
+                        className="h-[17rem] w-[20rem] 2xl:h-[22rem] 2xl:w-[23rem]"
                         images={pgcd20Images}
                         autoRotate={{ disabled: true }}
                         movementSensitivity={40}

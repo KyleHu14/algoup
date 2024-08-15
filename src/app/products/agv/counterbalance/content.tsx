@@ -41,8 +41,8 @@ export default function Content() {
                 specsRef={specsRef}
                 mainDesc={
                     <>
-                        Design for <UnderlineSpan text="Tracking" />{" "}
-                        Applications.
+                        <UnderlineSpan text="High Flexibility" /> Pallet
+                        Movement Solution
                     </>
                 }
                 productImage={

@@ -23,11 +23,14 @@ export default function Content() {
     const specsRef = useRef<null | HTMLDivElement>(null)
 
     const images = [
-        "/agv/tractor/tseries-360-1.png",
-        "/agv/tractor/tseries-360-2.png",
-        "/agv/tractor/tseries-360-3.png",
-        "/agv/tractor/tseries-360-4.png",
-        "/agv/tractor/tseries-360-5.png",
+        "/agv/tractor/t/1.jpg",
+        "/agv/tractor/t/2.jpg",
+        "/agv/tractor/t/3.jpg",
+        "/agv/tractor/t/4.jpg",
+        "/agv/tractor/t/5.jpg",
+        "/agv/tractor/t/6.jpg",
+        "/agv/tractor/t/7.jpg",
+        "/agv/tractor/t/8.jpg",
     ]
 
     return (

@@ -53,7 +53,7 @@ export default function Content() {
                 }
                 productImage={
                     <CoverImage
-                        className="h-[22rem] w-[35rem]"
+                        className="h-[22rem] w-[30rem]"
                         src="/agv/pallet-stacker/pg-cr-16/1.png"
                         alt="Pallet Stacker Cover Image"
                         rounded={false}

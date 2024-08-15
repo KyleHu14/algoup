@@ -28,10 +28,6 @@ import { SpecDescription } from "@/components/Product/SpecificationDescription"
 export default function Content() {
     const specsRef = useRef<null | HTMLDivElement>(null)
 
-    const scrollToSpecs = () => {
-        specsRef.current?.scrollIntoView({ behavior: "smooth" })
-    }
-
     const pgcd15Images = [
         "/agv/fork-lift/pg-cd-15/1.png",
         "/agv/fork-lift/pg-cd-15/2.png",

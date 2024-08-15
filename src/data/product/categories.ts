@@ -42,7 +42,7 @@ const agvCategories: ProductCategoryType[] = [
     {
         name: "Pallet Stacker",
         description: "",
-        imageSrc: "/agv/pallet-stacker/pg-cr-1.png",
+        imageSrc: "/agv/pallet-stacker/pg-cr-16/1.png",
         href: "/agv/pallet-stacker",
     },
     {

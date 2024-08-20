@@ -37,7 +37,7 @@ export default function ProductCard({
                 <CardDescription>{description}</CardDescription>
             </CardHeader>
             <CardContent>
-                <div className="relative flex h-[130px] w-[120px] items-center justify-center 2xl:h-[150px] 2xl:w-[150px]">
+                <div className="relative flex h-[130px] w-[120px] items-center justify-center 2xl:h-[120px] 2xl:w-[150px]">
                     <Image
                         className="object-cover"
                         src={imageSrc}

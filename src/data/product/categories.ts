@@ -24,13 +24,13 @@ const agvCategories: ProductCategoryType[] = [
     {
         name: "Tractor",
         description: "",
-        imageSrc: "/agv/tractor/tseries-1.png",
+        imageSrc: "/agv/tractor/t/1.jpg",
         href: "/agv/tractor",
     },
     {
         name: "Lifting",
         description: "",
-        imageSrc: "/agv/lifting/dcseries-1.png",
+        imageSrc: "/agv/lifting/dc/dc-cover.jpg",
         href: "/agv/lifting",
     },
     {

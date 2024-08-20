@@ -23,48 +23,48 @@ export default function Content() {
     const specsRef = useRef<null | HTMLDivElement>(null)
 
     const carouselImages: string[] = [
-        "/agv/lifting/dcseries-1.png",
-        "/agv/lifting/ddseries-1.png",
-        "/agv/lifting/qseries-1.png",
-        "/agv/lifting/dcseries-2.png",
-        "/agv/lifting/ddseries-2.png",
-        "/agv/lifting/qseries-2.png",
-        "/agv/lifting/dcseries-3.png",
-        "/agv/lifting/ddseries-3.png",
-        "/agv/lifting/qseries-3.png",
+        "/agv/lifting/dc/1.png",
+        "/agv/lifting/dd/1.png",
+        "/agv/lifting/q/1.png",
+        "/agv/lifting/dc/2.png",
+        "/agv/lifting/dd/2.png",
+        "/agv/lifting/q/2.png",
+        "/agv/lifting/dc/3.png",
+        "/agv/lifting/dd/3.png",
+        "/agv/lifting/q/3.png",
     ]
 
     const dc360Images: string[] = [
-        "/agv/lifting/dc/1.jpg",
-        "/agv/lifting/dc/2.jpg",
-        "/agv/lifting/dc/3.jpg",
-        "/agv/lifting/dc/4.jpg",
-        "/agv/lifting/dc/5.jpg",
-        "/agv/lifting/dc/6.jpg",
-        "/agv/lifting/dc/7.jpg",
-        "/agv/lifting/dc/8.jpg",
+        "/agv/lifting/dc/1.png",
+        "/agv/lifting/dc/2.png",
+        "/agv/lifting/dc/3.png",
+        "/agv/lifting/dc/4.png",
+        "/agv/lifting/dc/5.png",
+        "/agv/lifting/dc/6.png",
+        "/agv/lifting/dc/7.png",
+        "/agv/lifting/dc/8.png",
     ]
 
     const dd360Images: string[] = [
-        "/agv/lifting/dd/1.jpg",
-        "/agv/lifting/dd/2.jpg",
-        "/agv/lifting/dd/3.jpg",
-        "/agv/lifting/dd/4.jpg",
-        "/agv/lifting/dd/5.jpg",
-        "/agv/lifting/dd/6.jpg",
-        "/agv/lifting/dd/7.jpg",
-        "/agv/lifting/dd/8.jpg",
+        "/agv/lifting/dd/1.png",
+        "/agv/lifting/dd/2.png",
+        "/agv/lifting/dd/3.png",
+        "/agv/lifting/dd/4.png",
+        "/agv/lifting/dd/5.png",
+        "/agv/lifting/dd/6.png",
+        "/agv/lifting/dd/7.png",
+        "/agv/lifting/dd/8.png",
     ]
 
     const q360Images = [
-        "/agv/lifting/q/1.jpg",
-        "/agv/lifting/q/2.jpg",
-        "/agv/lifting/q/3.jpg",
-        "/agv/lifting/q/4.jpg",
-        "/agv/lifting/q/5.jpg",
-        "/agv/lifting/q/6.jpg",
-        "/agv/lifting/q/7.jpg",
-        "/agv/lifting/q/8.jpg",
+        "/agv/lifting/q/1.png",
+        "/agv/lifting/q/2.png",
+        "/agv/lifting/q/3.png",
+        "/agv/lifting/q/4.png",
+        "/agv/lifting/q/5.png",
+        "/agv/lifting/q/6.png",
+        "/agv/lifting/q/7.png",
+        "/agv/lifting/q/8.png",
     ]
 
     return (
@@ -188,7 +188,7 @@ export default function Content() {
                         className="h-[20rem] w-[35rem]"
                         images={dd360Images}
                         autoRotate={{ disabled: true }}
-                        movementSensitivity={140}
+                        movementSensitivity={200}
                     />
                 }
             />

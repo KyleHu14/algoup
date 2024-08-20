@@ -23,14 +23,14 @@ export default function Content() {
     const specsRef = useRef<null | HTMLDivElement>(null)
 
     const images = [
-        "/agv/tractor/t/1.jpg",
-        "/agv/tractor/t/2.jpg",
-        "/agv/tractor/t/3.jpg",
-        "/agv/tractor/t/4.jpg",
-        "/agv/tractor/t/5.jpg",
-        "/agv/tractor/t/6.jpg",
-        "/agv/tractor/t/7.jpg",
-        "/agv/tractor/t/8.jpg",
+        "/agv/tractor/t/1.png",
+        "/agv/tractor/t/2.JPG",
+        "/agv/tractor/t/3.JPG",
+        "/agv/tractor/t/4.JPG",
+        "/agv/tractor/t/5.JPG",
+        "/agv/tractor/t/6.JPG",
+        "/agv/tractor/t/7.JPG",
+        "/agv/tractor/t/8.JPG",
     ]
 
     return (
@@ -49,7 +49,7 @@ export default function Content() {
                 productImage={
                     <ProductCoverImage
                         className="h-[20rem] w-[35rem] 2xl:h-[20rem] 2xl:w-[40rem]"
-                        src="/agv/tractor/tseries-1.png"
+                        src="/agv/tractor/t/1.png"
                         alt="T series tractor"
                         rounded={false}
                     />

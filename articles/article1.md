@@ -1,19 +1,13 @@
 ---
-title: "Algoup Website is Live!"
-excerpt: "The algoup website has just gone live, learn about how its built and organized."
+title: "New Model : PG-RS"
+excerpt: "Algoup released a new PG-RS model for pallet lifting."
 coverImage: "/news/news-placeholder.png"
-date: "2024-07-17"
+date: "2024-06-15"
 author:
-    name: JJ Kasper
+    name: Algoup Team
     picture: "/assets/blog/authors/jj.jpeg"
 ogImage:
     url: "/news/news-placeholder.png"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
-
-Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
-
-## Lorem Ipsum
-
-Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.
+Excited to announce ALGOUP's new AGV model, PG-RS, is ready to serve the use cases of horizontal pallet movement with improved productivity and efficiency. Comparing with last generation, PG-RS is with 15% size reduction together with up to 2.0m/s max. speed and 10 hours working lead time with one full charge. All features incl. RCS and AI based perception make it one of the best-in-class forklift AGVs in the market.

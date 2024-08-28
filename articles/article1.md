@@ -1,7 +1,7 @@
 ---
 title: "New Model : PG-RS"
 excerpt: "Algoup released a new PG-RS model for pallet lifting."
-coverImage: "/news/news-placeholder.png"
+coverImage: "/news/pg-rs-cover.jpg"
 date: "2024-06-15"
 author:
     name: Algoup Team

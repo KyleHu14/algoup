@@ -1,0 +1,23 @@
+.gridContainer {
+    display: grid;
+    grid-template-areas:
+        "header header menu menu"
+        "header header main right"
+        "footer footer main right";
+}
+
+.counterbalance {
+    grid-area: header;
+}
+.tractor {
+    grid-area: menu;
+}
+.slimforklift {
+    grid-area: main;
+}
+.palletstacker {
+    grid-area: right;
+}
+.lifting {
+    grid-area: footer;
+}

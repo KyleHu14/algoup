@@ -34,7 +34,7 @@ export default function Home() {
 
                 {/* Grid for the Product Display */}
                 <div
-                    className={`m-14 gap-14 bg-[#969696] px-72 py-20 ${styles.gridContainer}`}
+                    className={`m-14 gap-14 px-72 py-20 ${styles.gridContainer}`}
                 >
                     {/* Counter Balance AGV */}
                     <ProductContainer
@@ -74,7 +74,7 @@ export default function Home() {
                         title="Slim Forklift"
                         isHorizontal={false}
                     >
-                        <div className="relative h-[432px] w-[267px]">
+                        <div className="relative h-[393px] w-[240px]">
                             <Image
                                 className="object-cover"
                                 alt="Counter Balance Image"
@@ -136,10 +136,11 @@ function ProductContainer({
 }: productContainerProps) {
     if (isHorizontal) {
         return (
-            <div className={`bg-[#E7E7E7] ${className}`}>
-                <div className="flex flex-col justify-center">
-                    <h1 className="text-2xl font-bold">{title}</h1>
-                    <Button>Learn More</Button>
+            <div className={`bg-[#e6e6e6] ${className}`}>
+                <div className="flex flex-col p-5">
+                    <h1 className="text-3xl font-bold text-zinc-800">
+                        {title}
+                    </h1>
                 </div>
 
                 {children}
@@ -147,8 +148,8 @@ function ProductContainer({
         )
     } else {
         return (
-            <div className={`bg-[#E7E7E7] ${className}`}>
-                <h1 className="text-2xl font-bold">{title}</h1>
+            <div className={`bg-[#E7E7E7] ${className} p-5`}>
+                <h1 className="text-3xl font-bold text-zinc-800">{title}</h1>
                 {children}
             </div>
         )

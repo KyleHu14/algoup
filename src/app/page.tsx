@@ -1,7 +1,7 @@
 import Image from "next/image"
+import Link from "next/link"
 
 import styles from "./home.module.css"
-import { Button } from "@/components/ui/button"
 
 export default function Home() {
     return (
@@ -22,11 +22,11 @@ export default function Home() {
                     Empowering Your Business with Robotics
                 </div>
             </section>
-            <section className="bg-[#313131] py-20">
+            <section className="bg-[#252525] py-20">
                 {/* Header for AGV Product Section */}
                 <header className="flex flex-col gap-3 text-center">
-                    <h1 className="text-4xl text-white">AGV Products</h1>
-                    <p className="text-zinc-300">
+                    <h1 className="text-6xl text-white">AGV Products</h1>
+                    <p className="text-3xl font-light text-zinc-300">
                         View our products that are designed for your special
                         cases.
                     </p>
@@ -34,15 +34,16 @@ export default function Home() {
 
                 {/* Grid for the Product Display */}
                 <div
-                    className={`m-14 gap-14 px-72 py-20 ${styles.gridContainer}`}
+                    className={`gap-10 py-20 xl:px-14 2xl:px-72 ${styles.gridContainer}`}
                 >
                     {/* Counter Balance AGV */}
                     <ProductContainer
+                        link="/products/agv/counterbalance"
                         className={`flex flex-col items-center justify-center ${styles.counterbalance}`}
                         title="Counter Balance AGV"
                         isHorizontal={false}
                     >
-                        <div className="relative h-[464px] w-[383px]">
+                        <div className="relative h-[404px] w-[323px] 2xl:h-[464px] 2xl:w-[383px]">
                             <Image
                                 className="object-cover"
                                 alt="Counter Balance Image"
@@ -54,14 +55,15 @@ export default function Home() {
 
                     {/* Autonomous Tractor */}
                     <ProductContainer
+                        link="/products/agv/tractor"
                         className={`flex justify-center ${styles.tractor}`}
                         title="Autonomous Tractors"
                         isHorizontal={true}
                     >
-                        <div className="relative h-[277px] w-[446px]">
+                        <div className="relative h-[237px] w-[406px] 2xl:h-[277px] 2xl:w-[446px]">
                             <Image
                                 className="object-cover"
-                                alt="Counter Balance Image"
+                                alt="Tractor Image"
                                 src="/agv/tractor/t/1.png"
                                 fill={true}
                             />
@@ -70,14 +72,15 @@ export default function Home() {
 
                     {/* Slim Forklift */}
                     <ProductContainer
+                        link="/products/agv/slim-forklift"
                         className={`${styles.slimforklift} flex flex-col items-center justify-center`}
                         title="Slim Forklift"
                         isHorizontal={false}
                     >
-                        <div className="relative h-[393px] w-[240px]">
+                        <div className="relative h-[353px] w-[200px] 2xl:h-[393px] 2xl:w-[240px]">
                             <Image
                                 className="object-cover"
-                                alt="Counter Balance Image"
+                                alt="Slim Forklift Image"
                                 src="/agv/fork-lift/pg-cd-15/1.png"
                                 fill={true}
                             />
@@ -86,14 +89,15 @@ export default function Home() {
 
                     {/* Pallet Stacker */}
                     <ProductContainer
+                        link="/products/agv/pallet-stacker"
                         className={`${styles.palletstacker} flex flex-col items-center justify-center`}
                         title="Pallet Stacker"
                         isHorizontal={false}
                     >
-                        <div className="relative h-[393px] w-[240px]">
+                        <div className="relative h-[353px] w-[200px] 2xl:h-[393px] 2xl:w-[240px]">
                             <Image
                                 className="object-cover"
-                                alt="Counter Balance Image"
+                                alt="Pallet Stacker Image"
                                 src="/agv/pallet-stacker/pg-cr-16/1.png"
                                 fill={true}
                             />
@@ -102,6 +106,7 @@ export default function Home() {
 
                     {/* Lifting AGV */}
                     <ProductContainer
+                        link="/products/agv/lifting"
                         className={`flex justify-center ${styles.lifting}`}
                         title="Lifting AGV"
                         isHorizontal={true}
@@ -123,6 +128,7 @@ export default function Home() {
 
 interface productContainerProps {
     className?: string
+    link: string
     title: string
     isHorizontal: boolean
     children: React.ReactNode
@@ -130,28 +136,23 @@ interface productContainerProps {
 
 function ProductContainer({
     title,
+    link,
     className,
     isHorizontal,
     children,
 }: productContainerProps) {
-    if (isHorizontal) {
-        return (
-            <div className={`bg-[#e6e6e6] ${className}`}>
-                <div className="flex flex-col p-5">
-                    <h1 className="text-3xl font-bold text-zinc-800">
-                        {title}
-                    </h1>
-                </div>
+    return (
+        <Link
+            href={link}
+            className={`bg-[#dfdfdf] ${className} rounded-sm text-zinc-800 duration-500 ease-out hover:scale-105 hover:text-orange-400`}
+        >
+            <div
+                className={`flex p-5 ${isHorizontal ? "flex-col justify-center" : ""}`}
+            >
+                <h1 className="text-3xl font-semibold">{title}</h1>
+            </div>
 
-                {children}
-            </div>
-        )
-    } else {
-        return (
-            <div className={`bg-[#E7E7E7] ${className} p-5`}>
-                <h1 className="text-3xl font-bold text-zinc-800">{title}</h1>
-                {children}
-            </div>
-        )
-    }
+            {children}
+        </Link>
+    )
 }

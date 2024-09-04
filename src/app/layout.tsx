@@ -6,7 +6,7 @@ import "./globals.css"
 
 // Importing of Components
 import Navbar from "@/components/General/Navbar"
-import Footer from "@/components/General/Footer/Footer"
+import Footer from "@/components/General/Footer"
 
 export const metadata: Metadata = {
     title: "Algoup",

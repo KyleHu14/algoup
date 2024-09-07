@@ -17,10 +17,34 @@ export default function Technology() {
             </section>
 
             {/* Technology Categories */}
-            <section className="bg-white">
+            <section className="flex flex-col gap-6 bg-white">
                 <CategoryContainer
                     icon="/technology/header.jpg"
                     title="Vehicle Design"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                />
+
+                <CategoryContainer
+                    icon="/technology/header.jpg"
+                    title="Control System"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                />
+
+                <CategoryContainer
+                    icon="/technology/header.jpg"
+                    title="Safety System"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                />
+
+                <CategoryContainer
+                    icon="/technology/header.jpg"
+                    title="Battery System"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                />
+
+                <CategoryContainer
+                    icon="/technology/header.jpg"
+                    title="Software System"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
                 />
             </section>
@@ -40,10 +64,19 @@ function CategoryContainer({
     description,
 }: CategoryContainerProps) {
     return (
-        <div className="flex px-16 py-10">
-            <Image height={30} width={30} src={icon} alt="Category Icon" />
-            <h1>{title}</h1>
-            <p>{description}</p>
+        <div className="grid grid-cols-6 items-center px-40 py-10">
+            <h1 className="col-span-2 flex w-fit items-center gap-20 whitespace-nowrap text-3xl font-bold">
+                <div className="relative h-20 w-20">
+                    <Image
+                        className="rounded-full object-fill"
+                        src={icon}
+                        alt="Category Icon"
+                        fill
+                    />
+                </div>
+                {title}
+            </h1>
+            <p className="col-span-4 text-xl">{description}</p>
         </div>
     )
 }

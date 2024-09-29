@@ -3,14 +3,14 @@ import Link from "next/link"
 
 export default function DashboardNavbar() {
     return (
-        <nav className="w-ful sticky top-0 z-50 border-b-zinc-300 bg-white py-4 shadow-md xl:px-14 2xl:px-28">
+        <nav className="w-ful sticky top-0 z-50 border-b-zinc-100 bg-white py-4 shadow-md xl:px-14 2xl:px-28">
             <div className="flex justify-between">
                 <Link
                     href="/"
                     className="relative xl:h-[45px] xl:w-[170px] 2xl:h-[65px] 2xl:w-[260px]"
                 >
                     <Image
-                        src="/logo-full.png"
+                        src="/logo-full.jpg"
                         fill={true}
                         alt="Company Logo"
                     />
@@ -35,7 +35,7 @@ export default function DashboardNavbar() {
                     <NavbarLink link="/news" text="News" />
                     <NavbarLink link="/about" text="About Us" />
                     <Link href="/contact">
-                        <button className="= rounded-xl bg-orange-400 p-2 font-semibold text-white transition duration-300 ease-in-out hover:bg-orange-500 xl:text-lg 2xl:text-[1.1rem]">
+                        <button className="= bg-secondary-color hover:bg-secondary-color-dark rounded-xl p-2 font-semibold text-white transition duration-300 ease-in-out xl:text-lg 2xl:text-[1.1rem]">
                             Contact Us
                         </button>
                     </Link>
@@ -53,7 +53,7 @@ interface NavbarLinkProps {
 function NavbarLink({ text, link }: NavbarLinkProps) {
     return (
         <Link
-            className="font-semibold text-black transition duration-300 ease-in-out hover:text-orange-400 xl:text-lg 2xl:text-[1.2rem]"
+            className="hover:text-secondary-color font-semibold text-black transition duration-300 ease-in-out xl:text-lg 2xl:text-[1.2rem]"
             href={link}
         >
             {text}

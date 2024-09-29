@@ -7,7 +7,7 @@ export default function Footer() {
             {/* Col 1 - Logo */}
             <div className="flex flex-col">
                 <Image
-                    src="/logo-full.png"
+                    src="/logo-full.jpg"
                     width={317}
                     height={75}
                     alt="Logo Picture"
@@ -19,7 +19,7 @@ export default function Footer() {
 
             {/* Col 2 - Contact */}
             <div className="flex flex-col gap-3">
-                <h1 className="text-4xl text-orange-400">Contact</h1>
+                <h1 className="text-secondary-color text-4xl">Contact</h1>
                 <div className="text-white">
                     <h1 className="text-2xl font-semibold 2xl:text-3xl">
                         Phone
@@ -43,7 +43,7 @@ export default function Footer() {
 
             {/* Col 3 - Navigation */}
             <div className="flex flex-col gap-3">
-                <h1 className="text-4xl text-orange-400">Navigation</h1>
+                <h1 className="text-secondary-color text-4xl">Navigation</h1>
                 <Link className="text-xl text-zinc-400" href="/technology">
                     Technology
                 </Link>
@@ -66,7 +66,7 @@ export default function Footer() {
 
             {/* Col 4 - Social Media */}
             <div className="flex flex-col gap-3">
-                <h1 className="text-4xl text-orange-400">Navigation</h1>
+                <h1 className="text-secondary-color text-4xl">Social Media</h1>
                 <Link
                     className="flex items-center gap-2 text-xl text-zinc-400"
                     href="https://www.linkedin.com/company/algoup"

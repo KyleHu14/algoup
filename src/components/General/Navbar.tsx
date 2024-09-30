@@ -1,9 +1,10 @@
+import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
 
 export default function DashboardNavbar() {
     return (
-        <nav className="w-ful sticky top-0 z-50 border-b-zinc-100 bg-white py-4 shadow-md xl:px-14 2xl:px-28">
+        <nav className="sticky top-0 z-50 w-full border-b-zinc-100 bg-white py-4 shadow-md xl:px-14 2xl:px-28">
             <div className="flex justify-between">
                 <Link
                     href="/"
@@ -35,9 +36,9 @@ export default function DashboardNavbar() {
                     <NavbarLink link="/news" text="News" />
                     <NavbarLink link="/about" text="About Us" />
                     <Link href="/contact">
-                        <button className="= bg-secondary-color hover:bg-secondary-color-dark rounded-xl p-2 font-semibold text-white transition duration-300 ease-in-out xl:text-lg 2xl:text-[1.1rem]">
+                        <Button className="bg-secondary-color-dark text-xl text-white">
                             Contact Us
-                        </button>
+                        </Button>
                     </Link>
                 </div>
             </div>
@@ -53,7 +54,7 @@ interface NavbarLinkProps {
 function NavbarLink({ text, link }: NavbarLinkProps) {
     return (
         <Link
-            className="hover:text-secondary-color font-semibold text-black transition duration-300 ease-in-out xl:text-lg 2xl:text-[1.2rem]"
+            className="font-semibold text-black transition duration-300 ease-in-out hover:text-secondary-color xl:text-lg 2xl:text-[1.2rem]"
             href={link}
         >
             {text}

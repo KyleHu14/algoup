@@ -25,7 +25,7 @@ export default function AboutUs() {
                         About Algoup
                     </div>
                     <div className="xl:text-md text-left text-gray-500 2xl:text-lg 3xl:text-xl">
-                        <span className="font-semibold text-orange-400">
+                        <span className="font-semibold text-secondary-color">
                             ALGOUP Inc.
                         </span>{" "}
                         , headquartered in Seattle, WA, specializes in
@@ -37,7 +37,7 @@ export default function AboutUs() {
                         state-of-the-art technologies positioned at the edge.
                         <br></br>
                         <br></br>
-                        <span className="font-semibold text-orange-400">
+                        <span className="font-semibold text-secondary-color">
                             ALGOUP Inc.
                         </span>{" "}
                         has cultivated a portfolio of advanced robot products,
@@ -94,7 +94,7 @@ export default function AboutUs() {
             <section className="flex flex-col items-center">
                 <h1 className="text-2xl 3xl:mb-10 3xl:text-3xl">
                     Partnered with{" "}
-                    <span className="font-bold text-orange-400">
+                    <span className="font-bold text-secondary-color">
                         industry-leading
                     </span>{" "}
                     organizations
@@ -107,7 +107,9 @@ export default function AboutUs() {
             <section className="flex flex-col items-center">
                 <h1 className="text-2xl 3xl:mb-10 3xl:text-3xl">
                     Serving a{" "}
-                    <span className="font-bold text-orange-400">diverse</span>{" "}
+                    <span className="font-bold text-secondary-color">
+                        diverse
+                    </span>{" "}
                     array of industries
                 </h1>
 

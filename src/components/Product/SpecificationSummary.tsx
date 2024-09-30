@@ -1,4 +1,5 @@
 import { MutableRefObject } from "react"
+import Semibold from "../General/Semibold"
 
 interface Props {
     title: React.ReactNode
@@ -28,11 +29,9 @@ export default function SpecificationSummary({
                     {specifications}
                 </div>
 
-                <div>
+                <div className="text-center">
                     {productView}
-                    <h1 className="text-center font-bold text-orange-400">
-                        Click and Drag for 360 View.
-                    </h1>
+                    <Semibold text="Click and Drag for 360 View." />
                 </div>
             </div>
         </section>

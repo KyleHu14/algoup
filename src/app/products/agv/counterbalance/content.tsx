@@ -1,7 +1,7 @@
 "use client"
 
 import UnderlineSpan from "@/components/General/UnderlineSpan"
-import OrangeSemibold from "@/components/General/OrangeSemibold"
+import Semibold from "@/components/General/Semibold"
 
 import { Rabbit, Undo2, Weight } from "lucide-react"
 import ProductCoverImage from "@/components/Product/CoverImage"
@@ -69,8 +69,8 @@ export default function Content() {
 
                             <SpecDescription>
                                 Our tractor AGV can carry up to a maximum of{" "}
-                                <OrangeSemibold text="4 tons" /> making it
-                                suitable for carrying heavy loads.
+                                <Semibold text="4 tons" /> making it suitable
+                                for carrying heavy loads.
                             </SpecDescription>
                         </div>
 
@@ -81,7 +81,7 @@ export default function Content() {
                             </SpecHeader>
                             <SpecDescription>
                                 With a max speed of{" "}
-                                <OrangeSemibold text="1 meter / second" />, the
+                                <Semibold text="1 meter / second" />, the
                                 tractor can move heavy cargo at efficient
                                 speeds.
                             </SpecDescription>
@@ -94,8 +94,8 @@ export default function Content() {
                             </SpecHeader>
                             <SpecDescription>
                                 Having a turning radius{" "}
-                                <OrangeSemibold text="800mm" /> allows the
-                                tractor to have maximum versatility.
+                                <Semibold text="800mm" /> allows the tractor to
+                                have maximum versatility.
                             </SpecDescription>
                         </div>
                     </>

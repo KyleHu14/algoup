@@ -32,7 +32,7 @@ export default function TitleSection({
             {/* Learn More Button */}
             <Button
                 onClick={scrollToSpecs}
-                className="w-fit bg-orange-400 text-xl hover:bg-orange-500 2xl:mb-12"
+                className="w-fit bg-secondary-color text-xl hover:bg-secondary-color-dark 2xl:mb-12"
             >
                 Learn More
             </Button>

@@ -144,7 +144,7 @@ function ProductContainer({
     return (
         <Link
             href={link}
-            className={`bg-[#dfdfdf] ${className} rounded-sm text-zinc-800 duration-500 ease-out hover:scale-105 hover:text-orange-400`}
+            className={`bg-[#dfdfdf] ${className} rounded-sm text-zinc-800 duration-500 ease-out hover:scale-105 hover:text-secondary-color-dark`}
         >
             <div
                 className={`flex p-5 ${isHorizontal ? "flex-col justify-center" : ""}`}

@@ -58,12 +58,60 @@ export default function VehicleDesign() {
                 </div>
 
                 {/* AGV Front Design */}
-                <div className="flex">
-                    <div></div>
+                <div className="flex items-center justify-center">
+                    <div>
+                        <AGVSectionTitle
+                            title="AGV Front Design"
+                            description="Some description regarding  the front design of AGVs. This information could be long or short, but focused on the front design of the AGVs."
+                        />
+
+                        <AGVfact
+                            title="Fork Design & Control"
+                            description="Some extra description of what this part means. "
+                        />
+                        <AGVfact
+                            title="Steering Motor Design"
+                            description="Some extra description of this part too."
+                        />
+                    </div>
                     <ImageContainer
                         src="/technology/forklift-front.png"
                         description="Forklift Front Image Description"
                         alt="3D model of the Front of the Forklift"
+                        width={567}
+                        height={460}
+                    />
+                </div>
+
+                {/* AGV Back Design */}
+                <div className="flex items-center justify-center">
+                    <div>
+                        <AGVSectionTitle
+                            title="AGV Back Design"
+                            description="Some description regarding the back design of AGVs. This information could be long or short, but focused on the front design of the AGVs."
+                        />
+
+                        <AGVfact
+                            title="Mass Design"
+                            description="Some extra description of what this part means. "
+                        />
+                        <AGVfact
+                            title="Battery Layout"
+                            description="Some extra description of this part too."
+                        />
+                        <AGVfact
+                            title="Hydraulic System Design"
+                            description="Some extra description of this part too."
+                        />
+                        <AGVfact
+                            title="Driving Motor Design"
+                            description="Some extra description of this part too."
+                        />
+                    </div>
+                    <ImageContainer
+                        src="/technology/forklift-back.png"
+                        description="Forklift Back Image Description"
+                        alt="3D model of the Back of the Forklift"
                         width={567}
                         height={460}
                     />
@@ -94,6 +142,33 @@ function ImageContainer({
             <p className="w-[20rem] text-center text-xl text-[#C5C5C5]">
                 {description}
             </p>
+        </div>
+    )
+}
+
+interface AGVfactProps {
+    title: string
+    description: string
+}
+function AGVfact({ title, description }: AGVfactProps) {
+    return (
+        <div className="border-b border-b-black">
+            <h3>{title}</h3>
+            <p>{description}</p>
+        </div>
+    )
+}
+
+interface AGVSectionTitleProps {
+    title: string
+    description: string
+}
+
+function AGVSectionTitle({ title, description }: AGVSectionTitleProps) {
+    return (
+        <div>
+            <h2>{title}</h2>
+            <p>{description}</p>
         </div>
     )
 }

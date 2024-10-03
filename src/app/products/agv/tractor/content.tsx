@@ -10,7 +10,7 @@ import {
 } from "../../../../data/product/specifications/tractor"
 
 import { ReactImageTurntable } from "react-image-turntable"
-import { useRef } from "react"
+
 import ProductCoverImage from "@/components/Product/CoverImage"
 import UnderlineSpan from "@/components/General/UnderlineSpan"
 import TitleSection from "@/components/Product/TitleSection"
@@ -20,8 +20,6 @@ import SpecHeader from "@/components/Product/SpecificationHeader"
 import { SpecDescription } from "@/components/Product/SpecificationDescription"
 
 export default function Content() {
-    const specsRef = useRef<null | HTMLDivElement>(null)
-
     const images = [
         "/agv/tractor/t/1.png",
         "/agv/tractor/t/2.JPG",
@@ -39,7 +37,6 @@ export default function Content() {
             <TitleSection
                 title="Tractor AGV"
                 subDesc="Perfect for frequent handling of large cargo."
-                specsRef={specsRef}
                 mainDesc={
                     <>
                         <UnderlineSpan text="Unique" /> Design for{" "}
@@ -64,7 +61,6 @@ export default function Content() {
                         applications.
                     </>
                 }
-                specsRef={specsRef}
                 specifications={
                     <>
                         {/* Max Weight */}

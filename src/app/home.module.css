@@ -1,23 +1,22 @@
 .gridContainer {
-    display: grid;
     grid-template-areas:
-        "header header menu menu"
-        "header header main right"
-        "footer footer main right";
+        "counterbalance counterbalance tractor tractor"
+        "counterbalance counterbalance forklift palletstacker"
+        "lifting lifting forklift palletstacker";
 }
 
 .counterbalance {
-    grid-area: header;
+    grid-area: counterbalance;
 }
 .tractor {
-    grid-area: menu;
+    grid-area: tractor;
 }
 .slimforklift {
-    grid-area: main;
+    grid-area: forklift;
 }
 .palletstacker {
-    grid-area: right;
+    grid-area: palletstacker;
 }
 .lifting {
-    grid-area: footer;
+    grid-area: lifting;
 }

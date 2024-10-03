@@ -1,46 +1,101 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
+import { Menu } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { useState } from "react"
 
 export default function DashboardNavbar() {
+    const [showMobileLinks, setShowMobileLinks] = useState(false)
+
     return (
-        <nav className="sticky top-0 z-50 w-full border-b-zinc-100 bg-white py-4 shadow-md xl:px-14 2xl:px-28">
-            <div className="flex justify-between">
-                <Link
-                    href="/"
-                    className="relative xl:h-[45px] xl:w-[170px] 2xl:h-[65px] 2xl:w-[260px]"
-                >
-                    <Image
-                        src="/logo-full.jpg"
-                        fill={true}
-                        alt="Company Logo"
+        /*
+            Mobile Navbar
+            fixed : fixed at top
+            top-0 : starting at top at pos 0
+            z-50: so that other elements don't overlap it
+            h & w : need to be specified for fixed
+        */
+        <nav className="fixed top-0 z-50 flex h-14 w-full items-center justify-between border-b-zinc-100 bg-white px-5 shadow-md sm:sticky sm:h-20 sm:flex-row xl:px-14 2xl:px-28">
+            <Link
+                href="/"
+                className="relative h-7 w-28 xl:block xl:h-[45px] xl:w-[170px] 2xl:h-[65px] 2xl:w-[260px]"
+            >
+                <Image src="/logo-full.jpg" fill={true} alt="Company Logo" />
+            </Link>
+
+            {/* Burger Menu */}
+            <button
+                onClick={() => setShowMobileLinks(!showMobileLinks)}
+                className="sm:hidden"
+            >
+                <Menu className="h-8 w-8 text-zinc-700" />
+            </button>
+
+            {/* Mobile Links */}
+            {showMobileLinks ? (
+                <div className="fixed left-0 top-[3.5rem] flex w-full flex-col items-center justify-center gap-2 bg-zinc-200 p-3 sm:hidden">
+                    <MobileLinkProps
+                        onClick={() => setShowMobileLinks(!showMobileLinks)}
+                        link="/technology"
+                        text="Technology"
                     />
-                </Link>
-
-                {/* <Link
-                    className="flex items-center tracking-widest text-white 2xl:text-[1.7rem]"
-                    href="/"
-                >
-                    ALGOUP
-                </Link> */}
-
-                <div className="flex items-center xl:gap-6 3xl:gap-8">
-                    <NavbarLink link="/" text="Home" />
-                    <NavbarLink link="/technology" text="Technology" />
-                    <NavbarLink link="/products" text="Products" />
-                    <NavbarLink
+                    <MobileLinkProps
+                        onClick={() => setShowMobileLinks(!showMobileLinks)}
+                        link="/products"
+                        text="Products"
+                    />
+                    <MobileLinkProps
+                        onClick={() => setShowMobileLinks(!showMobileLinks)}
                         link="/manufacturing"
                         text="Manufacturing Capability"
                     />
-                    <NavbarLink link="/service" text="Service" />
-                    <NavbarLink link="/news" text="News" />
-                    <NavbarLink link="/about" text="About Us" />
+                    <MobileLinkProps
+                        onClick={() => setShowMobileLinks(!showMobileLinks)}
+                        link="/service"
+                        text="Service"
+                    />
+                    <MobileLinkProps
+                        onClick={() => setShowMobileLinks(!showMobileLinks)}
+                        link="/news"
+                        text="News"
+                    />
+                    <MobileLinkProps
+                        onClick={() => setShowMobileLinks(!showMobileLinks)}
+                        link="/about"
+                        text="About Us"
+                    />
                     <Link href="/contact">
-                        <Button className="bg-secondary-color-dark text-xl text-white">
+                        <Button
+                            size="sm"
+                            className="bg-secondary-color-dark text-sm text-white"
+                        >
                             Contact Us
                         </Button>
                     </Link>
                 </div>
+            ) : null}
+
+            {/* Desktop Links */}
+            <div className="hidden flex-row items-center justify-center gap-3 sm:flex xl:gap-6 3xl:gap-8">
+                <NavbarLink link="/technology" text="Technology" />
+                <NavbarLink link="/products" text="Products" />
+                <NavbarLink
+                    link="/manufacturing"
+                    text="Manufacturing Capability"
+                />
+                <NavbarLink link="/service" text="Service" />
+                <NavbarLink link="/news" text="News" />
+                <NavbarLink link="/about" text="About Us" />
+                <Link href="/contact">
+                    <Button
+                        size="sm"
+                        className="bg-secondary-color-dark px-2 py-0 text-[11px] text-white lg:text-lg"
+                    >
+                        Contact Us
+                    </Button>
+                </Link>
             </div>
         </nav>
     )
@@ -54,7 +109,25 @@ interface NavbarLinkProps {
 function NavbarLink({ text, link }: NavbarLinkProps) {
     return (
         <Link
-            className="font-semibold text-black transition duration-300 ease-in-out hover:text-secondary-color xl:text-lg 2xl:text-[1.2rem]"
+            className="text-center text-[11px] text-black transition duration-300 ease-in-out hover:text-secondary-color md:text-sm lg:text-lg"
+            href={link}
+        >
+            {text}
+        </Link>
+    )
+}
+
+interface MobileLinkProps {
+    onClick: React.MouseEventHandler<HTMLAnchorElement>
+    text: string
+    link: string
+}
+
+function MobileLinkProps({ text, link, onClick }: MobileLinkProps) {
+    return (
+        <Link
+            onClick={onClick}
+            className="text-center text-sm font-semibold text-black"
             href={link}
         >
             {text}

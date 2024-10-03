@@ -3,117 +3,98 @@ import Link from "next/link"
 
 export default function Footer() {
     return (
-        <footer className="flex justify-center bg-[#18181B] py-24 pt-[5rem] lg:gap-[5rem] lg:px-[5rem] xl:gap-[8rem] xl:px-[10rem] 2xl:gap-20 2xl:px-16">
+        <footer className="flex flex-col items-center justify-center gap-4 bg-[#18181B] px-5 py-10 sm:flex-row sm:items-start sm:justify-normal sm:text-left lg:gap-[5rem] lg:px-[5rem] xl:gap-[5rem] xl:px-[7rem] 2xl:gap-20 2xl:px-16">
             {/* Col 1 - Logo */}
-            <div className="flex flex-col">
-                <Image
-                    src="/logo-full.jpg"
-                    width={317}
-                    height={75}
-                    alt="Logo Picture"
-                />
-                <p className="ml-6 text-xl text-[#C3C3C3]">
+            <div className="hidden flex-col sm:flex">
+                <div className="relative h-[40px] w-[150px] xl:h-[55px] xl:w-[230px] 2xl:h-[75px] 2xl:w-[317px]">
+                    <Image src="/logo-full.jpg" fill alt="Logo Picture" />
+                </div>
+
+                <p className="ml-6 text-lg text-[#C3C3C3] 2xl:text-2xl">
                     Always striving for innovation.
                 </p>
             </div>
 
             {/* Col 2 - Contact */}
-            <div className="flex flex-col gap-3">
-                <h1 className="text-4xl font-semibold text-secondary-color">
+            <div className="flex w-full flex-col gap-1">
+                <h1 className="text-xl font-semibold text-secondary-color lg:text-2xl xl:text-4xl">
                     Contact
                 </h1>
-                <div className="text-white">
-                    <h1 className="text-2xl font-semibold 2xl:text-3xl">
+                {/* Phone Contact Info */}
+                <>
+                    <h1 className="text-lg font-semibold text-white sm:text-xl 2xl:text-3xl">
                         Phone
                     </h1>
-                    <p className="text-lg font-light text-zinc-400 2xl:text-2xl">
+                    <p className="text-md font-light text-zinc-400 sm:text-lg 2xl:text-2xl">
                         US: +1 202 664 4153
                     </p>
-                    <p className="text-lg font-light text-zinc-400 2xl:text-2xl">
+                    <p className="text-md font-light text-zinc-400 sm:text-lg 2xl:text-2xl">
                         CN: + 86 182 0190 0625
                     </p>
-                </div>
-                <div className="text-white">
-                    <h1 className="text-2xl font-semibold 2xl:text-3xl">
+                </>
+
+                {/* Email Contact Info */}
+                <>
+                    <h1 className="text-lg font-semibold text-white sm:text-xl 2xl:text-3xl">
                         Email
                     </h1>
-                    <p className="text-lg font-light text-zinc-400 2xl:text-2xl">
+                    <p className="text-md font-light text-zinc-400 sm:text-lg 2xl:text-2xl">
                         bill@algoupinc.com
                     </p>
-                </div>
+                </>
             </div>
 
             {/* Col 3 - Navigation */}
-            <div className="flex flex-col gap-3">
-                <h1 className="text-4xl font-semibold text-secondary-color">
+            <div className="flex w-full flex-col gap-1">
+                <h1 className="text-xl font-semibold text-secondary-color lg:text-2xl">
                     Navigation
                 </h1>
-                <Link className="text-xl text-zinc-400" href="/technology">
-                    Technology
-                </Link>
-                <Link className="text-xl text-zinc-400" href="/products">
-                    Products
-                </Link>
-                <Link className="text-xl text-zinc-400" href="/manufacturing">
-                    Manufacturing Capability
-                </Link>
-                <Link className="text-xl text-zinc-400" href="/service">
-                    Service
-                </Link>
-                <Link className="text-xl text-zinc-400" href="/news">
-                    News
-                </Link>
-                <Link className="text-xl text-zinc-400" href="/contact">
-                    Contact Us
-                </Link>
+                <NavigationLink text="Technology" link="/technology" />
+                <NavigationLink text="Products" link="/products" />
+                <NavigationLink
+                    text="Manufacturing Capability"
+                    link="/manufacturing"
+                />
+                <NavigationLink text="Service" link="/service" />
+                <NavigationLink text="News" link="/news" />
+                <NavigationLink text="Contact Us" link="/contact" />
             </div>
 
             {/* Col 4 - Social Media */}
-            <div className="flex flex-col gap-3">
-                <h1 className="text-4xl font-semibold text-secondary-color">
+            <div className="flex w-full flex-col gap-3">
+                <h1 className="text-xl font-semibold text-secondary-color lg:text-2xl">
                     Social Media
                 </h1>
-                <Link
-                    className="flex items-center gap-2 text-xl text-zinc-400"
-                    href="https://www.linkedin.com/company/algoup"
-                >
+
+                <SocialLinks link="https://www.linkedin.com/company/algoup">
                     <Linkedin />
                     <p>Linkedin</p>
-                </Link>
-                <Link
-                    className="flex items-center gap-2 text-xl text-zinc-400"
-                    href="/"
-                >
+                </SocialLinks>
+
+                <SocialLinks link="/">
                     <Youtube />
                     <p>Youtube</p>
-                </Link>
-                <Link
-                    className="flex items-center gap-2 text-xl text-zinc-400"
-                    href="/"
-                >
+                </SocialLinks>
+
+                <SocialLinks link="/">
                     <X />
                     <p>X / Twitter</p>
-                </Link>
-                <Link
-                    className="flex items-center gap-2 text-xl text-zinc-400"
-                    href="/"
-                >
-                    <Wechat /> <p>Wechat</p>
-                </Link>
-                <Link
-                    className="flex items-center gap-2 text-xl text-zinc-400"
-                    href="/"
-                >
+                </SocialLinks>
+
+                <SocialLinks link="/">
+                    <Wechat />
+                    <p>Wechat</p>
+                </SocialLinks>
+
+                <SocialLinks link="/">
                     <Facebook />
                     <p>Facebook</p>
-                </Link>
-                <Link
-                    className="flex items-center gap-2 text-xl text-zinc-400"
-                    href="/"
-                >
+                </SocialLinks>
+
+                <SocialLinks link="/">
                     <Instagram />
                     <p>Instagram</p>
-                </Link>
+                </SocialLinks>
             </div>
         </footer>
     )
@@ -200,5 +181,37 @@ function Instagram() {
         >
             <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
         </svg>
+    )
+}
+
+interface NavigationLinkProps {
+    link: string
+    text: string
+}
+
+function NavigationLink({ link, text }: NavigationLinkProps) {
+    return (
+        <Link
+            className="text-md font-light text-zinc-400 sm:text-lg 2xl:text-2xl"
+            href={link}
+        >
+            {text}
+        </Link>
+    )
+}
+
+interface SocialLinksProps {
+    link: string
+    children: React.ReactNode
+}
+
+function SocialLinks({ link, children }: SocialLinksProps) {
+    return (
+        <Link
+            className="text-md flex items-center gap-2 font-light text-zinc-400 sm:text-lg 2xl:text-2xl"
+            href={link}
+        >
+            {children}
+        </Link>
     )
 }

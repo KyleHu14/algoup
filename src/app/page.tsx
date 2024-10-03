@@ -5,7 +5,7 @@ import styles from "./home.module.css"
 
 export default function Home() {
     return (
-        <main>
+        <main className="">
             <section className="slide-container h-screen w-full">
                 <video
                     className="relative h-screen w-screen object-cover"
@@ -18,15 +18,18 @@ export default function Home() {
                         type="video/mp4"
                     />
                 </video>
-                <div className="absolute left-0 right-0 top-[45%] mx-auto text-center font-bold text-white lg:max-w-[25rem] lg:text-3xl xl:max-w-[35rem] xl:text-4xl 2xl:max-w-[50rem] 2xl:text-6xl">
+                <div className="absolute left-0 right-0 top-[45%] mx-auto max-w-[16rem] text-center text-2xl font-bold text-white sm:max-w-[25rem] sm:text-3xl xl:max-w-[35rem] xl:text-4xl 2xl:max-w-[50rem] 2xl:text-6xl">
                     Empowering Your Business with Robotics
                 </div>
             </section>
+
             <section className="bg-[#252525] py-20">
                 {/* Header for AGV Product Section */}
                 <header className="flex flex-col gap-3 text-center">
-                    <h1 className="text-6xl text-white">AGV Products</h1>
-                    <p className="text-3xl font-light text-zinc-300">
+                    <h1 className="text-4xl text-white xl:text-6xl">
+                        AGV Products
+                    </h1>
+                    <p className="text-2xl font-light text-zinc-300 xl:text-3xl">
                         View our products that are designed for your special
                         cases.
                     </p>
@@ -34,16 +37,16 @@ export default function Home() {
 
                 {/* Grid for the Product Display */}
                 <div
-                    className={`gap-10 py-20 xl:px-14 2xl:px-72 ${styles.gridContainer}`}
+                    className={`flex flex-col gap-10 px-10 py-20 sm:px-24 xl:grid xl:px-14 2xl:px-72 ${styles.gridContainer}`}
                 >
                     {/* Counter Balance AGV */}
                     <ProductContainer
                         link="/products/agv/counterbalance"
-                        className={`flex flex-col items-center justify-center ${styles.counterbalance}`}
+                        className={`flex flex-col items-center justify-center text-center ${styles.counterbalance}`}
                         title="Counter Balance AGV"
                         isHorizontal={false}
                     >
-                        <div className="relative h-[404px] w-[323px] 2xl:h-[464px] 2xl:w-[383px]">
+                        <div className="relative h-[200px] w-[150px] md:h-[230px] md:w-[180px] lg:h-[350px] lg:w-[270px] xl:h-[404px] xl:w-[323px] 2xl:h-[464px] 2xl:w-[383px]">
                             <Image
                                 className="object-cover"
                                 alt="Counter Balance Image"
@@ -56,11 +59,11 @@ export default function Home() {
                     {/* Autonomous Tractor */}
                     <ProductContainer
                         link="/products/agv/tractor"
-                        className={`flex justify-center ${styles.tractor}`}
+                        className={`flex flex-col items-center justify-center text-center ${styles.tractor}`}
                         title="Autonomous Tractors"
                         isHorizontal={true}
                     >
-                        <div className="relative h-[237px] w-[406px] 2xl:h-[277px] 2xl:w-[446px]">
+                        <div className="relative h-[110px] w-[150px] md:h-[140px] md:w-[180px] xl:h-[237px] xl:w-[406px] 2xl:h-[277px] 2xl:w-[446px]">
                             <Image
                                 className="object-cover"
                                 alt="Tractor Image"
@@ -77,7 +80,7 @@ export default function Home() {
                         title="Slim Forklift"
                         isHorizontal={false}
                     >
-                        <div className="relative h-[353px] w-[200px] 2xl:h-[393px] 2xl:w-[240px]">
+                        <div className="relative h-[140px] w-[90px] md:h-[180px] md:w-[130px] xl:h-[353px] xl:w-[200px] 2xl:h-[393px] 2xl:w-[240px]">
                             <Image
                                 className="object-cover"
                                 alt="Slim Forklift Image"
@@ -94,7 +97,7 @@ export default function Home() {
                         title="Pallet Stacker"
                         isHorizontal={false}
                     >
-                        <div className="relative h-[353px] w-[200px] 2xl:h-[393px] 2xl:w-[240px]">
+                        <div className="relative h-[140px] w-[90px] md:h-[180px] md:w-[130px] xl:h-[353px] xl:w-[200px] 2xl:h-[393px] 2xl:w-[240px]">
                             <Image
                                 className="object-cover"
                                 alt="Pallet Stacker Image"
@@ -107,11 +110,11 @@ export default function Home() {
                     {/* Lifting AGV */}
                     <ProductContainer
                         link="/products/agv/lifting"
-                        className={`flex justify-center ${styles.lifting}`}
+                        className={`flex justify-center ${styles.lifting} flex-col items-center`}
                         title="Lifting AGV"
                         isHorizontal={true}
                     >
-                        <div className="relative h-[165px] w-[257px]">
+                        <div className="relative h-[115px] w-[207px] md:h-[165px] md:w-[257px]">
                             <Image
                                 className="object-cover"
                                 alt="DC Lifting Image"
@@ -149,7 +152,9 @@ function ProductContainer({
             <div
                 className={`flex p-5 ${isHorizontal ? "flex-col justify-center" : ""}`}
             >
-                <h1 className="text-3xl font-semibold">{title}</h1>
+                <h1 className="text-lg font-semibold lg:text-xl xl:text-3xl">
+                    {title}
+                </h1>
             </div>
 
             {children}

@@ -12,7 +12,6 @@ import {
 } from "../../../../data/product/specifications/counterbalance"
 
 import { ReactImageTurntable } from "react-image-turntable"
-import { useRef } from "react"
 import TitleSection from "@/components/Product/TitleSection"
 import SpecificationSummary from "@/components/Product/SpecificationSummary"
 import SpecHeader from "@/components/Product/SpecificationHeader"
@@ -20,8 +19,6 @@ import { SpecDescription } from "@/components/Product/SpecificationDescription"
 import SpecificationTable from "@/components/Product/SpecificationTable"
 
 export default function Content() {
-    const specsRef = useRef<null | HTMLDivElement>(null)
-
     const images360 = [
         "/agv/counterbalance/1.png",
         "/agv/counterbalance/2.png",
@@ -38,7 +35,6 @@ export default function Content() {
             <TitleSection
                 title="Counterbalance AGV"
                 subDesc="Perfect for frequent handling of large cargo."
-                specsRef={specsRef}
                 mainDesc={
                     <>
                         <UnderlineSpan text="High Flexibility" /> Pallet
@@ -58,7 +54,6 @@ export default function Content() {
             {/* Specification Summary */}
             <SpecificationSummary
                 title={<>Specification Overview</>}
-                specsRef={specsRef}
                 specifications={
                     <>
                         {/* Max Weight */}

@@ -16,6 +16,7 @@ export default function SpecificationSummary({
 }: Props) {
     return (
         <section
+            id="spec-summary"
             ref={specsRef}
             className="flex h-[100vh] flex-col items-center justify-center gap-16"
         >

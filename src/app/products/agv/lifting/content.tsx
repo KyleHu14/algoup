@@ -12,7 +12,6 @@ import {
 
 import ProductDisplayCarousel from "@/components/Product/DisplayCarousel"
 import { ReactImageTurntable } from "react-image-turntable"
-import { useRef } from "react"
 import TitleSection from "@/components/Product/TitleSection"
 import SpecificationSummary from "@/components/Product/SpecificationSummary"
 import SpecHeader from "@/components/Product/SpecificationHeader"
@@ -20,8 +19,6 @@ import { SpecDescription } from "@/components/Product/SpecificationDescription"
 import SpecificationTable from "@/components/Product/SpecificationTable"
 
 export default function Content() {
-    const specsRef = useRef<null | HTMLDivElement>(null)
-
     const carouselImages: string[] = [
         "/agv/lifting/dc/1.png",
         "/agv/lifting/dd/1.png",
@@ -72,7 +69,6 @@ export default function Content() {
             <TitleSection
                 title="Lifting AGV"
                 subDesc="Perfect for frequent handling of large cargo."
-                specsRef={specsRef}
                 mainDesc={
                     <>
                         Special Design for{" "}
@@ -87,7 +83,6 @@ export default function Content() {
             {/* Specification Summary - DC */}
             <SpecificationSummary
                 title={<>DC-Series Overview</>}
-                specsRef={specsRef}
                 specifications={
                     <>
                         {/* Max Weight */}

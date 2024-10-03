@@ -1,8 +1,5 @@
 "use client"
 
-// React
-import { useRef } from "react"
-
 // Icons
 import { Rabbit, Undo2, Weight } from "lucide-react"
 
@@ -26,8 +23,6 @@ import SpecHeader from "@/components/Product/SpecificationHeader"
 import { SpecDescription } from "@/components/Product/SpecificationDescription"
 
 export default function Content() {
-    const specsRef = useRef<null | HTMLDivElement>(null)
-
     const pgcd15Images = [
         "/agv/fork-lift/pg-cd-15/1.png",
         "/agv/fork-lift/pg-cd-15/2.png",
@@ -55,7 +50,6 @@ export default function Content() {
             <TitleSection
                 title="Slim Forklift AGV"
                 subDesc="Perfect for frequent handling of large cargo."
-                specsRef={specsRef}
                 mainDesc={
                     <>
                         <UnderlineSpan text="Cost Beneficial" /> Mobility
@@ -77,7 +71,6 @@ export default function Content() {
             {/* PG-CD-15 */}
             <SpecificationSummary
                 title={<>PG-CD 15 Overview</>}
-                specsRef={specsRef}
                 specifications={
                     <>
                         {/* Max Weight */}

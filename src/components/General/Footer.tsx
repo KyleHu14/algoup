@@ -17,7 +17,7 @@ export default function Footer() {
 
             {/* Col 2 - Contact */}
             <div className="flex w-full flex-col gap-1">
-                <h1 className="text-xl font-semibold text-secondary-color lg:text-2xl xl:text-4xl">
+                <h1 className="text-xl font-semibold text-secondary-color lg:text-2xl">
                     Contact
                 </h1>
                 {/* Phone Contact Info */}

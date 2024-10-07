@@ -23,15 +23,14 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="bg-[#252525] py-20">
+            <section className="py-20">
                 {/* Header for AGV Product Section */}
                 <header className="flex flex-col gap-3 text-center">
-                    <h1 className="text-4xl text-white 2xl:text-5xl">
+                    <h1 className="text-4xl font-bold text-zinc-700 2xl:text-5xl">
                         AGV Products
                     </h1>
-                    <p className="text-2xl font-light text-zinc-300 2xl:text-3xl">
-                        View our products that are designed for your special
-                        cases.
+                    <p className="text-2xl font-light text-zinc-600 2xl:text-3xl">
+                        View products designed for your special cases.
                     </p>
                 </header>
 
@@ -147,7 +146,7 @@ function ProductContainer({
     return (
         <Link
             href={link}
-            className={`bg-[#dfdfdf] ${className} rounded-sm text-zinc-800 duration-500 ease-out hover:scale-105 hover:text-secondary-color-dark`}
+            className={`bg-zinc-100 ${className} rounded-sm border-2 border-zinc-500 text-zinc-800 duration-500 ease-out hover:scale-105 hover:border-secondary-color hover:text-secondary-color`}
         >
             <div
                 className={`flex p-5 ${isHorizontal ? "flex-col justify-center" : ""}`}

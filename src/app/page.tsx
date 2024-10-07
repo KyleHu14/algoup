@@ -26,10 +26,10 @@ export default function Home() {
             <section className="bg-[#252525] py-20">
                 {/* Header for AGV Product Section */}
                 <header className="flex flex-col gap-3 text-center">
-                    <h1 className="text-4xl text-white xl:text-6xl">
+                    <h1 className="text-4xl text-white 2xl:text-5xl">
                         AGV Products
                     </h1>
-                    <p className="text-2xl font-light text-zinc-300 xl:text-3xl">
+                    <p className="text-2xl font-light text-zinc-300 2xl:text-3xl">
                         View our products that are designed for your special
                         cases.
                     </p>
@@ -46,7 +46,7 @@ export default function Home() {
                         title="Counter Balance AGV"
                         isHorizontal={false}
                     >
-                        <div className="relative h-[200px] w-[150px] md:h-[230px] md:w-[180px] lg:h-[350px] lg:w-[270px] xl:h-[404px] xl:w-[323px] 2xl:h-[464px] 2xl:w-[383px]">
+                        <div className="relative h-[200px] w-[150px] md:h-[230px] md:w-[180px] lg:h-[300px] lg:w-[230px] xl:h-[380px] xl:w-[280px] 2xl:h-[464px] 2xl:w-[383px]">
                             <Image
                                 className="object-cover"
                                 alt="Counter Balance Image"
@@ -152,9 +152,7 @@ function ProductContainer({
             <div
                 className={`flex p-5 ${isHorizontal ? "flex-col justify-center" : ""}`}
             >
-                <h1 className="text-lg font-semibold lg:text-xl xl:text-3xl">
-                    {title}
-                </h1>
+                <h1 className="text-lg font-semibold xl:text-2xl">{title}</h1>
             </div>
 
             {children}

@@ -17,28 +17,28 @@ export default function Footer() {
 
             {/* Col 2 - Contact */}
             <div className="flex w-full flex-col gap-1">
-                <h1 className="text-xl font-semibold text-secondary-color lg:text-2xl">
+                <h1 className="text-xl font-semibold text-secondary-color lg:text-2xl 2xl:text-3xl">
                     Contact
                 </h1>
                 {/* Phone Contact Info */}
                 <>
-                    <h1 className="text-lg font-semibold text-white sm:text-xl 2xl:text-3xl">
+                    <h1 className="text-lg font-semibold text-white sm:text-xl 2xl:text-2xl">
                         Phone
                     </h1>
-                    <p className="text-md font-light text-zinc-400 sm:text-lg 2xl:text-2xl">
+                    <p className="text-md font-light text-zinc-400 sm:text-lg 2xl:text-xl">
                         US: +1 202 664 4153
                     </p>
-                    <p className="text-md font-light text-zinc-400 sm:text-lg 2xl:text-2xl">
+                    <p className="text-md font-light text-zinc-400 sm:text-lg 2xl:text-xl">
                         CN: + 86 182 0190 0625
                     </p>
                 </>
 
                 {/* Email Contact Info */}
                 <>
-                    <h1 className="text-lg font-semibold text-white sm:text-xl 2xl:text-3xl">
+                    <h1 className="text-lg font-semibold text-white sm:text-xl 2xl:text-2xl">
                         Email
                     </h1>
-                    <p className="text-md font-light text-zinc-400 sm:text-lg 2xl:text-2xl">
+                    <p className="text-md font-light text-zinc-400 sm:text-lg 2xl:text-xl">
                         bill@algoupinc.com
                     </p>
                 </>
@@ -46,7 +46,7 @@ export default function Footer() {
 
             {/* Col 3 - Navigation */}
             <div className="flex w-full flex-col gap-1">
-                <h1 className="text-xl font-semibold text-secondary-color lg:text-2xl">
+                <h1 className="text-xl font-semibold text-secondary-color lg:text-2xl 2xl:text-3xl">
                     Navigation
                 </h1>
                 <NavigationLink text="Technology" link="/technology" />
@@ -62,7 +62,7 @@ export default function Footer() {
 
             {/* Col 4 - Social Media */}
             <div className="flex w-full flex-col gap-3">
-                <h1 className="text-xl font-semibold text-secondary-color lg:text-2xl">
+                <h1 className="text-xl font-semibold text-secondary-color lg:text-2xl 2xl:text-3xl">
                     Social Media
                 </h1>
 
@@ -192,7 +192,7 @@ interface NavigationLinkProps {
 function NavigationLink({ link, text }: NavigationLinkProps) {
     return (
         <Link
-            className="text-md font-light text-zinc-400 sm:text-lg 2xl:text-2xl"
+            className="text-md font-light text-zinc-400 sm:text-lg 2xl:text-xl"
             href={link}
         >
             {text}
@@ -208,7 +208,7 @@ interface SocialLinksProps {
 function SocialLinks({ link, children }: SocialLinksProps) {
     return (
         <Link
-            className="text-md flex items-center gap-2 font-light text-zinc-400 sm:text-lg 2xl:text-2xl"
+            className="text-md flex items-center gap-2 font-light text-zinc-400 sm:text-lg 2xl:text-xl"
             href={link}
         >
             {children}

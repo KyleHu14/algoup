@@ -25,18 +25,18 @@ export default function Home() {
 
             <section className="py-20">
                 {/* Header for AGV Product Section */}
-                <header className="flex flex-col gap-3 text-center">
+                <div className="flex flex-col gap-3 text-center">
                     <h1 className="text-4xl font-bold text-zinc-700 2xl:text-5xl">
                         AGV Products
                     </h1>
                     <p className="text-2xl font-light text-zinc-600 2xl:text-3xl">
                         View products designed for your special cases.
                     </p>
-                </header>
+                </div>
 
                 {/* Grid for the Product Display */}
                 <div
-                    className={`flex flex-col gap-10 px-10 py-20 sm:px-24 xl:grid xl:px-14 2xl:px-72 ${styles.gridContainer}`}
+                    className={`flex flex-col gap-10 px-10 py-14 sm:px-24 lg:px-48 xl:grid 2xl:px-72 ${styles.gridContainer}`}
                 >
                     {/* Counter Balance AGV */}
                     <ProductContainer
@@ -45,7 +45,7 @@ export default function Home() {
                         title="Counter Balance AGV"
                         isHorizontal={false}
                     >
-                        <div className="relative h-[200px] w-[150px] md:h-[230px] md:w-[180px] lg:h-[300px] lg:w-[230px] xl:h-[380px] xl:w-[280px] 2xl:h-[464px] 2xl:w-[383px]">
+                        <div className="relative h-[200px] w-[150px] md:h-[230px] md:w-[180px] lg:h-[300px] lg:w-[230px] 2xl:h-[464px] 2xl:w-[383px]">
                             <Image
                                 className="object-cover"
                                 alt="Counter Balance Image"
@@ -62,7 +62,7 @@ export default function Home() {
                         title="Autonomous Tractors"
                         isHorizontal={true}
                     >
-                        <div className="relative h-[110px] w-[150px] md:h-[140px] md:w-[180px] xl:h-[237px] xl:w-[406px] 2xl:h-[277px] 2xl:w-[446px]">
+                        <div className="relative h-[110px] w-[150px] md:h-[140px] md:w-[180px] lg:h-[200px] lg:w-[250px] 2xl:h-[277px] 2xl:w-[446px]">
                             <Image
                                 className="object-cover"
                                 alt="Tractor Image"
@@ -79,7 +79,7 @@ export default function Home() {
                         title="Slim Forklift"
                         isHorizontal={false}
                     >
-                        <div className="relative h-[140px] w-[90px] md:h-[180px] md:w-[130px] xl:h-[353px] xl:w-[200px] 2xl:h-[393px] 2xl:w-[240px]">
+                        <div className="relative h-[140px] w-[90px] md:h-[180px] md:w-[130px] lg:h-[220px] lg:w-[180px] 2xl:h-[393px] 2xl:w-[240px]">
                             <Image
                                 className="object-cover"
                                 alt="Slim Forklift Image"
@@ -96,7 +96,7 @@ export default function Home() {
                         title="Pallet Stacker"
                         isHorizontal={false}
                     >
-                        <div className="relative h-[140px] w-[90px] md:h-[180px] md:w-[130px] xl:h-[353px] xl:w-[200px] 2xl:h-[393px] 2xl:w-[240px]">
+                        <div className="relative h-[140px] w-[90px] md:h-[180px] md:w-[130px] lg:h-[200px] lg:w-[160px] 2xl:h-[393px] 2xl:w-[240px]">
                             <Image
                                 className="object-cover"
                                 alt="Pallet Stacker Image"
@@ -151,7 +151,9 @@ function ProductContainer({
             <div
                 className={`flex p-5 ${isHorizontal ? "flex-col justify-center" : ""}`}
             >
-                <h1 className="text-lg font-semibold xl:text-2xl">{title}</h1>
+                <h1 className="text-lg font-semibold xl:text-xl 2xl:text-2xl">
+                    {title}
+                </h1>
             </div>
 
             {children}

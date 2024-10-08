@@ -3,14 +3,14 @@ import Link from "next/link"
 
 export default function Footer() {
     return (
-        <footer className="flex flex-col items-center justify-center gap-4 bg-[#18181B] px-5 py-10 sm:flex-row sm:items-start sm:justify-normal sm:text-left lg:gap-[5rem] lg:px-[5rem] xl:gap-[5rem] xl:px-[7rem] 2xl:gap-20 2xl:px-16">
+        <footer className="flex flex-col items-center justify-center gap-4 bg-zinc-100 px-5 py-10 sm:flex-row sm:items-start sm:justify-normal sm:text-left lg:gap-[5rem] lg:px-[5rem] xl:gap-[5rem] xl:px-[7rem] 2xl:gap-20 2xl:px-16">
             {/* Col 1 - Logo */}
             <div className="hidden flex-col sm:flex">
                 <div className="relative h-[40px] w-[150px] xl:h-[55px] xl:w-[230px] 2xl:h-[75px] 2xl:w-[317px]">
                     <Image src="/logo-full.jpg" fill alt="Logo Picture" />
                 </div>
 
-                <p className="ml-6 text-lg text-[#C3C3C3] 2xl:text-2xl">
+                <p className="ml-6 text-lg text-zinc-700 2xl:text-2xl">
                     Always striving for innovation.
                 </p>
             </div>
@@ -22,23 +22,23 @@ export default function Footer() {
                 </h1>
                 {/* Phone Contact Info */}
                 <>
-                    <h1 className="text-lg font-semibold text-white sm:text-xl 2xl:text-2xl">
+                    <h1 className="text-lg font-semibold text-zinc-700 sm:text-xl 2xl:text-2xl">
                         Phone
                     </h1>
-                    <p className="text-md font-light text-zinc-400 sm:text-lg 2xl:text-xl">
+                    <p className="text-md font-light text-zinc-600 sm:text-lg 2xl:text-xl">
                         US: +1 202 664 4153
                     </p>
-                    <p className="text-md font-light text-zinc-400 sm:text-lg 2xl:text-xl">
+                    <p className="text-md font-light text-zinc-600 sm:text-lg 2xl:text-xl">
                         CN: + 86 182 0190 0625
                     </p>
                 </>
 
                 {/* Email Contact Info */}
                 <>
-                    <h1 className="text-lg font-semibold text-white sm:text-xl 2xl:text-2xl">
+                    <h1 className="text-lg font-semibold text-zinc-700 sm:text-xl 2xl:text-2xl">
                         Email
                     </h1>
-                    <p className="text-md font-light text-zinc-400 sm:text-lg 2xl:text-xl">
+                    <p className="text-md font-light text-zinc-600 sm:text-lg 2xl:text-xl">
                         bill@algoupinc.com
                     </p>
                 </>
@@ -192,7 +192,7 @@ interface NavigationLinkProps {
 function NavigationLink({ link, text }: NavigationLinkProps) {
     return (
         <Link
-            className="text-md font-light text-zinc-400 sm:text-lg 2xl:text-xl"
+            className="text-md text-zinc-700 sm:text-lg 2xl:text-xl"
             href={link}
         >
             {text}
@@ -208,7 +208,7 @@ interface SocialLinksProps {
 function SocialLinks({ link, children }: SocialLinksProps) {
     return (
         <Link
-            className="text-md flex items-center gap-2 font-light text-zinc-400 sm:text-lg 2xl:text-xl"
+            className="text-md flex items-center gap-2 text-zinc-700 sm:text-lg 2xl:text-xl"
             href={link}
         >
             {children}

@@ -127,7 +127,7 @@ function MobileLinkProps({ text, link, onClick }: MobileLinkProps) {
     return (
         <Link
             onClick={onClick}
-            className="text-center text-sm font-semibold text-black"
+            className="text-center text-lg font-semibold text-black"
             href={link}
         >
             {text}

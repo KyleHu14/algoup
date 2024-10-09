@@ -23,7 +23,7 @@ export default function LogoDisplayCarousel({
     logos,
 }: LogoDisplayCarouselProps) {
     return (
-        <Carousel plugins={[Autoplay({delay: 2500, }),]} opts={{ loop: true }}className="w-full max-w-5xl">
+        <Carousel plugins={[Autoplay({delay: 2500, }),]} opts={{ loop: true }}className="max-w-5xl">
             <CarouselContent className="-ml-16">
                 {logos.map((partnerSrc, index) =>
                     partnerSrc.includes("volkswagen") ? (

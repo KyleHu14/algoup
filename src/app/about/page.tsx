@@ -7,11 +7,11 @@ import { CUSTOMERS } from "../../data/about-us/customers"
 
 export default function AboutUs() {
     return (
-        <main className="flex flex-col gap-24 pb-24">
+        <main className="flex flex-col gap-24 py-24">
             {/* Main About Us Section */}
-            <section className="flex h-screen items-center justify-center gap-10 px-7 2xl:gap-16">
+            <section className="flex flex-col items-center justify-center gap-10 px-7 2xl:gap-16">
                 {/* About Us Description */}
-                <div className="relative h-[20rem] w-[40rem] 2xl:h-[30rem] 2xl:w-[60rem]">
+                <div className="relative h-[12rem] w-full 2xl:h-[30rem] 2xl:w-[60rem]">
                     <Image
                         className="rounded object-cover"
                         src="/about/seattle.jpeg"
@@ -20,11 +20,11 @@ export default function AboutUs() {
                     />
                 </div>
 
-                <div className="flex w-[40rem] flex-col justify-center gap-5">
+                <div className="flex flex-col gap-5 text-center">
                     <div className="text-2xl font-bold xl:text-3xl 2xl:text-4xl 3xl:text-5xl">
                         About Algoup
                     </div>
-                    <div className="xl:text-md text-left text-gray-500 2xl:text-lg 3xl:text-xl">
+                    <div className="xl:text-md text-gray-500 2xl:text-lg 3xl:text-xl">
                         <span className="font-semibold text-secondary-color">
                             ALGOUP Inc.
                         </span>{" "}
@@ -52,12 +52,12 @@ export default function AboutUs() {
             </section>
 
             {/* Our Team Section */}
-            <section className="flex w-screen gap-20 bg-zinc-800 p-20 text-white">
-                <div className="flex w-[40rem] flex-col gap-5">
-                    <h1 className="text-3xl font-bold 2xl:text-4xl 3xl:text-5xl">
+            <section className="flex flex-col-reverse items-center justify-center gap-5 bg-zinc-100 p-10">
+                <div className="flex flex-col gap-5 text-center">
+                    <h1 className="text-2xl font-bold 2xl:text-4xl 3xl:text-5xl">
                         Our Team
                     </h1>
-                    <div className="flex flex-col gap-3 text-left text-lg 3xl:text-xl">
+                    <div className="flex flex-col gap-3 3xl:text-xl">
                         <p>
                             At ALGOUP, our team is composed of dedicated and
                             skilled professionals driven to provide
@@ -80,7 +80,7 @@ export default function AboutUs() {
                         </p>
                     </div>
                 </div>
-                <div className="relative h-[30rem] w-[50rem]">
+                <div className="relative h-[12rem] w-full">
                     <Image
                         className="rounded object-cover"
                         src="/about/team.jpg"

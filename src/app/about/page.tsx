@@ -57,7 +57,7 @@ export default function AboutUs() {
                     <h1 className="text-2xl font-bold 2xl:text-4xl 3xl:text-5xl">
                         Our Team
                     </h1>
-                    <div className="flex flex-col gap-3 3xl:text-xl">
+                    <div className="flex flex-col gap-3 text-gray-600 3xl:text-xl">
                         <p>
                             At ALGOUP, our team is composed of dedicated and
                             skilled professionals driven to provide
@@ -91,7 +91,7 @@ export default function AboutUs() {
             </section>
 
             {/* Partners */}
-            <section className="flex flex-col items-center">
+            <section className="flex flex-col items-center text-center">
                 <h1 className="text-2xl 3xl:mb-10 3xl:text-3xl">
                     Partnered with{" "}
                     <span className="font-bold text-secondary-color">
@@ -104,7 +104,7 @@ export default function AboutUs() {
             </section>
 
             {/* Customers */}
-            <section className="flex flex-col items-center">
+            <section className="flex flex-col items-center text-center">
                 <h1 className="text-2xl 3xl:mb-10 3xl:text-3xl">
                     Serving a{" "}
                     <span className="font-bold text-secondary-color">

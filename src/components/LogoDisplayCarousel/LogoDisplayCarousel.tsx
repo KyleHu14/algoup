@@ -23,11 +23,11 @@ export default function LogoDisplayCarousel({
     logos,
 }: LogoDisplayCarouselProps) {
     return (
-        <Carousel plugins={[Autoplay({delay: 2500, }),]} opts={{ loop: true }}className="max-w-5xl">
+        <Carousel plugins={[Autoplay({delay: 2500, }),]} opts={{ loop: true }}className="w-[70%] max-w-5xl">
             <CarouselContent className="-ml-16">
                 {logos.map((partnerSrc, index) =>
                     partnerSrc.includes("volkswagen") ? (
-                        <CarouselItem key={index} className="basis-1/5 pl-16">
+                        <CarouselItem key={index} className="basis-1/2 lg:basis-1/5 pl-16">
                             <div className="flex aspect-square items-center justify-center">
                                 <Image
                                     src={partnerSrc}
@@ -38,7 +38,7 @@ export default function LogoDisplayCarousel({
                             </div>
                         </CarouselItem>
                     ) : (
-                        <CarouselItem key={index} className="basis-1/5 pl-16">
+                        <CarouselItem key={index} className="basis-1/2 lg:basis-1/5 pl-16">
                             <div className="flex aspect-square items-center justify-center">
                                 <Image
                                     src={partnerSrc}

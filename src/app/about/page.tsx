@@ -9,9 +9,9 @@ export default function AboutUs() {
     return (
         <main className="flex flex-col gap-24 py-24">
             {/* Main About Us Section */}
-            <section className="flex flex-col items-center justify-center gap-10 px-7 2xl:gap-16">
+            <section className="flex flex-col items-center justify-center gap-10 px-7 md:px-24 lg:flex-row 2xl:gap-16 2xl:px-44">
                 {/* About Us Description */}
-                <div className="relative h-[12rem] w-full 2xl:h-[30rem] 2xl:w-[60rem]">
+                <div className="relative h-[12rem] w-full md:h-[23rem] 2xl:h-[25rem]">
                     <Image
                         className="rounded object-cover"
                         src="/about/seattle.jpeg"
@@ -20,14 +20,14 @@ export default function AboutUs() {
                     />
                 </div>
 
-                <div className="flex flex-col gap-5 text-center">
-                    <div className="text-2xl font-bold xl:text-3xl 2xl:text-4xl 3xl:text-5xl">
+                <div className="flex w-full flex-col gap-5 text-center">
+                    <div className="text-2xl font-bold xl:text-3xl 2xl:text-4xl">
                         About Algoup
                     </div>
                     <div className="xl:text-md text-gray-500 2xl:text-lg 3xl:text-xl">
                         <span className="font-semibold text-secondary-color">
                             ALGOUP Inc.
-                        </span>{" "}
+                        </span>
                         , headquartered in Seattle, WA, specializes in
                         automation solutions encompassing research and
                         development, manufacturing, and distribution of mobile
@@ -52,12 +52,12 @@ export default function AboutUs() {
             </section>
 
             {/* Our Team Section */}
-            <section className="flex flex-col-reverse items-center justify-center gap-5 bg-zinc-100 p-10">
-                <div className="flex flex-col gap-5 text-center">
-                    <h1 className="text-2xl font-bold 2xl:text-4xl 3xl:text-5xl">
+            <section className="flex flex-col-reverse items-center justify-center gap-10 bg-zinc-100 px-7 py-24 md:px-24 lg:flex-row 2xl:px-44">
+                <div className="flex w-full flex-col gap-5 text-center">
+                    <h1 className="text-2xl font-bold xl:text-3xl 2xl:text-4xl">
                         Our Team
                     </h1>
-                    <div className="flex flex-col gap-3 text-gray-600 3xl:text-xl">
+                    <div className="flex flex-col gap-3 text-gray-600 2xl:text-lg 3xl:text-xl">
                         <p>
                             At ALGOUP, our team is composed of dedicated and
                             skilled professionals driven to provide
@@ -80,7 +80,7 @@ export default function AboutUs() {
                         </p>
                     </div>
                 </div>
-                <div className="relative h-[12rem] w-full">
+                <div className="relative h-[12rem] w-full md:h-[20rem] lg:h-[23rem]">
                     <Image
                         className="rounded object-cover"
                         src="/about/team.jpg"

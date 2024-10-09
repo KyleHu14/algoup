@@ -9,6 +9,7 @@ export default function Home() {
             <section className="slide-container h-screen w-full">
                 <video
                     className="relative h-screen w-screen object-cover"
+                    playsInline
                     autoPlay
                     loop
                     muted

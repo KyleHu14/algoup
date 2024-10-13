@@ -38,7 +38,7 @@ export default function Contact() {
 
     return (
         <form
-            className="flex w-[60%] flex-col items-center gap-7 rounded-lg border border-zinc-400 p-4 shadow-2xl lg:p-10"
+            className="flex w-[60%] flex-col items-center gap-7 rounded-lg border border-zinc-400 p-4 shadow-2xl lg:p-10 xl:w-[40%]"
             onSubmit={onSubmit}
         >
             <div className="flex w-full gap-5">

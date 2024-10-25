@@ -1,8 +1,15 @@
-import { Button } from "@/components/ui/button"
-import ArticlePreview from "@/components/News/ArticlePreview"
+// [ Imports ]
+// Utilities
 import { getAllArticles } from "@/lib/newsUtils"
+
+// Nextjs Components
 import Image from "next/image"
-import Link from "next/link"
+
+// import { Button } from "@/components/ui/button"
+// import ArticlePreview from "@/components/News/ArticlePreview"
+
+// import Image from "next/image"
+// import Link from "next/link"
 
 export default function News() {
     const allArticles = getAllArticles()
@@ -12,14 +19,40 @@ export default function News() {
     const moreArticles = allArticles.slice(1)
 
     return (
-        <main>
-            <div>
-                <h1>Company News</h1>
-                <h2>
+        <main className="mx-5 my-14">
+            {/* Title Section */}
+            <div className="py-8">
+                <h1 className="text-xl font-semibold">Company News</h1>
+                <p className="text-md">
                     <TodaysDate />
+                </p>
+            </div>
+
+            {/* Featured Article */}
+            <div className="bg-background-dark flex flex-col items-center gap-3 rounded-md p-4">
+                {/* Title */}
+                <h2 className="w-full border-b-2 border-b-secondary-color text-lg font-semibold">
+                    Featured Article
                 </h2>
+
+                {/* Featured Article Image */}
+                <div className="relative h-44 w-44">
+                    <Image
+                        className="object-cover"
+                        src={featuredArticle.coverImage}
+                        fill={true}
+                        alt="News Placeholder"
+                    />
+                </div>
+
+                {/* Featured Article Text */}
+                <div className="mt-3 text-3xl">{featuredArticle.title}</div>
+                <div className="mt-2 w-[28rem] text-lg">
+                    {featuredArticle.excerpt}
+                </div>
             </div>
         </main>
+
         // <main>
         //     {/* Header */}
         //     <section className="flex min-h-[25rem] flex-col gap-10 bg-zinc-800 px-28 py-[4rem] xl:px-[12rem]">

@@ -8,6 +8,16 @@
 
 @layer base {
     :root {
+        /* Algoup */
+        /* Colors */
+        --algoup-accent: 184 55% 59%;
+        --algoup-accent-dark: 184 41% 51%;
+
+        /* Text */
+        --typography-main: 240 10% 4%;
+        --typography-secondary: 240 4% 46%;
+
+        /* Shadcn */
         --background: 0 0% 100%;
         --foreground: 224 71.4% 4.1%;
 

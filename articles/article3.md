@@ -1,9 +1,9 @@
 ---
-title: "New Model : PG-RS"
-excerpt: "Algoup released a new PG-RS model for pallet lifting."
+title: "Example Article 3"
+excerpt: "Another non featured article is here."
 coverImage: "/news/pg-rs-cover.jpg"
-date: "2024-06-15"
-isFeatured: true
+date: "2024-11-15"
+isFeatured: false
 author:
     name: Algoup Team
     picture: "/assets/blog/authors/jj.jpeg"

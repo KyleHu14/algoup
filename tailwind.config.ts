@@ -20,8 +20,13 @@ const config = {
         extend: {
             colors: {
                 // Custom Colors
-                secondary: "#5CC8Cf",
-                "secondary-dark": "#50afb5",
+                "algoup-accent": "hsl(var(--algoup-accent))",
+                "algoup-accent-dark": "hsl(var(--algoup-accent-dark))",
+
+                // Text
+                "typography-main": "hsl(var(--typography-main))",
+                "typography-secondary": "hsl(var(--typography-secondary))",
+
                 "background-dark": "#E8E8E8",
 
                 // Shadcn

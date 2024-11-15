@@ -1,34 +1,28 @@
 // [ Imports ]
 // Utilities
-import { getAllArticles } from "@/lib/newsUtils"
+import { getNonFeaturedArticles, getFeaturedArticle } from "@/lib/newsUtils"
 
 // Components
 import ArticleList from "@/components/News/ArticleList"
 import ArticleContainer from "@/components/News/ArticleContainer"
 import FlexImage from "@/components/FlexImage"
-
-// NextJs
-import Link from "next/link"
+import AccentButton from "@/components/AccentButton"
 
 export default function News() {
-    const allArticles = getAllArticles()
+    const allArticles = getNonFeaturedArticles()
 
-    const featuredArticle = allArticles[0]
-
-    const moreArticles = allArticles.slice(1)
+    const featuredArticle = getFeaturedArticle()
 
     function slugifyArticle(url: string) {
         return `/news/${url}`
     }
 
     return (
-        <main className="mx-5 my-14 flex max-w-[43rem] flex-col gap-10 text-center md:mx-auto md:text-left">
+        <main className="mx-5 my-24 flex max-w-[43rem] flex-col gap-10 text-center md:mx-auto md:my-14 md:text-left">
             {/* Title Section */}
             <section>
-                <h1 className="text-xl font-semibold lg:text-3xl">
-                    Company News
-                </h1>
-                <p className="text-md lg:text-xl">
+                <h1 className="text-3xl font-semibold">Company News</h1>
+                <p className="mt-1 text-xl">
                     <TodaysDate />
                 </p>
             </section>
@@ -44,30 +38,41 @@ export default function News() {
                     />
 
                     {/* Featured Article Text */}
-                    <div>
+                    <div className="flex flex-col">
+                        {/* Title */}
                         <h3 className="w-full text-xl font-bold">
                             {featuredArticle.title}
                         </h3>
 
-                        <p className="text-lg">{featuredArticle.excerpt}</p>
+                        {/* Date | Author Name */}
+                        <p>{`${featuredArticle.date} | By ${featuredArticle.author.name}`}</p>
 
-                        <Link href={slugifyArticle(featuredArticle.slug)}>
-                            <button>Read More</button>
-                        </Link>
+                        {/* Desc */}
+                        <p className="text-typography-secondary text-md mt-3">
+                            {featuredArticle.excerpt}
+                        </p>
+
+                        <AccentButton
+                            className="mt-4"
+                            text="Read More"
+                            link={slugifyArticle(featuredArticle.slug)}
+                        />
                     </div>
                 </div>
             </ArticleList>
 
             {/* All Articles */}
             <ArticleList title="All Articles">
-                {moreArticles.length > 0 ? (
-                    moreArticles.map((articleData, index) => (
+                {allArticles.length > 0 ? (
+                    allArticles.map((articleData, index) => (
                         <ArticleContainer
                             key={index}
                             title={articleData.title}
                             excerpt={articleData.excerpt}
+                            date={articleData.date}
                             author={articleData.author.name}
                             img={articleData.coverImage}
+                            link={slugifyArticle(articleData.slug)}
                         />
                     ))
                 ) : (

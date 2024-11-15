@@ -20,7 +20,7 @@ type Article = {
         url: string
     }
     content: string
-    preview?: boolean
+    isFeatured: boolean
 }
 
 export function getArticleSlug() {
@@ -36,11 +36,21 @@ export function getArticleBySlug(slug: string) {
     return { ...data, slug: realSlug, content } as Article
 }
 
-export function getAllArticles(): Article[] {
+function getAllArticles(): Article[] {
     const slugs = getArticleSlug()
     const posts = slugs
         .map((slug) => getArticleBySlug(slug))
         // sort posts by date in descending order
         .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
     return posts
+}
+
+export function getFeaturedArticle(): Article {
+    const allArticles = getAllArticles()
+    return allArticles.filter((article) => article.isFeatured)[0]
+}
+
+export function getNonFeaturedArticles(): Article[] {
+    const allArticles = getAllArticles()
+    return allArticles.filter((article) => !article.isFeatured)
 }

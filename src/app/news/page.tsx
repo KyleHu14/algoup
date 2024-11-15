@@ -21,9 +21,9 @@ export default function News() {
     const moreArticles = allArticles.slice(1)
 
     return (
-        <main className="mx-5 my-14 flex flex-col gap-10 py-12 text-center">
+        <main className="mx-5 my-14 flex max-w-[45rem] flex-col gap-10 py-12 text-center md:mx-auto md:text-left">
             {/* Title Section */}
-            <section>
+            <section className="">
                 <h1 className="text-xl font-semibold">Company News</h1>
                 <p className="text-md">
                     <TodaysDate />
@@ -32,21 +32,23 @@ export default function News() {
 
             {/* Featured Article */}
             <ArticleList title="Featured Article">
-                {/* Featured Article Image */}
-                <FlexImage
-                    className="relative h-44 w-44"
-                    imgSrc={featuredArticle.coverImage}
-                    altText="Featured Article's Cover Image"
-                />
+                <div className="group flex flex-col items-center gap-2 md:flex-row">
+                    {/* Featured Article Image */}
+                    <FlexImage
+                        className="relative h-44 w-44"
+                        imgSrc={featuredArticle.coverImage}
+                        altText="Featured Article's Cover Image"
+                    />
 
-                {/* Featured Article Text */}
-                <h3 className="mt-3 w-full text-xl font-bold">
-                    {featuredArticle.title}
-                </h3>
-                <p className="text-lg">{featuredArticle.excerpt}</p>
-                <Link href={`/news/${featuredArticle.slug}`}>
-                    <Button className="bg-secondary-dark">Read More</Button>
-                </Link>
+                    {/* Featured Article Text */}
+                    <div>
+                        <h3 className="mt-3 w-full text-xl font-bold">
+                            {featuredArticle.title}
+                        </h3>
+                        <p className="text-lg">{featuredArticle.excerpt}</p>
+                        <button>Read More</button>
+                    </div>
+                </div>
             </ArticleList>
 
             {/* All Articles */}

@@ -17,7 +17,7 @@ export default function DashboardNavbar() {
             z-50: so that other elements don't overlap it
             h & w : need to be specified for fixed
         */
-        <nav className="border-b-secondary-dark fixed top-0 z-50 flex h-14 w-full items-center justify-between border-b-2 bg-white px-5 shadow-md sm:sticky sm:h-20 sm:flex-row xl:px-14 2xl:px-28">
+        <nav className="fixed top-0 z-50 flex h-14 w-full items-center justify-between border-b-2 border-b-secondary-dark bg-white px-5 shadow-md sm:sticky sm:h-20 sm:flex-row xl:px-14 2xl:px-28">
             <Link
                 href="/"
                 className="relative h-7 w-28 xl:block xl:h-[45px] xl:w-[170px] 2xl:h-[65px] 2xl:w-[260px]"
@@ -28,14 +28,14 @@ export default function DashboardNavbar() {
             {/* Burger Menu */}
             <button
                 onClick={() => setShowMobileLinks(!showMobileLinks)}
-                className="sm:hidden"
+                className="md:hidden"
             >
                 <Menu className="h-8 w-8 text-zinc-700" />
             </button>
 
             {/* Mobile Links */}
             {showMobileLinks ? (
-                <div className="fixed left-0 top-[3.5rem] flex w-full flex-col items-center justify-center gap-2 bg-zinc-200 p-3 sm:hidden">
+                <div className="fixed left-0 top-[3.5rem] flex w-full flex-col items-center justify-center gap-2 bg-zinc-200 p-3 md:hidden">
                     <MobileLinkProps
                         onClick={() => setShowMobileLinks(!showMobileLinks)}
                         link="/technology"
@@ -78,7 +78,7 @@ export default function DashboardNavbar() {
             ) : null}
 
             {/* Desktop Links */}
-            <div className="hidden flex-row items-center justify-center gap-3 sm:flex xl:gap-6 3xl:gap-8">
+            <div className="hidden flex-row items-center justify-center gap-3 md:flex xl:gap-6 3xl:gap-8">
                 <NavbarLink link="/technology" text="Technology" />
                 <NavbarLink link="/products" text="Products" />
                 <NavbarLink
@@ -91,7 +91,7 @@ export default function DashboardNavbar() {
                 <Link href="/contact">
                     <Button
                         size="sm"
-                        className="bg-secondary-color-dark px-2 py-0 text-[11px] text-white lg:text-lg"
+                        className="bg-secondary px-2 py-0 text-[11px] text-white hover:bg-secondary-dark lg:text-lg"
                     >
                         Contact Us
                     </Button>
@@ -109,7 +109,7 @@ interface NavbarLinkProps {
 function NavbarLink({ text, link }: NavbarLinkProps) {
     return (
         <Link
-            className="text-center text-[11px] text-black transition duration-300 ease-in-out hover:text-secondary-color md:text-sm lg:text-lg"
+            className="hover:text-secondary-color text-center text-[11px] text-black transition duration-300 ease-in-out md:text-sm lg:text-lg"
             href={link}
         >
             {text}

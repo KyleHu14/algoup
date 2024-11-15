@@ -15,16 +15,25 @@ export default function ArticleContainer({
     img,
 }: Props) {
     return (
-        <div className="group flex flex-col items-center">
-            {/* Featured Article Image */}
+        /**
+         * md:flex-row : Row based layout on desktop
+         */
+        <div className="group flex flex-col items-center gap-2 md:flex-row">
+            {/* Article Image */}
             <FlexImage
                 className="relative h-44 w-44"
                 imgSrc={img}
                 altText="Article's cover image"
             />
-            <h3 className="group-hover:underline">{title}</h3>
-            <p>{excerpt}</p>
-            <p>By : {author}</p>
+
+            {/* Text */}
+            <div>
+                <h3 className="text-xl font-bold group-hover:underline">
+                    {title}
+                </h3>
+                <p className="text-lg">{excerpt}</p>
+                <p className="text-md">By : {author}</p>
+            </div>
         </div>
     )
 }

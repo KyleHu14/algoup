@@ -1,5 +1,5 @@
-import { ArticleBody } from "@/components/News/Article/ArticleBody"
-import { ArticleHeader } from "@/components/News/Article/ArticleHeader"
+import { ArticleBody } from "@/components/News/ArticleSlug/ArticleBody"
+import { ArticleHeader } from "@/components/News/ArticleSlug/ArticleHeader"
 import markdownToHtml from "@/lib/mdToHtml"
 import { getArticleBySlug } from "@/lib/newsUtils"
 

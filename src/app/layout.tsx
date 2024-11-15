@@ -8,8 +8,8 @@ const inter = Inter({
 import "./globals.css"
 
 // Importing of Components
-import Navbar from "@/components/General/Navbar"
-import Footer from "@/components/General/Footer"
+import Navbar from "@/components/Navbar"
+import Footer from "@/components/Footer"
 
 export const metadata: Metadata = {
     title: "Algoup",

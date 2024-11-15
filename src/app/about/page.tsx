@@ -1,4 +1,4 @@
-import LogoDisplayCarousel from "@/components/LogoDisplayCarousel/LogoDisplayCarousel"
+import LogoDisplayCarousel from "@/components/LogoDisplayCarousel"
 
 import Image from "next/image"
 
@@ -25,7 +25,7 @@ export default function AboutUs() {
                         About Algoup
                     </div>
                     <div className="xl:text-md text-gray-500 2xl:text-lg 3xl:text-xl">
-                        <span className="font-semibold text-secondary-color">
+                        <span className="font-semibold text-secondary">
                             ALGOUP Inc.
                         </span>
                         , headquartered in Seattle, WA, specializes in
@@ -37,7 +37,7 @@ export default function AboutUs() {
                         state-of-the-art technologies positioned at the edge.
                         <br></br>
                         <br></br>
-                        <span className="font-semibold text-secondary-color">
+                        <span className="font-semibold text-secondary">
                             ALGOUP Inc.
                         </span>{" "}
                         has cultivated a portfolio of advanced robot products,
@@ -94,7 +94,7 @@ export default function AboutUs() {
             <section className="flex flex-col items-center text-center">
                 <h1 className="text-2xl 3xl:mb-10 3xl:text-3xl">
                     Partnered with{" "}
-                    <span className="font-bold text-secondary-color">
+                    <span className="font-bold text-secondary">
                         industry-leading
                     </span>{" "}
                     organizations
@@ -107,43 +107,12 @@ export default function AboutUs() {
             <section className="flex flex-col items-center text-center">
                 <h1 className="text-2xl 3xl:mb-10 3xl:text-3xl">
                     Serving a{" "}
-                    <span className="font-bold text-secondary-color">
-                        diverse
-                    </span>{" "}
+                    <span className="font-bold text-secondary">diverse</span>{" "}
                     array of industries
                 </h1>
 
                 <LogoDisplayCarousel logos={CUSTOMERS} />
             </section>
         </main>
-    )
-}
-
-function CompanyFact({ number, text }: { number: string; text: string }) {
-    return (
-        <div className="border-b border-b-gray-800">
-            <div className="text-3xl font-bold">{number}</div>
-            <div className="my-3 text-xl">{text}</div>
-        </div>
-    )
-}
-
-function PartnerCard({
-    imageUrl,
-    companyName,
-}: {
-    imageUrl: string
-    companyName: string
-}) {
-    return (
-        <div className="flex w-[20rem] flex-col items-center justify-center bg-gray-100 px-10 py-5">
-            <div className="p-10">
-                <img src={imageUrl} />
-            </div>
-
-            <div className="mb-5 w-full border border-gray-300"></div>
-
-            <div className="font-semibold">{companyName}</div>
-        </div>
     )
 }

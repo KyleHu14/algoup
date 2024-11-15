@@ -1,6 +1,6 @@
 "use client"
 
-import Semibold from "@/components/General/Semibold"
+import Semibold from "@/components/Semibold"
 
 import { Rabbit, Undo2, Weight } from "lucide-react"
 
@@ -12,7 +12,7 @@ import {
 import { ReactImageTurntable } from "react-image-turntable"
 
 import ProductCoverImage from "@/components/Product/CoverImage"
-import UnderlineSpan from "@/components/General/UnderlineSpan"
+import UnderlineSpan from "@/components/UnderlineSpan"
 import TitleSection from "@/components/Product/TitleSection"
 import SpecificationSummary from "@/components/Product/SpecificationSummary"
 import SpecificationTable from "@/components/Product/SpecificationTable"

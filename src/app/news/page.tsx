@@ -3,13 +3,15 @@
 import { getAllArticles } from "@/lib/newsUtils"
 
 // Nextjs Components
-import Image from "next/image"
+import Link from "next/link"
 
-// import { Button } from "@/components/ui/button"
-// import ArticlePreview from "@/components/News/ArticlePreview"
+// Shadcn
+import { Button } from "@/components/ui/button"
 
-// import Image from "next/image"
-// import Link from "next/link"
+// Components
+import ArticleList from "@/components/News/ArticleList"
+import ArticleContainer from "@/components/News/ArticleContainer"
+import FlexImage from "@/components/FlexImage"
 
 export default function News() {
     const allArticles = getAllArticles()
@@ -19,38 +21,50 @@ export default function News() {
     const moreArticles = allArticles.slice(1)
 
     return (
-        <main className="mx-5 my-14">
+        <main className="mx-5 my-14 flex flex-col gap-10 py-12 text-center">
             {/* Title Section */}
-            <div className="py-8">
+            <section>
                 <h1 className="text-xl font-semibold">Company News</h1>
                 <p className="text-md">
                     <TodaysDate />
                 </p>
-            </div>
+            </section>
 
             {/* Featured Article */}
-            <div className="bg-background-dark flex flex-col items-center gap-3 rounded-md p-4">
-                {/* Title */}
-                <h2 className="w-full border-b-2 border-b-secondary-color text-lg font-semibold">
-                    Featured Article
-                </h2>
-
+            <ArticleList title="Featured Article">
                 {/* Featured Article Image */}
-                <div className="relative h-44 w-44">
-                    <Image
-                        className="object-cover"
-                        src={featuredArticle.coverImage}
-                        fill={true}
-                        alt="News Placeholder"
-                    />
-                </div>
+                <FlexImage
+                    className="relative h-44 w-44"
+                    imgSrc={featuredArticle.coverImage}
+                    altText="Featured Article's Cover Image"
+                />
 
                 {/* Featured Article Text */}
-                <div className="mt-3 text-3xl">{featuredArticle.title}</div>
-                <div className="mt-2 w-[28rem] text-lg">
-                    {featuredArticle.excerpt}
-                </div>
-            </div>
+                <h3 className="mt-3 w-full text-xl font-bold">
+                    {featuredArticle.title}
+                </h3>
+                <p className="text-lg">{featuredArticle.excerpt}</p>
+                <Link href={`/news/${featuredArticle.slug}`}>
+                    <Button className="bg-secondary-dark">Read More</Button>
+                </Link>
+            </ArticleList>
+
+            {/* All Articles */}
+            <ArticleList title="All Articles">
+                {moreArticles.length > 0 ? (
+                    moreArticles.map((articleData, index) => (
+                        <ArticleContainer
+                            key={index}
+                            title={articleData.title}
+                            excerpt={articleData.excerpt}
+                            author={articleData.author.name}
+                            img={articleData.coverImage}
+                        />
+                    ))
+                ) : (
+                    <p>No Articles.</p>
+                )}
+            </ArticleList>
         </main>
 
         // <main>

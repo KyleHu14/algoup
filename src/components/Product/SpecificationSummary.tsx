@@ -1,5 +1,5 @@
 import { MutableRefObject } from "react"
-import Semibold from "../General/Semibold"
+import Semibold from "../Semibold"
 
 interface Props {
     title: React.ReactNode

@@ -7,8 +7,8 @@ import { Rabbit, Undo2, Weight } from "lucide-react"
 import { ReactImageTurntable } from "react-image-turntable"
 
 // Components
-import UnderlineSpan from "@/components/General/UnderlineSpan"
-import Semibold from "@/components/General/Semibold"
+import UnderlineSpan from "@/components/UnderlineSpan"
+import Semibold from "@/components/Semibold"
 import CoverImage from "@/components/Product/CoverImage"
 import TitleSection from "@/components/Product/TitleSection"
 import SpecificationSummary from "@/components/Product/SpecificationSummary"

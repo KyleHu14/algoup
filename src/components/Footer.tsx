@@ -17,7 +17,7 @@ export default function Footer() {
 
             {/* Col 2 - Contact */}
             <div className="flex w-full flex-col gap-1">
-                <h1 className="text-xl font-semibold text-secondary-color lg:text-2xl 2xl:text-3xl">
+                <h1 className="text-xl font-semibold text-secondary lg:text-2xl 2xl:text-3xl">
                     Contact
                 </h1>
                 {/* Phone Contact Info */}
@@ -46,7 +46,7 @@ export default function Footer() {
 
             {/* Col 3 - Navigation */}
             <div className="flex w-full flex-col gap-1">
-                <h1 className="text-xl font-semibold text-secondary-color lg:text-2xl 2xl:text-3xl">
+                <h1 className="text-xl font-semibold text-secondary lg:text-2xl 2xl:text-3xl">
                     Navigation
                 </h1>
                 <NavigationLink text="Technology" link="/technology" />
@@ -62,7 +62,7 @@ export default function Footer() {
 
             {/* Col 4 - Social Media */}
             <div className="flex w-full flex-col gap-3">
-                <h1 className="text-xl font-semibold text-secondary-color lg:text-2xl 2xl:text-3xl">
+                <h1 className="text-xl font-semibold text-secondary lg:text-2xl 2xl:text-3xl">
                     Social Media
                 </h1>
 

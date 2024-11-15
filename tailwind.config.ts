@@ -19,8 +19,8 @@ const config = {
         },
         extend: {
             colors: {
-                "secondary-color": "#5CC8Cf",
-                "secondary-color-dark": "#50afb5",
+                secondary: "#5CC8Cf",
+                "secondary-dark": "#50afb5",
                 "background-dark": "#E8E8E8",
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
@@ -30,10 +30,6 @@ const config = {
                 primary: {
                     DEFAULT: "hsl(var(--primary))",
                     foreground: "hsl(var(--primary-foreground))",
-                },
-                secondary: {
-                    DEFAULT: "hsl(var(--secondary))",
-                    foreground: "hsl(var(--secondary-foreground))",
                 },
                 destructive: {
                     DEFAULT: "hsl(var(--destructive))",

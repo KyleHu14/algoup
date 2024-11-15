@@ -1,5 +1,5 @@
 ---
-title: "New Model : PG-RS"
+title: "New Model : PG-RSSSSS"
 excerpt: "Algoup released a new PG-RS model for pallet lifting."
 coverImage: "/news/pg-rs-cover.jpg"
 date: "2024-06-15"

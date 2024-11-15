@@ -1,7 +1,7 @@
 "use client"
 
-import UnderlineSpan from "@/components/General/UnderlineSpan"
-import Semibold from "@/components/General/Semibold"
+import UnderlineSpan from "@/components/UnderlineSpan"
+import Semibold from "@/components/Semibold"
 
 import { Rabbit, Undo2, Weight } from "lucide-react"
 

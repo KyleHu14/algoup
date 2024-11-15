@@ -78,3 +78,7 @@
         @apply bg-background text-foreground;
     }
 }
+
+.border-light {
+    @apply rounded-sm border shadow-md;
+}

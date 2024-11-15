@@ -2,16 +2,13 @@
 // Utilities
 import { getAllArticles } from "@/lib/newsUtils"
 
-// Nextjs Components
-import Link from "next/link"
-
-// Shadcn
-import { Button } from "@/components/ui/button"
-
 // Components
 import ArticleList from "@/components/News/ArticleList"
 import ArticleContainer from "@/components/News/ArticleContainer"
 import FlexImage from "@/components/FlexImage"
+
+// NextJs
+import Link from "next/link"
 
 export default function News() {
     const allArticles = getAllArticles()
@@ -20,33 +17,43 @@ export default function News() {
 
     const moreArticles = allArticles.slice(1)
 
+    function slugifyArticle(url: string) {
+        return `/news/${url}`
+    }
+
     return (
-        <main className="mx-5 my-14 flex max-w-[45rem] flex-col gap-10 py-12 text-center md:mx-auto md:text-left">
+        <main className="mx-5 my-14 flex max-w-[43rem] flex-col gap-10 text-center md:mx-auto md:text-left">
             {/* Title Section */}
-            <section className="">
-                <h1 className="text-xl font-semibold">Company News</h1>
-                <p className="text-md">
+            <section>
+                <h1 className="text-xl font-semibold lg:text-3xl">
+                    Company News
+                </h1>
+                <p className="text-md lg:text-xl">
                     <TodaysDate />
                 </p>
             </section>
 
             {/* Featured Article */}
             <ArticleList title="Featured Article">
-                <div className="group flex flex-col items-center gap-2 md:flex-row">
+                <div className="group flex flex-col items-center gap-2 md:flex-row md:items-start">
                     {/* Featured Article Image */}
                     <FlexImage
-                        className="relative h-44 w-44"
+                        className="relative h-60 w-56"
                         imgSrc={featuredArticle.coverImage}
                         altText="Featured Article's Cover Image"
                     />
 
                     {/* Featured Article Text */}
                     <div>
-                        <h3 className="mt-3 w-full text-xl font-bold">
+                        <h3 className="w-full text-xl font-bold">
                             {featuredArticle.title}
                         </h3>
+
                         <p className="text-lg">{featuredArticle.excerpt}</p>
-                        <button>Read More</button>
+
+                        <Link href={slugifyArticle(featuredArticle.slug)}>
+                            <button>Read More</button>
+                        </Link>
                     </div>
                 </div>
             </ArticleList>

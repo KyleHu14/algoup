@@ -19,9 +19,12 @@ const config = {
         },
         extend: {
             colors: {
+                // Custom Colors
                 secondary: "#5CC8Cf",
                 "secondary-dark": "#50afb5",
                 "background-dark": "#E8E8E8",
+
+                // Shadcn
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
                 ring: "hsl(var(--ring))",

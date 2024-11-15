@@ -18,7 +18,7 @@ export default function ArticleContainer({
         /**
          * md:flex-row : Row based layout on desktop
          */
-        <div className="group flex flex-col items-center gap-2 md:flex-row">
+        <div className="group flex flex-col items-center gap-2 md:flex-row md:items-start">
             {/* Article Image */}
             <FlexImage
                 className="relative h-44 w-44"

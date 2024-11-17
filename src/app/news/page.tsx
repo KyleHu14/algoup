@@ -21,8 +21,10 @@ export default function News() {
         <main className="mx-5 my-24 flex max-w-[43rem] flex-col gap-10 text-center md:mx-auto md:my-14 md:text-left">
             {/* Title Section */}
             <section>
-                <h1 className="text-3xl font-semibold">Company News</h1>
-                <p className="mt-1 text-xl">
+                <h1 className="text-typography-main text-3xl font-semibold">
+                    Company News
+                </h1>
+                <p className="text-typography-secondary mt-1 text-xl">
                     <TodaysDate />
                 </p>
             </section>

@@ -15,7 +15,7 @@
 
         /* Text */
         --typography-main: 240 10% 4%;
-        --typography-secondary: 240 4% 46%;
+        --typography-secondary: 240 4% 20%;
 
         /* Shadcn */
         --background: 0 0% 100%;
@@ -42,7 +42,7 @@
         --destructive: 0 84.2% 60.2%;
         --destructive-foreground: 210 20% 98%;
 
-        --border: 220 13% 91%;
+        --border: 220 13% 85%;
         --input: 220 13% 91%;
         --ring: 224 71.4% 4.1%;
 

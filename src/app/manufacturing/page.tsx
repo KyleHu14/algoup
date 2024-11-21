@@ -1,6 +1,3 @@
-import { Hammer, Leaf, SearchCheck } from "lucide-react"
-import Image from "next/image"
-
 // Components
 import CapabilityContainer from "@/components/Manufacturing/CapabilityContainer"
 
@@ -8,18 +5,18 @@ export default function Manufacturing() {
     return (
         <>
             {/* Header */}
-            <header className="flex flex-col justify-center gap-1 py-14 pt-24 text-center sm:gap-3">
-                <h1 className="text-typography-main text-2xl font-semibold sm:text-3xl">
+            <header className="flex flex-col justify-center gap-1 border-b pb-12 pt-24 text-center sm:gap-3">
+                <h1 className="text-xl font-bold text-typography-main sm:text-2xl md:text-3xl">
                     Manufacturing Capabilities
                 </h1>
-                <p className="text-typography-secondary text-md sm:text-xl">
+                <p className="text-md text-typography-secondary sm:text-xl">
                     Explore Algoup's extensive manufacturing capbilities.
                 </p>
             </header>
 
-            <main className="px-5">
+            <main className="px-5 py-16 sm:px-28">
                 {/* Capabilities Container */}
-                <div>
+                <div className="flex flex-col items-center gap-3 sm:gap-10">
                     {/* Robust Production */}
                     <CapabilityContainer
                         title="Robust Production"
@@ -27,8 +24,8 @@ export default function Manufacturing() {
                         enables us to fabricate critical components, sub-systems
                         and assemble AGVs & AMRs inhouse. Annual production
                         capacity is around 3,000 AGVs/AMRs."
-                        imgSrc="/manufacturing/facility-outer.jpg"
-                        imgClassName="h-[10rem] w-[20rem]"
+                        imgSrc="/manufacturing/facility-inner.jpg"
+                        imgClassName="max-w-[30rem] w-full h-[10rem] sm:h-[16rem] hover:scale-105 duration-300"
                         imgAltText="Manufacturing Facility"
                     />
 
@@ -39,8 +36,8 @@ export default function Manufacturing() {
                                 efficient supply chain, and lean production
                                 process allows us to have a competitive and
                                 sustainable cost structure."
-                        imgSrc="/manufacturing/manufacturing-2.png"
-                        imgClassName="h-[10rem] w-[20rem]"
+                        imgSrc="/manufacturing/facility-outer.png"
+                        imgClassName="max-w-[30rem] w-full h-[10rem] sm:h-[16rem] hover:scale-105 duration-300"
                         imgAltText="Indoor Manufacturing Facility"
                     />
 
@@ -53,8 +50,8 @@ export default function Manufacturing() {
                                 records on each component and manufacturing
                                 process helping us to substantially improve the
                                 final product’s quality."
-                        imgSrc="/manufacturing/manufacturing-1.jpg"
-                        imgClassName="h-[10rem] w-[20rem]"
+                        imgSrc="/manufacturing/quality-control.png"
+                        imgClassName="max-w-[30rem] w-full h-[10rem] sm:h-[16rem] hover:scale-105 duration-300"
                         imgAltText="Two People checking for quality control"
                     />
                 </div>

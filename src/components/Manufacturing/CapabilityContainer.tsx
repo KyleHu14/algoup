@@ -16,10 +16,7 @@ export default function CapabilityContainer({
     imgAltText,
 }: Props) {
     return (
-        <div className="mt-5 flex flex-col items-center justify-between gap-3 rounded-md border p-5 2xl:gap-5 3xl:gap-10">
-            {/* Title */}
-            <h2 className="text-2xl font-bold 2xl:text-4xl">{title}</h2>
-
+        <div className="flex max-w-[50rem] flex-col items-center justify-between gap-1 rounded-md border p-5 shadow-lg 2xl:gap-3">
             {/* Image */}
             <FlexImage
                 className={imgClassName}
@@ -27,8 +24,11 @@ export default function CapabilityContainer({
                 altText={imgAltText}
             />
 
+            {/* Title */}
+            <h2 className="text-xl font-bold sm:text-2xl">{title}</h2>
+
             {/* Description */}
-            <p className="text-typography-secondary mt-1 text-center text-lg font-light 2xl:text-2xl">
+            <p className="text-md mt-1 text-center font-light text-typography-secondary sm:text-lg">
                 {description}
             </p>
         </div>

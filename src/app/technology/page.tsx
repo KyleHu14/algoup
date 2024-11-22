@@ -2,19 +2,29 @@ import Image from "next/image"
 import Link from "next/link"
 
 export default function Technology() {
+    const techInfo = [
+        {
+            name: "Vehicle Design",
+            link: "/technology/vehicle-design",
+            iconLink: "/technology/header.jpg",
+            description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non sagittis nisi, vitae molestie lectus. Etiam scelerisque mollis nibh. Nunc libero dui, ullamcorper sed interdum quis, pellentesque mattis mi. ",
+        },
+        {},
+    ]
+
     return (
         <main>
             {/* Header Section */}
-            <section className="flex min-h-[25rem] items-center gap-10 bg-[url('/technology/header.jpg')] bg-[length:1902px_549px] bg-no-repeat 2xl:px-[12rem]">
+            <section className="flex flex-col items-center gap-3 border-b pb-12 pt-24 text-center sm:pt-12">
                 {/* Text */}
-                <div className="flex flex-col gap-2">
-                    <h1 className="text-3xl font-bold text-[#2c2c2c] 2xl:text-5xl">
-                        Technology Overview
-                    </h1>
-                    <p className="w-[25rem] text-2xl text-[#2c2c2c] 2xl:w-[30rem] 2xl:text-3xl">
-                        Explore Algoup’s extensive capabilities.
-                    </p>
-                </div>
+                <h1 className="text-3xl font-bold text-algoup-accent-dark 2xl:text-4xl">
+                    Technology Overview
+                </h1>
+
+                <p className="w-[25rem] text-2xl text-typography-secondary 2xl:w-[30rem]">
+                    Explore Algoup’s extensive capabilities.
+                </p>
             </section>
 
             {/* Technology Categories */}

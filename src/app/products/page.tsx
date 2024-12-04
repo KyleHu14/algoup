@@ -52,13 +52,13 @@ function ProductCard({ name, description, imageSrc, href }: ProductCardProps) {
     return (
         <Card className="flex flex-col items-center justify-center sm:mx-0">
             <CardHeader>
-                <CardTitle className="text-center text-xl font-semibold">
+                <CardTitle className="text-center text-lg font-semibold">
                     {name}
                 </CardTitle>
                 <CardDescription>{description}</CardDescription>
             </CardHeader>
             <CardContent>
-                <div className="relative flex h-[130px] w-[120px] items-center justify-center 2xl:h-[120px] 2xl:w-[150px]">
+                <div className="relative flex h-[100px] w-[130px] items-center justify-center 2xl:h-[120px] 2xl:w-[150px]">
                     <Image
                         className="object-cover"
                         src={imageSrc}
@@ -86,10 +86,10 @@ interface ProductHeaderProps {
 function ProductHeader({ title, subTitle }: ProductHeaderProps) {
     return (
         <div className="text-center sm:text-left">
-            <h1 className="text-xl font-semibold xl:text-2xl 2xl:text-3xl">
+            <h1 className="text-lg font-semibold xl:text-xl 2xl:text-2xl">
                 {title}
             </h1>
-            <h2 className="text-md font-light text-gray-500 sm:text-xl lg:text-2xl">
+            <h2 className="text-md font-light text-gray-500 xl:text-lg 2xl:text-xl">
                 {subTitle}
             </h2>
         </div>

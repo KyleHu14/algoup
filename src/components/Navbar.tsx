@@ -53,11 +53,6 @@ export default function DashboardNavbar() {
                     />
                     <MobileLinkProps
                         onClick={() => setShowMobileLinks(!showMobileLinks)}
-                        link="/service"
-                        text="Service"
-                    />
-                    <MobileLinkProps
-                        onClick={() => setShowMobileLinks(!showMobileLinks)}
                         link="/news"
                         text="News"
                     />
@@ -85,7 +80,6 @@ export default function DashboardNavbar() {
                     link="/manufacturing"
                     text="Manufacturing Capability"
                 />
-                <NavbarLink link="/service" text="Service" />
                 <NavbarLink link="/news" text="News" />
                 <NavbarLink link="/about" text="About Us" />
                 <Link href="/contact">

@@ -1,18 +1,21 @@
 // Components
 import CapabilityContainer from "@/components/Manufacturing/CapabilityContainer"
+import {
+    PageHeader,
+    PageHeaderSubTitle,
+    PageHeaderTitle,
+} from "@/components/PageHeader"
 
 export default function Manufacturing() {
     return (
         <>
             {/* Header */}
-            <header className="flex flex-col justify-center gap-1 border-b pb-12 pt-24 text-center sm:gap-3">
-                <h1 className="text-xl font-bold text-typography-main sm:text-2xl md:text-3xl">
-                    Manufacturing Capabilities
-                </h1>
-                <p className="text-md text-typography-secondary sm:text-xl">
+            <PageHeader>
+                <PageHeaderTitle>Manufacturing Capabilities</PageHeaderTitle>
+                <PageHeaderSubTitle>
                     Explore Algoup's extensive manufacturing capbilities.
-                </p>
-            </header>
+                </PageHeaderSubTitle>
+            </PageHeader>
 
             <main className="px-5 py-16 sm:px-28">
                 {/* Capabilities Container */}

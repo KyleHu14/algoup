@@ -4,28 +4,25 @@ interface Props {
     className?: string
     imgSrc: string
     altText: string
-    rounded?: boolean
+    round?: keyof typeof roundVariants
+}
+
+const roundVariants = {
+    default: "",
+    rounded: "rounded",
+    roundedFull: "rounded-full",
 }
 
 // prettier-ignore
-export default function FlexImage({ className, imgSrc, altText, rounded = false }: Props) {
+export default function FlexImage({ className, imgSrc, altText, round = "default" }: Props) {
     return (
         <div className={`relative ${className}`}>
-            {rounded ? (
-                <Image
-                    className="rounded object-cover"
-                    src={imgSrc}
-                    fill={true}
-                    alt={altText}
-                />
-            ) : (
-                <Image
-                    className="object-cover"
-                    src={imgSrc}
-                    fill={true}
-                    alt={altText}
-                />
-            )}
+            <Image
+                className={`object-cover ${roundVariants[round]}`}
+                src={imgSrc}
+                fill={true}
+                alt={altText}
+            />
         </div>
     )
 }

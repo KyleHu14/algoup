@@ -38,8 +38,8 @@ export default function DashboardNavbar() {
                 <div className="fixed left-0 top-[3.5rem] flex w-full flex-col items-center justify-center gap-2 bg-zinc-200 p-3 md:hidden">
                     <MobileLinkProps
                         onClick={() => setShowMobileLinks(!showMobileLinks)}
-                        link="/technology"
-                        text="Technology"
+                        link="/ai"
+                        text="AI"
                     />
                     <MobileLinkProps
                         onClick={() => setShowMobileLinks(!showMobileLinks)}
@@ -74,7 +74,7 @@ export default function DashboardNavbar() {
 
             {/* Desktop Links */}
             <div className="hidden flex-row items-center justify-center gap-3 md:flex xl:gap-6 3xl:gap-8">
-                <NavbarLink link="/technology" text="Technology" />
+                <NavbarLink link="/ai" text="AI" />
                 <NavbarLink link="/products" text="Products" />
                 <NavbarLink
                     link="/manufacturing"

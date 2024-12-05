@@ -16,48 +16,9 @@ import {
 import { Button } from "@/components/ui/button"
 import { ChevronsRight } from "lucide-react"
 import FlexImage from "@/components/FlexImage"
+import { techInfo } from "@/data/ai"
 
 export default function AI() {
-    const root = "/ai"
-
-    const techInfo = [
-        {
-            name: "Vehicle Design",
-            link: `${root}/vehicle-design`,
-            iconLink: "/technology/header.jpg",
-            description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non sagittis nisi, vitae molestie lectus. Etiam scelerisque mollis nibh. Nunc libero dui, ullamcorper sed interdum quis, pellentesque mattis mi. ",
-        },
-        {
-            name: "Vehicle Design",
-            link: `${root}/vehicle-design`,
-            iconLink: "/technology/header.jpg",
-            description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non sagittis nisi, vitae molestie lectus. Etiam scelerisque mollis nibh. Nunc libero dui, ullamcorper sed interdum quis, pellentesque mattis mi. ",
-        },
-        {
-            name: "Vehicle Design",
-            link: `${root}/vehicle-design`,
-            iconLink: "/technology/header.jpg",
-            description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non sagittis nisi, vitae molestie lectus. Etiam scelerisque mollis nibh. Nunc libero dui, ullamcorper sed interdum quis, pellentesque mattis mi. ",
-        },
-        {
-            name: "Vehicle Design",
-            link: `${root}/vehicle-design`,
-            iconLink: "/technology/header.jpg",
-            description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non sagittis nisi, vitae molestie lectus. Etiam scelerisque mollis nibh. Nunc libero dui, ullamcorper sed interdum quis, pellentesque mattis mi. ",
-        },
-        {
-            name: "Vehicle Design",
-            link: `${root}/vehicle-design`,
-            iconLink: "/technology/header.jpg",
-            description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non sagittis nisi, vitae molestie lectus. Etiam scelerisque mollis nibh. Nunc libero dui, ullamcorper sed interdum quis, pellentesque mattis mi. ",
-        },
-    ]
-
     return (
         <>
             <PageHeader>

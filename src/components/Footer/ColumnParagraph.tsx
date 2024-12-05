@@ -5,7 +5,7 @@ interface Props {
 
 export default function ColumnParagraph({ className, children }: Props) {
     return (
-        <p className={`font-light text-zinc-600 2xl:text-xl ${className}`}>
+        <p className={`text-typography-secondary/90 2xl:text-xl ${className}`}>
             {children}
         </p>
     )

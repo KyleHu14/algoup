@@ -4,16 +4,13 @@ import Image from "next/image"
 import ColumnTitle from "./ColumnTitle"
 
 // Icons
-import SocialLinks from "./SocialLinks"
-import Linkedin from "../Icons/Linkedin"
-import Youtube from "../Icons/Youtube"
-import X from "../Icons/X"
-import Wechat from "../Icons/Wechat"
-import Facebook from "../Icons/Facebook"
-import Instagram from "../Icons/Instagram"
+import SocialLinks from "./SocialLink"
+
 import ColumnSubTitle from "./ColumnSubTitle"
 import Link from "next/link"
 import ColumnParagraph from "./ColumnParagraph"
+import FooterLink from "./FooterLink"
+import { SOCIALS } from "@/data/socials"
 
 export default function Footer() {
     return (
@@ -51,60 +48,30 @@ export default function Footer() {
             <div className="flex w-full flex-col gap-1">
                 <ColumnTitle text="Navigation" />
 
-                <Link href="/technology">
-                    <ColumnSubTitle>Technology</ColumnSubTitle>
-                </Link>
-
-                <Link href="/products">
-                    <ColumnSubTitle>Products</ColumnSubTitle>
-                </Link>
-
-                <Link href="/manufacturing">
-                    <ColumnSubTitle>Manufacturing Capability</ColumnSubTitle>
-                </Link>
-
-                <Link href="/news">
-                    <ColumnSubTitle>News</ColumnSubTitle>
-                </Link>
-
-                <Link href="/contact">
-                    <ColumnSubTitle>Contact Us</ColumnSubTitle>
-                </Link>
+                <FooterLink href="/ai">AI</FooterLink>
+                <FooterLink href="/products">Products</FooterLink>
+                <FooterLink href="/manufacturing">
+                    Manufacturing Capability
+                </FooterLink>
+                <FooterLink href="/news">News</FooterLink>
+                <FooterLink href="/contact">Contact Us</FooterLink>
             </div>
 
             {/* Col 4 - Social Media */}
             <div className="flex w-full flex-col gap-3">
                 <ColumnTitle text="Social Media" />
 
-                <SocialLinks link="https://www.linkedin.com/company/algoup">
-                    <Linkedin />
-                    <ColumnSubTitle>Linkedin</ColumnSubTitle>
-                </SocialLinks>
-
-                <SocialLinks link="/">
-                    <Youtube />
-                    <ColumnSubTitle>Youtube</ColumnSubTitle>
-                </SocialLinks>
-
-                <SocialLinks link="/">
-                    <X />
-                    <ColumnSubTitle>X</ColumnSubTitle>
-                </SocialLinks>
-
-                <SocialLinks link="/">
-                    <Wechat />
-                    <ColumnSubTitle>Wechat</ColumnSubTitle>
-                </SocialLinks>
-
-                <SocialLinks link="/">
-                    <Facebook />
-                    <ColumnSubTitle>Facebook</ColumnSubTitle>
-                </SocialLinks>
-
-                <SocialLinks link="/">
-                    <Instagram />
-                    <ColumnSubTitle>Instagram</ColumnSubTitle>
-                </SocialLinks>
+                {SOCIALS.map((social) => {
+                    const Icon = social.icon
+                    return (
+                        <SocialLinks link={social.link}>
+                            <Icon />
+                            <ColumnSubTitle className="group-hover:text-algoup-accent">
+                                {social.name}
+                            </ColumnSubTitle>
+                        </SocialLinks>
+                    )
+                })}
             </div>
         </footer>
     )

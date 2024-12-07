@@ -61,10 +61,10 @@ export default function Footer() {
             <div className="flex w-full flex-col gap-3">
                 <ColumnTitle text="Social Media" />
 
-                {SOCIALS.map((social) => {
+                {SOCIALS.map((social, index) => {
                     const Icon = social.icon
                     return (
-                        <SocialLinks link={social.link}>
+                        <SocialLinks key={index} link={social.link}>
                             <Icon />
                             <ColumnSubTitle className="group-hover:text-algoup-accent">
                                 {social.name}

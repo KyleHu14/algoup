@@ -8,7 +8,7 @@ const inter = Inter({
 import "./globals.css"
 
 // Importing of Components
-import Navbar from "@/components/Navbar"
+import Navbar from "@/components/Navbar/Navbar"
 import Footer from "@/components/Footer/Footer"
 
 export const metadata: Metadata = {

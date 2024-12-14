@@ -20,13 +20,13 @@ export default function AboutUs() {
                     />
                 </div>
 
-                <div className="flex w-full flex-col gap-5 text-center">
+                <div className="flex w-full flex-col gap-5 text-left">
                     <div className="text-2xl font-bold xl:text-3xl 2xl:text-4xl">
                         About Algoup
                     </div>
                     <div className="xl:text-md text-gray-500 2xl:text-lg 3xl:text-xl">
-                        <span className="text-algoup-accent font-semibold">
-                            ALGOUP Inc.
+                        <span className="font-semibold text-algoup-accent">
+                            ALGOUP
                         </span>
                         , headquartered in Seattle, WA, specializes in
                         automation solutions encompassing research and
@@ -37,8 +37,8 @@ export default function AboutUs() {
                         state-of-the-art technologies positioned at the edge.
                         <br></br>
                         <br></br>
-                        <span className="text-algoup-accent font-semibold">
-                            ALGOUP Inc.
+                        <span className="font-semibold text-algoup-accent">
+                            ALGOUP
                         </span>{" "}
                         has cultivated a portfolio of advanced robot products,
                         including humanoid, hexapod robots, AGVs, AMRs, and
@@ -53,7 +53,7 @@ export default function AboutUs() {
 
             {/* Our Team Section */}
             <section className="flex flex-col-reverse items-center justify-center gap-10 bg-zinc-100 px-7 py-12 md:px-24 lg:flex-row lg:py-24 2xl:px-44">
-                <div className="flex w-full flex-col gap-5 text-center">
+                <div className="flex w-full flex-col gap-5 text-left">
                     <h1 className="text-2xl font-bold xl:text-3xl 2xl:text-4xl">
                         Our Team
                     </h1>
@@ -94,7 +94,7 @@ export default function AboutUs() {
             <section className="flex flex-col items-center text-center">
                 <h1 className="text-2xl 3xl:mb-10 3xl:text-3xl">
                     Partnered with{" "}
-                    <span className="text-algoup-accent font-bold">
+                    <span className="font-bold text-algoup-accent">
                         industry-leading
                     </span>{" "}
                     organizations
@@ -107,7 +107,7 @@ export default function AboutUs() {
             <section className="flex flex-col items-center text-center">
                 <h1 className="text-2xl 3xl:mb-10 3xl:text-3xl">
                     Serving a{" "}
-                    <span className="text-algoup-accent font-bold">
+                    <span className="font-bold text-algoup-accent">
                         diverse
                     </span>{" "}
                     array of industries

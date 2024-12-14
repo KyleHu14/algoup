@@ -1,0 +1,35 @@
+interface Link {
+    link: string
+    text: string
+}
+
+export const NAVLINKS: Link[] = [
+    {
+        link: "/master-plan",
+        text: "Master Plan",
+    },
+    {
+        link: "/ai",
+        text: "AI",
+    },
+    {
+        link: "/products",
+        text: "Products",
+    },
+    {
+        link: "/manufacturing-capability",
+        text: "Manufacturing Capability",
+    },
+    {
+        link: "/news",
+        text: "News",
+    },
+    {
+        link: "/about",
+        text: "About Us",
+    },
+    {
+        link: "/contact",
+        text: "Contact Us",
+    },
+]

@@ -7,9 +7,9 @@ import ColumnTitle from "./ColumnTitle"
 import SocialLinks from "./SocialLink"
 
 import ColumnSubTitle from "./ColumnSubTitle"
-import Link from "next/link"
 import ColumnParagraph from "./ColumnParagraph"
 import FooterLink from "./FooterLink"
+import { NAVLINKS } from "@/data/nav-links"
 import { SOCIALS } from "@/data/socials"
 
 export default function Footer() {
@@ -47,14 +47,11 @@ export default function Footer() {
             {/* Col 3 - Navigation */}
             <div className="flex w-full flex-col gap-1">
                 <ColumnTitle text="Navigation" />
-
-                <FooterLink href="/ai">AI</FooterLink>
-                <FooterLink href="/products">Products</FooterLink>
-                <FooterLink href="/manufacturing">
-                    Manufacturing Capability
-                </FooterLink>
-                <FooterLink href="/news">News</FooterLink>
-                <FooterLink href="/contact">Contact Us</FooterLink>
+                {NAVLINKS.map((linkData, index) => (
+                    <FooterLink key={index} href={linkData.link}>
+                        {linkData.text}
+                    </FooterLink>
+                ))}
             </div>
 
             {/* Col 4 - Social Media */}

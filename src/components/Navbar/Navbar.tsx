@@ -21,8 +21,8 @@ export default function DashboardNavbar() {
             z-50: so that other elements don't overlap it
             h & w : need to be specified for fixed
         */
-        <header>
-            <nav className="fixed top-0 z-50 flex h-14 w-full items-center justify-between border-b-2 border-b-algoup-accent-dark bg-white px-5 shadow-md sm:sticky sm:h-20 sm:flex-row xl:px-14 2xl:px-28">
+        <header className="fixed top-0 z-50 sm:sticky">
+            <nav className="flex h-14 w-full items-center justify-between border-b-2 border-b-algoup-accent-dark bg-white px-5 shadow-md sm:h-20 sm:flex-row xl:px-14 2xl:px-28">
                 <Link
                     href="/"
                     className="relative h-7 w-28 xl:block xl:h-[45px] xl:w-[170px] 2xl:h-[65px] 2xl:w-[260px]"

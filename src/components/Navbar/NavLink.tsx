@@ -8,7 +8,7 @@ interface NavbarLinkProps {
 export default function NavLink({ text, link }: NavbarLinkProps) {
     return (
         <Link
-            className="text-center text-[11px] text-black transition duration-300 ease-in-out hover:text-algoup-accent-dark md:text-sm lg:text-lg"
+            className="text-center text-[11px] text-inherit transition duration-300 ease-in-out hover:text-algoup-accent-dark md:text-sm lg:text-lg"
             href={link}
         >
             {text}

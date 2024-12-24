@@ -4,7 +4,7 @@ import Image from "next/image"
 import ColumnTitle from "./ColumnTitle"
 
 // Icons
-import SocialLinks from "./SocialLink"
+import SocialLink from "./SocialLink"
 
 import ColumnSubTitle from "./ColumnSubTitle"
 import ColumnParagraph from "./ColumnParagraph"
@@ -14,16 +14,28 @@ import { SOCIALS } from "@/data/socials"
 
 export default function Footer() {
     return (
-        <footer className="flex flex-col items-center justify-center gap-4 bg-zinc-100 px-5 py-10 sm:flex-row sm:items-start sm:justify-normal sm:text-left lg:gap-[5rem] lg:px-[5rem] xl:gap-[5rem] xl:px-[7rem] 2xl:gap-20 2xl:px-16">
+        <footer className="flex flex-col items-center justify-center gap-4 bg-zinc-100 px-5 py-10 sm:flex-row sm:items-start sm:justify-normal sm:text-left md:px-24 lg:px-40 xl:px-64">
             {/* Col 1 - Logo */}
-            <div className="hidden flex-col lg:flex">
-                <div className="relative h-[40px] w-[150px] xl:h-[55px] xl:w-[230px] 2xl:h-[75px] 2xl:w-[317px]">
-                    <Image src="/logo-full.jpg" fill alt="Logo Picture" />
+            <div className="hidden w-full flex-col gap-3 lg:flex">
+                <div className="relative h-[40px] w-[150px] xl:h-[55px] xl:w-[230px]">
+                    <Image src="/logo-full.png" fill alt="Logo Picture" />
                 </div>
 
-                <ColumnParagraph className="ml-3 xl:ml-6">
+                <ColumnParagraph>
                     Always striving for innovation.
                 </ColumnParagraph>
+
+                {/* Col 4 - Social Media */}
+                <div className="flex gap-3">
+                    {SOCIALS.map((social, index) => {
+                        const Icon = social.icon
+                        return (
+                            <SocialLink key={index} link={social.link}>
+                                <Icon />
+                            </SocialLink>
+                        )
+                    })}
+                </div>
             </div>
 
             {/* Col 2 - Contact */}
@@ -52,23 +64,6 @@ export default function Footer() {
                         {linkData.text}
                     </FooterLink>
                 ))}
-            </div>
-
-            {/* Col 4 - Social Media */}
-            <div className="flex w-full flex-col gap-3">
-                <ColumnTitle text="Social Media" />
-
-                {SOCIALS.map((social, index) => {
-                    const Icon = social.icon
-                    return (
-                        <SocialLinks key={index} link={social.link}>
-                            <Icon />
-                            <ColumnSubTitle className="group-hover:text-algoup-accent">
-                                {social.name}
-                            </ColumnSubTitle>
-                        </SocialLinks>
-                    )
-                })}
             </div>
         </footer>
     )

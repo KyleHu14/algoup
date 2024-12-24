@@ -4,14 +4,31 @@ import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { usePathname } from "next/navigation"
 
 import { NAVLINKS } from "@/data/nav-links"
 import MobileLinkProps from "./MobileLink"
 import NavLink from "./NavLink"
 
-export default function DashboardNavbar() {
+export default function Navbar() {
+    const pathname = usePathname()
+
     const [showMobileLinks, setShowMobileLinks] = useState(false)
+    const [transparent, setTransparent] = useState(true)
+
+    const changeBackground = () => {
+        if (window.scrollY >= 64) {
+            setTransparent(false)
+        } else {
+            setTransparent(true)
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener("scroll", changeBackground)
+        return () => window.removeEventListener("scroll", changeBackground)
+    }, [transparent])
 
     return (
         /*
@@ -21,21 +38,23 @@ export default function DashboardNavbar() {
             z-50: so that other elements don't overlap it
             h & w : need to be specified for fixed
         */
-        <header className="fixed top-0 z-50 sm:sticky">
-            <nav className="flex h-14 w-full items-center justify-between border-b-2 border-b-algoup-accent-dark bg-white px-5 shadow-md sm:h-20 sm:flex-row xl:px-14 2xl:px-28">
+        <header
+            className={`sticky top-0 z-50 w-full ${pathname === "/" && transparent ? "bg-white text-white md:bg-transparent" : "border-b-2 border-b-algoup-accent-dark bg-white text-black"}`}
+        >
+            <nav className="flex h-[75px] items-center justify-between px-5 sm:flex-row xl:px-14 2xl:px-28">
                 <Link
                     href="/"
-                    className="relative h-7 w-28 xl:block xl:h-[45px] xl:w-[170px] 2xl:h-[65px] 2xl:w-[260px]"
+                    className="relative h-7 w-28 xl:block xl:h-11 xl:w-40 2xl:h-14 2xl:w-56"
                 >
                     <Image
-                        src="/logo-full.jpg"
+                        src="/logo-full.png"
                         fill={true}
                         alt="Company Logo"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                 </Link>
 
                 {/* Burger Menu */}
-
                 <button
                     onClick={() => setShowMobileLinks(!showMobileLinks)}
                     className="md:hidden"
@@ -82,7 +101,7 @@ export default function DashboardNavbar() {
                     {NAVLINKS.map((linkData, index) => {
                         if (linkData.text === "Contact Us") {
                             return (
-                                <Link href={linkData.link}>
+                                <Link key={index} href={linkData.link}>
                                     <Button
                                         size="sm"
                                         className="bg-algoup-accent px-2 py-0 text-[11px] text-white hover:bg-algoup-accent-dark lg:text-lg"

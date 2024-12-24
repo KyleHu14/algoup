@@ -8,8 +8,6 @@ import SocialLink from "./SocialLink"
 
 import ColumnSubTitle from "./ColumnSubTitle"
 import ColumnParagraph from "./ColumnParagraph"
-import FooterLink from "./FooterLink"
-import { NAVLINKS } from "@/data/nav-links"
 import { SOCIALS } from "@/data/socials"
 
 export default function Footer() {
@@ -36,34 +34,6 @@ export default function Footer() {
                         )
                     })}
                 </div>
-            </div>
-
-            {/* Col 2 - Contact */}
-            <div className="flex w-full flex-col gap-1">
-                <ColumnTitle text="Contact" />
-
-                {/* Phone Contact Info */}
-                <>
-                    <ColumnSubTitle>Phone</ColumnSubTitle>
-                    <ColumnParagraph>US: +1 202 664 4153</ColumnParagraph>
-                    <ColumnParagraph>CN: + 86 182 0190 0625</ColumnParagraph>
-                </>
-
-                {/* Email Contact Info */}
-                <>
-                    <ColumnSubTitle>Email</ColumnSubTitle>
-                    <ColumnParagraph>bill@algoupinc.com</ColumnParagraph>
-                </>
-            </div>
-
-            {/* Col 3 - Navigation */}
-            <div className="flex w-full flex-col gap-1">
-                <ColumnTitle text="Navigation" />
-                {NAVLINKS.map((linkData, index) => (
-                    <FooterLink key={index} href={linkData.link}>
-                        {linkData.text}
-                    </FooterLink>
-                ))}
             </div>
         </footer>
     )

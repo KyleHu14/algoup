@@ -44,9 +44,10 @@ export default function Navbar() {
             <nav className="flex h-[75px] items-center justify-between px-5 sm:flex-row xl:px-14 2xl:px-28">
                 <Link
                     href="/"
-                    className="relative h-7 w-28 xl:block xl:h-11 xl:w-40 2xl:h-14 2xl:w-56"
+                    className="relative h-7 w-28 xl:block xl:h-11 xl:w-44 2xl:h-14 2xl:w-56"
                 >
                     <Image
+                        className="object-contain"
                         src="/logo-full.png"
                         fill={true}
                         alt="Company Logo"

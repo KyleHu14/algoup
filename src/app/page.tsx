@@ -11,7 +11,10 @@ export default function Home() {
                     loop
                     muted
                 >
-                    <source src="/home/circuit-board.mp4" type="video/mp4" />
+                    <source
+                        src="https://assets.codepen.io/6093409/river.mp4"
+                        type="video/mp4"
+                    />
                 </video>
                 <div className="absolute left-0 right-0 top-[40%] mx-auto max-w-[16rem] text-center text-2xl font-bold text-white sm:left-[10%] sm:right-auto sm:max-w-[25rem] sm:text-left sm:text-3xl xl:max-w-[35rem] xl:text-4xl 2xl:max-w-[50rem] 2xl:text-6xl">
                     Empowering Your Business with Robotics

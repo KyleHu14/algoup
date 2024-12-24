@@ -4,6 +4,7 @@ import { useState } from "react"
 
 import FormInput from "./FormInput"
 import { Button } from "../ui/button"
+import Title from "./Title"
 
 export default function Contact() {
     const [result, setResult] = useState("")
@@ -38,9 +39,10 @@ export default function Contact() {
 
     return (
         <form
-            className="flex w-[60%] flex-col items-center gap-7 rounded-lg border border-zinc-400 p-4 shadow-2xl lg:p-10 xl:w-[50%] 2xl:w-[40%]"
+            className="flex w-full flex-col items-center gap-7 rounded-lg border border-zinc-400 p-4 shadow-xl lg:p-7"
             onSubmit={onSubmit}
         >
+            <Title className="mb-[-10px]">Send us a Message</Title>
             <div className="flex w-full gap-5">
                 <FormInput
                     name="name"

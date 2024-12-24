@@ -3,7 +3,7 @@ export default function Youtube() {
         // <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
         <svg
             fill="currentColor"
-            className="h-8 w-8"
+            className="h-full w-full"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 576 512"
         >

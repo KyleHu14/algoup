@@ -2,7 +2,7 @@ export default function Wechat() {
     return (
         <svg
             fill="currentColor"
-            className="h-8 w-8"
+            className="h-full w-full"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 576 512"
         >

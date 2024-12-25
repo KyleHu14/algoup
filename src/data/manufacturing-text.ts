@@ -17,14 +17,14 @@ export const MANUFACTURING_TEXT: Section[] = [
         title: "Sustainability",
         description:
             "Our integrated in-house capabilities for component and sub-system fabrication, combined with a strategically optimized supply chain and the implementation of lean manufacturing principles, allow us to maintain a highly competitive and cost-efficient structure, ensuring long-term operational sustainability.",
-        coverImage: "/manufacturing/facility-outer.png",
+        coverImage: "/manufacturing/sustainability.jpg",
         coverImageAltText: "Indoor Manufacturing Facility",
     },
     {
         title: "Quality Control",
         description:
             "Quality and performance are fundamental to meeting our customers' expectations. Through our ISO 9001-certified quality management system, we maintain comprehensive traceability of quality records for each component and manufacturing process. This rigorous framework enables us to consistently drive improvements, ensuring superior quality in the final product.",
-        coverImage: "/manufacturing/quality-control.png",
+        coverImage: "/manufacturing/quality-control.jpg",
         coverImageAltText: "Two People Checking for Quality Control",
     },
 ]

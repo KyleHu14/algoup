@@ -1,10 +1,13 @@
 interface PageHeaderProps {
+    className?: string
     children?: React.ReactNode
 }
 
-const PageHeader = ({ children }: PageHeaderProps) => {
+const PageHeader = ({ children, className }: PageHeaderProps) => {
     return (
-        <div className="mb-10 flex w-full flex-col gap-2 text-left sm:gap-3">
+        <div
+            className={`mb-10 flex w-full flex-col gap-2 text-left sm:gap-3 ${className}`}
+        >
             {children}
         </div>
     )
@@ -26,7 +29,7 @@ interface PageHeaderSubTitleProps {
 }
 const PageHeaderSubTitle = ({ children }: PageHeaderSubTitleProps) => {
     return (
-        <p className="text-lg text-typography-secondary sm:text-xl lg:text-2xl">
+        <p className="text-lg text-typography-secondary sm:text-xl 2xl:text-2xl">
             {children}
         </p>
     )

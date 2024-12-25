@@ -19,10 +19,11 @@ import {
 import { Button } from "@/components/ui/button"
 
 import { MASTERPLAN_INFO } from "@/data/masterplan-info"
+import PageContainer from "@/components/PageContainer"
 
 export default function MasterPlan() {
     return (
-        <main className="px-5 pt-10 sm:px-10 md:px-[15%] lg:px-[20%] xl:px-[25%]">
+        <PageContainer>
             <PageHeader>
                 <PageHeaderTitle>Master Plan</PageHeaderTitle>
                 <PageHeaderSubTitle>
@@ -36,7 +37,7 @@ export default function MasterPlan() {
             {MASTERPLAN_INFO.map((section, index) => {
                 if (!(section.title === "The Solution")) {
                     return (
-                        <PageSection key={index}>
+                        <PageSection key={index} spacing="lg">
                             <PageSectionTitle>{section.title}</PageSectionTitle>
                             <PageSectionText>
                                 {section.description}
@@ -107,6 +108,6 @@ export default function MasterPlan() {
                     cause harm to humanity.
                 </PageSectionText>
             </PageSection>
-        </main>
+        </PageContainer>
     )
 }

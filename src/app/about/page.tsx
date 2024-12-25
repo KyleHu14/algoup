@@ -20,7 +20,7 @@ export default function AboutUs() {
                     />
                 </div>
 
-                <div className="flex w-full flex-col gap-5 text-left">
+                <div className="flex w-full flex-col gap-5 text-justify">
                     <div className="text-2xl font-bold xl:text-3xl 2xl:text-4xl">
                         About Algoup
                     </div>
@@ -53,7 +53,7 @@ export default function AboutUs() {
 
             {/* Our Team Section */}
             <section className="flex flex-col-reverse items-center justify-center gap-10 bg-zinc-100 px-7 py-12 md:px-24 lg:flex-row lg:py-24 2xl:px-44">
-                <div className="flex w-full flex-col gap-5 text-left">
+                <div className="flex w-full flex-col gap-5 text-justify">
                     <h1 className="text-2xl font-bold xl:text-3xl 2xl:text-4xl">
                         Our Team
                     </h1>

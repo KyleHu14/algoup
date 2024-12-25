@@ -13,8 +13,7 @@ import { MANUFACTURING_TEXT } from "@/data/manufacturing-text"
 
 export default function Manufacturing() {
     return (
-        <>
-            {/* Header */}
+        <main className="px-5 pt-10 sm:px-10 md:px-[15%] lg:px-[20%] xl:px-[25%]">
             <PageHeader>
                 <PageHeaderTitle>Manufacturing Capabilities</PageHeaderTitle>
                 <PageHeaderSubTitle>
@@ -22,29 +21,20 @@ export default function Manufacturing() {
                 </PageHeaderSubTitle>
             </PageHeader>
 
-            <main className="px-5 py-16 sm:px-28">
-                {/* Capabilities Container */}
-                <div className="flex flex-col items-center gap-3 sm:gap-10">
-                    {/* Robust Production */}
-                    {MANUFACTURING_TEXT.map((section, index) => (
-                        <ManufacturingSection key={index}>
-                            <FlexImage
-                                className="h-[10rem] w-full max-w-[30rem] duration-300 hover:scale-105 sm:h-[16rem]"
-                                imgSrc={section.coverImage}
-                                altText={section.coverImageAltText}
-                            />
+            {/* Robust Production */}
+            {MANUFACTURING_TEXT.map((section, index) => (
+                <ManufacturingSection key={index}>
+                    <FlexImage
+                        className="h-[10rem] w-full max-w-[30rem] duration-300 hover:scale-105 sm:h-[16rem]"
+                        imgSrc={section.coverImage}
+                        altText={section.coverImageAltText}
+                    />
 
-                            <ManufacturingTitle>
-                                {section.title}
-                            </ManufacturingTitle>
+                    <ManufacturingTitle>{section.title}</ManufacturingTitle>
 
-                            <ManufacturingText>
-                                {section.description}
-                            </ManufacturingText>
-                        </ManufacturingSection>
-                    ))}
-                </div>
-            </main>
-        </>
+                    <ManufacturingText>{section.description}</ManufacturingText>
+                </ManufacturingSection>
+            ))}
+        </main>
     )
 }

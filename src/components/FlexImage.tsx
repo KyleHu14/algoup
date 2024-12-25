@@ -5,6 +5,7 @@ interface Props {
     imgSrc: string
     altText: string
     round?: keyof typeof roundVariants
+    sizes?: string
 }
 
 const roundVariants = {
@@ -14,7 +15,7 @@ const roundVariants = {
 }
 
 // prettier-ignore
-export default function FlexImage({ className, imgSrc, altText, round = "default" }: Props) {
+export default function FlexImage({ className, imgSrc, altText, round = "default", sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"}: Props) {
     return (
         <div className={`relative ${className}`}>
             <Image
@@ -22,6 +23,7 @@ export default function FlexImage({ className, imgSrc, altText, round = "default
                 src={imgSrc}
                 fill={true}
                 alt={altText}
+                sizes={sizes}
             />
         </div>
     )

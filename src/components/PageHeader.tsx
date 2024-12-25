@@ -4,9 +4,9 @@ interface PageHeaderProps {
 
 const PageHeader = ({ children }: PageHeaderProps) => {
     return (
-        <header className="flex flex-col justify-center gap-1 border-b pb-12 pt-20 text-center sm:gap-3">
+        <div className="mb-10 flex w-full flex-col gap-2 text-left sm:gap-3">
             {children}
-        </header>
+        </div>
     )
 }
 
@@ -15,7 +15,7 @@ interface PageHeaderTitleProps {
 }
 const PageHeaderTitle = ({ children }: PageHeaderTitleProps) => {
     return (
-        <h1 className="text-xl font-bold text-algoup-accent-dark sm:text-2xl md:text-3xl 2xl:text-4xl">
+        <h1 className="text-2xl font-bold sm:text-3xl md:text-4xl 2xl:text-5xl">
             {children}
         </h1>
     )
@@ -26,7 +26,7 @@ interface PageHeaderSubTitleProps {
 }
 const PageHeaderSubTitle = ({ children }: PageHeaderSubTitleProps) => {
     return (
-        <p className="text-md text-typography-secondary sm:text-xl">
+        <p className="text-lg text-typography-secondary sm:text-xl lg:text-2xl">
             {children}
         </p>
     )

@@ -1,11 +1,12 @@
 interface PageSectionProps {
-    spacing?: "base" | "lg"
+    spacing?: "base" | "lg" | "sm"
     children: React.ReactNode
 }
 
 const PageSection = ({ spacing = "base", children }: PageSectionProps) => {
-    type MarginKeys = "base" | "lg"
+    type MarginKeys = "base" | "lg" | "sm"
     const margins: Record<MarginKeys, string> = {
+        sm: "md:mb-7 lg:mb-9 xl:mb-10",
         base: "md:mb-9 lg:mb-12",
         lg: "md:mb-9 lg:mb-12 xl:mb-20",
     }

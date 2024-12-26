@@ -4,7 +4,7 @@ interface Section {
     img?: string
 }
 
-export const MASTERPLAN_INFO: Section[] = [
+export const MASTERPLAN_CONTENT: Section[] = [
     {
         title: "Our Vision",
         description:

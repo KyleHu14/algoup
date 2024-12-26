@@ -18,8 +18,9 @@ import {
 } from "@/components/PageHeader"
 import { Button } from "@/components/ui/button"
 
-import { MASTERPLAN_INFO } from "@/data/masterplan-info"
+import { MASTERPLAN_CONTENT } from "@/data/masterplan"
 import PageContainer from "@/components/PageContainer"
+import Link from "next/link"
 
 export default function MasterPlan() {
     return (
@@ -29,12 +30,9 @@ export default function MasterPlan() {
                 <PageHeaderSubTitle>
                     Algoup's roadmap and goals into the future.
                 </PageHeaderSubTitle>
-                <Button className="PageSectionText-sm sm:PageSectionText-base lg:PageSectionText-lg w-fit bg-algoup-accent-dark">
-                    Read More
-                </Button>
             </PageHeader>
 
-            {MASTERPLAN_INFO.map((section, index) => {
+            {MASTERPLAN_CONTENT.map((section, index) => {
                 if (!(section.title === "The Solution")) {
                     return (
                         <PageSection key={index} spacing="lg">

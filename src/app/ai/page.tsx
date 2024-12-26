@@ -5,57 +5,28 @@ import {
     PageHeaderSubTitle,
     PageHeaderTitle,
 } from "@/components/PageHeader"
-
-import {
-    Card,
-    CardContent,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { ChevronsRight } from "lucide-react"
+import PageContainer from "@/components/PageContainer"
 import FlexImage from "@/components/FlexImage"
-import { techInfo } from "@/data/ai"
+import { AI_CONTENT } from "@/data/ai"
+import { PageSection, PageSectionText } from "@/components/PageSection"
 
 export default function AI() {
     return (
-        <>
+        <PageContainer>
             <PageHeader>
-                <PageHeaderTitle>AI Overview</PageHeaderTitle>
-                <PageHeaderSubTitle>
-                    Explore Algoup’s extensive capabilities.
-                </PageHeaderSubTitle>
+                <PageHeaderTitle>Artificial Intelligence</PageHeaderTitle>
+                <FlexImage
+                    className="h-48 sm:h-56 lg:h-64 xl:h-72 2xl:h-96"
+                    imgSrc="/ai/ai.jpg"
+                    altText="AI Cover Image"
+                    sizes="(max-width: 768px) 100vw, 80vw"
+                />
             </PageHeader>
-            <main className="px-5 py-16 sm:px-28">
-                <section className="flex flex-wrap items-center justify-center gap-10">
-                    {techInfo.map((technology, index) => (
-                        <Card key={index} className="w-[350px]">
-                            <CardHeader className="pb-3">
-                                <FlexImage
-                                    className="relative mb-2 h-12 w-12"
-                                    round="roundedFull"
-                                    imgSrc="/technology/header.jpg"
-                                    altText={`Icon for ${technology.name}`}
-                                />
-                                <CardTitle className="text-lg lg:text-xl">
-                                    {technology.name}
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent className="text-sm lg:text-base">
-                                {technology.description}
-                            </CardContent>
-                            <CardFooter>
-                                <Link href={technology.link}>
-                                    <Button variant="algoup">
-                                        Read More <ChevronsRight />
-                                    </Button>
-                                </Link>
-                            </CardFooter>
-                        </Card>
-                    ))}
-                </section>
-            </main>
-        </>
+            {AI_CONTENT.map((text, index) => (
+                <PageSection key={index} spacing="sm">
+                    <PageSectionText>{text}</PageSectionText>
+                </PageSection>
+            ))}
+        </PageContainer>
     )
 }

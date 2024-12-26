@@ -5,7 +5,7 @@ interface Section {
     coverImageAltText: string
 }
 
-export const MANUFACTURING_TEXT: Section[] = [
+export const MANUFACTURING_CONTENT: Section[] = [
     {
         title: "Robust Production",
         description:

@@ -11,7 +11,7 @@ import {
     PageSectionText,
     PageSectionTitle,
 } from "@/components/PageSection"
-import { MANUFACTURING_TEXT } from "@/data/manufacturing-text"
+import { MANUFACTURING_CONTENT } from "@/data/manufacturing"
 
 export default function Manufacturing() {
     return (
@@ -33,7 +33,7 @@ export default function Manufacturing() {
             </PageHeader>
 
             {/* Robust Production */}
-            {MANUFACTURING_TEXT.map((section, index) => (
+            {MANUFACTURING_CONTENT.map((section, index) => (
                 <PageSection key={index} spacing="lg">
                     <PageSectionTitle>{section.title}</PageSectionTitle>
 

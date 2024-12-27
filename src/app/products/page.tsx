@@ -17,26 +17,51 @@ import Image from "next/image"
 import Link from "next/link"
 
 // Data Imports
-import { amrCategories, agvCategories } from "../../data/product/categories"
+import { agvCategories } from "../../data/product/categories"
 import { ProductCategoryType } from "../../data/product/categories"
+
+import PageContainer from "@/components/PageContainer"
+import { PageHeader, PageHeaderTitle } from "@/components/PageHeader"
+import {
+    PageSection,
+    PageSectionText,
+    PageSectionTitle,
+} from "@/components/PageSection"
 
 export default function ProductsHome() {
     return (
-        <main className="mt-16 flex flex-col gap-16 sm:px-20 sm:pb-12 xl:px-28">
-            {/* AMV Section */}
-            <CategoryDisplay
-                title="Autonomous Mobile Robots"
-                subTitle="Powerful, self sustaining, high quality robots."
-                categoryData={amrCategories}
-            />
+        <PageContainer>
+            <PageHeader>
+                <PageHeaderTitle>Products</PageHeaderTitle>
+            </PageHeader>
 
-            {/* AGV Section */}
-            <CategoryDisplay
-                title="Autonomous Guided Vehicles"
-                subTitle="Easy to operate, intuitive controls, and reliable."
-                categoryData={agvCategories}
-            />
-        </main>
+            <PageSection>
+                <PageSectionTitle>Autonomous Guided Vehicles</PageSectionTitle>
+                <CategoryDisplay
+                    title="Autonomous Guided Vehicles"
+                    subTitle="Easy to operate, intuitive controls, and reliable."
+                    categoryData={agvCategories}
+                />
+            </PageSection>
+
+            {/* Humanoid Robot */}
+            <PageSection>
+                <PageSectionTitle>Humanoid Robot</PageSectionTitle>
+                <PageSectionText>
+                    Leveraging years of expertise in robotics research,
+                    development, and deployment across a wide range of use
+                    cases, coupled with cutting-edge embedded AI technologies,
+                    we are developing specialized humanoid robots capable of
+                    performing complex tasks. These robots are designed to
+                    alleviate human workload, allowing individuals to focus on
+                    higher-priority activities.
+                </PageSectionText>
+
+                <PageSectionText>
+                    Stay tuned for further updates!
+                </PageSectionText>
+            </PageSection>
+        </PageContainer>
     )
 }
 
@@ -50,7 +75,7 @@ interface ProductCardProps {
 
 function ProductCard({ name, description, imageSrc, href }: ProductCardProps) {
     return (
-        <Card className="flex flex-col items-center justify-center sm:mx-0">
+        <Card className="flex flex-col items-center justify-center">
             <CardHeader>
                 <CardTitle className="text-center text-lg font-semibold">
                     {name}
@@ -58,7 +83,7 @@ function ProductCard({ name, description, imageSrc, href }: ProductCardProps) {
                 <CardDescription>{description}</CardDescription>
             </CardHeader>
             <CardContent>
-                <div className="relative flex h-[100px] w-[130px] items-center justify-center 2xl:h-[120px] 2xl:w-[150px]">
+                <div className="relative flex h-[90px] w-[120px] items-center justify-center">
                     <Image
                         className="object-cover"
                         src={imageSrc}
@@ -78,24 +103,6 @@ function ProductCard({ name, description, imageSrc, href }: ProductCardProps) {
     )
 }
 
-interface ProductHeaderProps {
-    title: string
-    subTitle: string
-}
-
-function ProductHeader({ title, subTitle }: ProductHeaderProps) {
-    return (
-        <div className="text-center sm:text-left">
-            <h1 className="text-lg font-semibold xl:text-xl 2xl:text-2xl">
-                {title}
-            </h1>
-            <h2 className="text-md font-light text-gray-500 xl:text-lg 2xl:text-xl">
-                {subTitle}
-            </h2>
-        </div>
-    )
-}
-
 interface CategoryDisplayProps {
     title: string
     subTitle: string
@@ -103,12 +110,11 @@ interface CategoryDisplayProps {
 }
 
 // prettier-ignore
-function CategoryDisplay({title, subTitle, categoryData,}: CategoryDisplayProps) {
+function CategoryDisplay({categoryData}: CategoryDisplayProps) {
     return (
         <div className="flex flex-col gap-5">
-            <ProductHeader title={title} subTitle={subTitle} />
             {/* AMV Category Card Display */}
-            <div className="mx-[20%] flex flex-col flex-wrap gap-7 sm:mx-0 sm:flex-row xl:gap-20">
+            <div className="flex flex-col flex-wrap gap-7 sm:flex-row ">
                 {categoryData.map((categoryObj, index) => {
                     return (
                         <div key={index}>

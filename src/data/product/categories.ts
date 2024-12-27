@@ -53,4 +53,4 @@ const agvCategories: ProductCategoryType[] = [
     },
 ]
 
-export { amrCategories, agvCategories }
+export { agvCategories }

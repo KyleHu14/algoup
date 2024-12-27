@@ -1,10 +1,4 @@
-import Link from "next/link"
-
-import {
-    PageHeader,
-    PageHeaderSubTitle,
-    PageHeaderTitle,
-} from "@/components/PageHeader"
+import { PageHeader, PageHeaderTitle } from "@/components/PageHeader"
 import PageContainer from "@/components/PageContainer"
 import FlexImage from "@/components/FlexImage"
 import { AI_CONTENT } from "@/data/ai"

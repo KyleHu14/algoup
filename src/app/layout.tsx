@@ -18,9 +18,7 @@ export const metadata: Metadata = {
         default: "Algoup",
     },
     metadataBase: new URL(
-        process.env.VERCEL_PROJECT_PRODUCTION_URL || // Use production URL if available
-            process.env.VERCEL_BRANCH_URL || // Use branch URL if in preview mode
-            process.env.VERCEL_URL || // Fallback to the default Vercel URL
+        process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL || // Use production URL if available
             `http://localhost:${process.env.PORT || 3000}`, // Fallback to local development URL
     ),
     openGraph: {

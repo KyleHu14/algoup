@@ -1,9 +1,28 @@
+// Components
 import LogoDisplayCarousel from "@/components/LogoDisplayCarousel"
 
+// Next Imports
 import Image from "next/image"
+import { Metadata } from "next"
 
-import { PARTNERS } from "../../data/about-us/partners"
-import { CUSTOMERS } from "../../data/about-us/customers"
+// Data
+import { PARTNERS } from "../../data/partners"
+import { CUSTOMERS } from "../../data/customers"
+
+export const metadata: Metadata = {
+    title: "About Us",
+    description:
+        "Learn about Algoup's partners, dedicated staff, and vibrant company culture.",
+    keywords: [
+        "automation solutions",
+        "Seattle",
+        "Washington",
+        "skilled professionals",
+    ],
+    openGraph: {
+        title: "About Algoup",
+    },
+}
 
 export default function AboutUs() {
     return (

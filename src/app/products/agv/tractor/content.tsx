@@ -7,7 +7,7 @@ import { Rabbit, Undo2, Weight } from "lucide-react"
 import {
     columnHeaders,
     data,
-} from "../../../../data/product/specifications/tractor"
+} from "../../../../data/product-specs/specifications/tractor"
 
 import { ReactImageTurntable } from "react-image-turntable"
 

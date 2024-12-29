@@ -18,7 +18,7 @@ import SpecificationTable from "@/components/Product/SpecificationTable"
 import {
     columnHeaders,
     data,
-} from "../../../../data/product/specifications/pallet-stacker"
+} from "../../../../data/product-specs/specifications/pallet-stacker"
 import SpecHeader from "@/components/Product/SpecificationHeader"
 import { SpecDescription } from "@/components/Product/SpecificationDescription"
 

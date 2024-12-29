@@ -12,10 +12,10 @@ export default function Logistics() {
             <defs />
             <g
                 fill="none"
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 id="People"
                 stroke="none"
-                stroke-width="1"
+                strokeWidth="1"
             >
                 <g
                     fill="#000000"

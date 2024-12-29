@@ -17,8 +17,8 @@ import Image from "next/image"
 import Link from "next/link"
 
 // Data Imports
-import { agvCategories } from "../../data/product/categories"
-import { ProductCategoryType } from "../../data/product/categories"
+import { agvCategories } from "../../data/product-specs/categories"
+import { ProductCategoryType } from "../../data/product-specs/categories"
 
 import PageContainer from "@/components/PageContainer"
 import { PageHeader, PageHeaderTitle } from "@/components/PageHeader"

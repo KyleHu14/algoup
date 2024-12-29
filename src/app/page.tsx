@@ -1,4 +1,10 @@
-import Head from "next/head"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+    description:
+        "ALGOUP is an automation solutions company specializing in mobile robots, intelligent equipment, sensors, and related services.",
+    keywords: ["Empowering Your Business", "Robotics"],
+}
 
 export default function Home() {
     return (

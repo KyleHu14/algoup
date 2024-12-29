@@ -1,15 +1,14 @@
-import FlexImage from "@/components/FlexImage"
-import Healthcare from "@/components/Icons/Healthcare"
-import Logistics from "@/components/Icons/Logistics"
-import Production from "@/components/Icons/Production"
+// Components
+import SolutionRow from "@/components/MasterPlan/SolutionRow"
+import SolutionRowLabel from "@/components/MasterPlan/SolutionRowLabel"
+
 import IconWrapper from "@/components/MasterPlan/IconWrapper"
+
 import {
     PageSection,
     PageSectionTitle,
     PageSectionText,
 } from "@/components/PageSection"
-import SolutionRow from "@/components/MasterPlan/SolutionRow"
-import SolutionRowLabel from "@/components/MasterPlan/SolutionRowLabel"
 
 import {
     PageHeader,
@@ -17,8 +16,34 @@ import {
     PageHeaderTitle,
 } from "@/components/PageHeader"
 
-import { MASTERPLAN_CONTENT } from "@/data/masterplan"
 import PageContainer from "@/components/PageContainer"
+
+// Icons
+import FlexImage from "@/components/FlexImage"
+import Healthcare from "@/components/Icons/Healthcare"
+import Logistics from "@/components/Icons/Logistics"
+import Production from "@/components/Icons/Production"
+
+// Data
+import { MASTERPLAN_CONTENT } from "@/data/masterplan"
+
+// Metadata
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: "Master Plan",
+    description: "Learn about Algoup's roadmap and goals into the future.",
+    keywords: [
+        "Masterplan",
+        "Plan",
+        "AI in logistics",
+        "AI in healthcare",
+        "labor shortages",
+    ],
+    openGraph: {
+        title: "Master Plan",
+    },
+}
 
 export default function MasterPlan() {
     return (

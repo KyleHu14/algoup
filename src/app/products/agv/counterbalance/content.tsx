@@ -9,7 +9,7 @@ import ProductCoverImage from "@/components/Product/CoverImage"
 import {
     columnHeaders,
     data,
-} from "../../../../data/product/specifications/counterbalance"
+} from "../../../../data/product-specs/specifications/counterbalance"
 
 import { ReactImageTurntable } from "react-image-turntable"
 import TitleSection from "@/components/Product/TitleSection"

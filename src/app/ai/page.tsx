@@ -4,6 +4,23 @@ import FlexImage from "@/components/FlexImage"
 import { AI_CONTENT } from "@/data/ai"
 import { PageSection, PageSectionText } from "@/components/PageSection"
 
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: "AI",
+    description:
+        "Explore Algoup's cutting-edge AI technologies and solutions driving innovation across industries.",
+    keywords: [
+        "edge-embedded AI",
+        "advanced artificial intelligence",
+        "closed-loop data engine",
+        "edge-embedded AI",
+    ],
+    openGraph: {
+        title: "Artificial Intelligence",
+    },
+}
+
 export default function AI() {
     return (
         <PageContainer>

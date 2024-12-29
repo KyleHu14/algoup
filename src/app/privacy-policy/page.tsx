@@ -37,9 +37,9 @@ export default function PrivacyPolicy() {
                         // prettier-ignore 
                         else {
                             return (
-                                <ul className="list-disc list-inside ">
+                                <ul key={contentIndex} className="list-disc list-inside ">
                                     {content.value.map((listValue, index) => (
-                                        <li className="text-sm sm:text-base md:text-lg"key={index}>{listValue}</li>
+                                        <li className="text-sm sm:text-base md:text-lg" key={index}>{listValue}</li>
                                     ))}
                                 </ul>
                             )

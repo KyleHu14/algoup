@@ -51,7 +51,7 @@ export default function MasterPlan() {
             <PageHeader>
                 <PageHeaderTitle>Master Plan</PageHeaderTitle>
                 <PageHeaderSubTitle>
-                    Algoup's roadmap and goals into the future.
+                    Algoup&apos;s roadmap and goals into the future.
                 </PageHeaderSubTitle>
             </PageHeader>
 
@@ -119,7 +119,7 @@ export default function MasterPlan() {
 
                 <PageSectionText>
                     In our early stages, we are honing in on logistics and
-                    material handling, leveraging our team's extensive
+                    material handling, leveraging our team&apos;s extensive
                     experience and deep insights to deliver optimal solutions
                     that are both effective and cost-efficient for our clients.
                 </PageSectionText>

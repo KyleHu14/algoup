@@ -22,7 +22,8 @@ export default function Manufacturing() {
                         Manufacturing Capabilities
                     </PageHeaderTitle>
                     <PageHeaderSubTitle>
-                        Explore Algoup's extensive manufacturing capbilities.
+                        Explore Algoup&apos;s extensive manufacturing
+                        capbilities.
                     </PageHeaderSubTitle>
                 </div>
                 <FlexImage

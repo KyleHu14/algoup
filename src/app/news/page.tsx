@@ -1,12 +1,21 @@
-// [ Imports ]
-// Utilities
-import { getNonFeaturedArticles, getFeaturedArticle } from "@/lib/newsUtils"
-
 // Components
 import ArticleList from "@/components/News/ArticleList"
 import ArticleContainer from "@/components/News/ArticleContainer"
 import FlexImage from "@/components/FlexImage"
 import AccentButton from "@/components/AccentButton"
+
+// Next
+import { Metadata } from "next"
+
+// News Utility Functions
+import { getNonFeaturedArticles, getFeaturedArticle } from "@/lib/newsUtils"
+
+export const metadata: Metadata = {
+    title: "News",
+    description:
+        "Stay updated with the latest news and announcements from Algoup.",
+    keywords: ["News", "Announcements", "Milestones", "Articles"],
+}
 
 export default function News() {
     const allArticles = getNonFeaturedArticles()
@@ -21,10 +30,10 @@ export default function News() {
         <main className="mx-5 my-24 flex max-w-[43rem] flex-col gap-10 text-center md:mx-auto md:my-14 md:text-left">
             {/* Title Section */}
             <section>
-                <h1 className="text-typography-main text-3xl font-semibold">
+                <h1 className="text-3xl font-semibold text-typography-main">
                     Company News
                 </h1>
-                <p className="text-typography-secondary mt-1 text-xl">
+                <p className="mt-1 text-xl text-typography-secondary">
                     <TodaysDate />
                 </p>
             </section>
@@ -50,7 +59,7 @@ export default function News() {
                         <p>{`${featuredArticle.date} | By ${featuredArticle.author.name}`}</p>
 
                         {/* Desc */}
-                        <p className="text-typography-secondary text-md mt-3">
+                        <p className="text-md mt-3 text-typography-secondary">
                             {featuredArticle.excerpt}
                         </p>
 

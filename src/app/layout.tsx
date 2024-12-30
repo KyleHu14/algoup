@@ -22,7 +22,6 @@ export const metadata: Metadata = {
             `http://localhost:${process.env.PORT || 3000}`, // Fallback to local development URL
     ),
     openGraph: {
-        title: "Algoup",
         images: ["/logo-full.png"],
         siteName: "Algoup",
     },

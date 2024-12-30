@@ -1,3 +1,4 @@
+// Components
 import PageContainer from "@/components/PageContainer"
 import {
     PageHeader,
@@ -9,8 +10,18 @@ import {
     PageSectionText,
     PageSectionTitle,
 } from "@/components/PageSection"
-import { Button } from "@/components/ui/button"
+
+// Next
+import { Metadata } from "next"
+
+// Data
 import { LAST_UPDATED, PRIVACY_POLICY_INFO } from "@/data/privacy-policy"
+
+export const metadata: Metadata = {
+    title: "Privacy Policy",
+    description:
+        "Review Algoup's privacy policy for details on how Algoup collects, uses, and protects your personal information",
+}
 
 export default function PrivacyPolicy() {
     return (

@@ -1,10 +1,15 @@
+// Components
 import { PageHeader, PageHeaderTitle } from "@/components/PageHeader"
-import PageContainer from "@/components/PageContainer"
-import FlexImage from "@/components/FlexImage"
-import { AI_CONTENT } from "@/data/ai"
 import { PageSection, PageSectionText } from "@/components/PageSection"
+import PageContainer from "@/components/PageContainer"
 
+import FlexImage from "@/components/FlexImage"
+
+// Next Imports
 import { Metadata } from "next"
+
+// Data
+import { AI_CONTENT } from "@/data/ai"
 
 export const metadata: Metadata = {
     title: "AI",
@@ -16,9 +21,6 @@ export const metadata: Metadata = {
         "closed-loop data engine",
         "edge-embedded AI",
     ],
-    openGraph: {
-        title: "Artificial Intelligence",
-    },
 }
 
 export default function AI() {

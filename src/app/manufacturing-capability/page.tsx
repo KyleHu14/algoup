@@ -11,7 +11,28 @@ import {
     PageSectionText,
     PageSectionTitle,
 } from "@/components/PageSection"
+
+// Next
+import { Metadata } from "next"
+
+// Data
 import { MANUFACTURING_CONTENT } from "@/data/manufacturing"
+
+export const metadata: Metadata = {
+    title: "Manufacturing Capabilities",
+    description:
+        "Read about Algoup's production capabilities, quality control, and sustainable manufacturing practices.",
+    keywords: [
+        "manufacturing facility",
+        "complex sub-systems",
+        "operational efficiency",
+        "sub-system fabrication",
+        "optimized supply chain",
+        "lean manufacturing principles",
+        "cost-efficient structure",
+        "comprehensive traceability",
+    ],
+}
 
 export default function Manufacturing() {
     return (

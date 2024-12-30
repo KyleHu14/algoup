@@ -18,6 +18,9 @@ import {
 
 import PageContainer from "@/components/PageContainer"
 
+// Next
+import { Metadata } from "next"
+
 // Icons
 import FlexImage from "@/components/FlexImage"
 import Healthcare from "@/components/Icons/Healthcare"
@@ -26,9 +29,6 @@ import Production from "@/components/Icons/Production"
 
 // Data
 import { MASTERPLAN_CONTENT } from "@/data/masterplan"
-
-// Metadata
-import { Metadata } from "next"
 
 export const metadata: Metadata = {
     title: "Master Plan",
@@ -40,9 +40,6 @@ export const metadata: Metadata = {
         "AI in healthcare",
         "labor shortages",
     ],
-    openGraph: {
-        title: "Master Plan",
-    },
 }
 
 export default function MasterPlan() {

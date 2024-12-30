@@ -1,10 +1,29 @@
+// Components
 import ContactForm from "@/components/ContactUs/ContactForm"
 import Paragraph from "@/components/ContactUs/Paragraph"
 import Subtitle from "@/components/ContactUs/Subtitle"
 import Title from "@/components/ContactUs/Title"
+
+// Next
+import { Metadata } from "next"
+
+// Icons
 import { Mail, Phone } from "lucide-react"
 
-export default function ContactPage() {
+export const metadata: Metadata = {
+    title: "Contact Us",
+    description:
+        "Contact Algoup for inquiries, support, or partnership oppurtunities.",
+    keywords: [
+        "contact Algoup",
+        "parternship oppurtunity",
+        "contact",
+        "inquiry",
+        "support",
+    ],
+}
+
+export default function Contact() {
     return (
         <main className="mx-auto w-[80%] py-20 sm:w-[60%] lg:p-10 xl:w-[50%] 2xl:w-[40%]">
             <section className="text-left">
@@ -12,8 +31,9 @@ export default function ContactPage() {
                     Contact Us
                 </h1>
                 <p className="text-md mt-2 font-light md:text-lg lg:text-xl 3xl:text-xl">
-                    Whether its talking an expert, asking an inquiry, or giving
-                    feedback, we are all ears!
+                    Whether its talking to an expert, sending an inquiry, or a
+                    potential partnership oppurtunity, we would love to hear
+                    from you!
                 </p>
             </section>
 
@@ -30,7 +50,6 @@ export default function ContactPage() {
                         <div>Phone</div>
                     </Subtitle>
                     <Paragraph>US: +1 202 664 4153</Paragraph>
-                    <Paragraph>CN: + 86 182 0190 0625</Paragraph>
                 </div>
 
                 <div>

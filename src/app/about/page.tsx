@@ -19,9 +19,6 @@ export const metadata: Metadata = {
         "Washington",
         "skilled professionals",
     ],
-    openGraph: {
-        title: "About Algoup",
-    },
 }
 
 export default function AboutUs() {

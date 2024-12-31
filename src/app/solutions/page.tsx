@@ -38,6 +38,7 @@ export const metadata: Metadata = {
     title: "Solutions",
     description:
         "View Algoup's comprehensive and diverse solutions for clients.",
+    keywords: ["algoup solutions", "products", "algoup AGV", "algoup AMR"],
 }
 
 export default function Solutions() {

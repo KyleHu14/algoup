@@ -14,7 +14,13 @@ export const metadata: Metadata = {
     title: "News",
     description:
         "Stay updated with the latest news and announcements from Algoup.",
-    keywords: ["News", "Announcements", "Milestones", "Articles"],
+    keywords: [
+        "News",
+        "Announcements",
+        "Milestones",
+        "Articles",
+        "algoup news",
+    ],
 }
 
 export default function News() {

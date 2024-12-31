@@ -20,6 +20,8 @@ export const metadata: Metadata = {
         "advanced artificial intelligence",
         "closed-loop data engine",
         "edge-embedded AI",
+        "AI",
+        "algoup ai",
     ],
 }
 

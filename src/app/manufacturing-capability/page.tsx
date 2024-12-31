@@ -31,6 +31,7 @@ export const metadata: Metadata = {
         "lean manufacturing principles",
         "cost-efficient structure",
         "comprehensive traceability",
+        "algoup facility",
     ],
 }
 

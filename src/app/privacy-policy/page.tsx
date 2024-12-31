@@ -21,6 +21,12 @@ export const metadata: Metadata = {
     title: "Privacy Policy",
     description:
         "Review Algoup's privacy policy for details on how Algoup collects, uses, and protects your personal information",
+    keywords: [
+        "privacy",
+        "privacy policy",
+        "algoup privacy",
+        "algoup privacy policy",
+    ],
 }
 
 export default function PrivacyPolicy() {

@@ -39,6 +39,7 @@ export const metadata: Metadata = {
         "AI in logistics",
         "AI in healthcare",
         "labor shortages",
+        "algoup plan",
     ],
 }
 

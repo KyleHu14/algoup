@@ -13,8 +13,8 @@ export const NAVLINKS: Link[] = [
         text: "AI",
     },
     {
-        link: "/products",
-        text: "Products",
+        link: "/solutions",
+        text: "Solutions",
     },
     {
         link: "/manufacturing-capability",

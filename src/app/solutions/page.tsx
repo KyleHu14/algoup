@@ -9,40 +9,49 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 
-// Icon Imports
-import { ChevronsRight } from "lucide-react"
-
-// Next Imports
-import Image from "next/image"
-import Link from "next/link"
-
-// Data Imports
-import { agvCategories } from "../../data/product-specs/categories"
-import { ProductCategoryType } from "../../data/product-specs/categories"
-
+// Components
 import PageContainer from "@/components/PageContainer"
-import { PageHeader, PageHeaderTitle } from "@/components/PageHeader"
+import {
+    PageHeader,
+    PageHeaderSubTitle,
+    PageHeaderTitle,
+} from "@/components/PageHeader"
 import {
     PageSection,
     PageSectionText,
     PageSectionTitle,
 } from "@/components/PageSection"
 
-export default function ProductsHome() {
+// Icon Imports
+import { ChevronsRight } from "lucide-react"
+
+// Next Imports
+import Image from "next/image"
+import Link from "next/link"
+import { Metadata } from "next"
+
+// Data Imports
+import { agvCategories } from "../../data/product-specs/categories"
+import { ProductCategoryType } from "../../data/product-specs/categories"
+
+export const metadata: Metadata = {
+    title: "Solutions",
+    description:
+        "View Algoup's comprehensive and diverse solutions for clients.",
+}
+
+export default function Solutions() {
     return (
         <PageContainer>
             <PageHeader>
-                <PageHeaderTitle>Products</PageHeaderTitle>
+                <PageHeaderTitle>Solutions</PageHeaderTitle>
+                <PageHeaderSubTitle>
+                    Algoup is committed to delivering comprehensive end-to-end
+                    solutions to our clients, integrating a diverse range of
+                    products and advanced technologies tailored to meet their
+                    specific requirements.
+                </PageHeaderSubTitle>
             </PageHeader>
-
-            <PageSection>
-                <PageSectionTitle>Autonomous Guided Vehicles</PageSectionTitle>
-                <CategoryDisplay
-                    title="Autonomous Guided Vehicles"
-                    subTitle="Easy to operate, intuitive controls, and reliable."
-                    categoryData={agvCategories}
-                />
-            </PageSection>
 
             {/* Humanoid Robot */}
             <PageSection>
@@ -60,6 +69,15 @@ export default function ProductsHome() {
                 <PageSectionText>
                     Stay tuned for further updates!
                 </PageSectionText>
+            </PageSection>
+
+            <PageSection>
+                <PageSectionTitle>AGVs & AMRs</PageSectionTitle>
+                <CategoryDisplay
+                    title="Autonomous Guided Vehicles"
+                    subTitle="Easy to operate, intuitive controls, and reliable."
+                    categoryData={agvCategories}
+                />
             </PageSection>
         </PageContainer>
     )
@@ -122,7 +140,7 @@ function CategoryDisplay({categoryData}: CategoryDisplayProps) {
                                 name={categoryObj.name}
                                 description={categoryObj.description}
                                 imageSrc={categoryObj.imageSrc}
-                                href={`/products/${categoryObj.href}`}
+                                href={`/solutions/${categoryObj.href}`}
                             />
                         </div>
                     )

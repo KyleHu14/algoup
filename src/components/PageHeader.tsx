@@ -29,7 +29,7 @@ interface PageHeaderSubTitleProps {
 }
 const PageHeaderSubTitle = ({ children }: PageHeaderSubTitleProps) => {
     return (
-        <p className="text-lg text-typography-secondary sm:text-xl 2xl:text-2xl">
+        <p className="text-justify text-lg sm:text-xl 2xl:text-2xl">
             {children}
         </p>
     )

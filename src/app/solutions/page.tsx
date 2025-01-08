@@ -112,7 +112,8 @@ function ProductCard({ name, description, imageSrc, href }: ProductCardProps) {
                 </div>
             </CardContent>
             <CardFooter className="flex items-center justify-center">
-                <Link href={href}>
+                {/* <Link href={href}> */}
+                <Link href="">
                     <Button variant="algoup">
                         View More <ChevronsRight />
                     </Button>

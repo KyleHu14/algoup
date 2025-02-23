@@ -1,4 +1,6 @@
 // Next
+import HorizontalScroll from "@/components/Home/HorizontalScroll"
+import { Button } from "@/components/ui/button"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -10,22 +12,34 @@ export const metadata: Metadata = {
 export default function Home() {
     return (
         <main className="mt-[-75px]">
-            <section className="slide-container h-screen w-full">
-                <video
-                    className="relative h-screen w-screen object-cover"
-                    playsInline
-                    autoPlay
-                    loop
-                    muted
-                >
-                    <source
-                        src="https://assets.codepen.io/6093409/river.mp4"
-                        type="video/mp4"
-                    />
-                </video>
-                <div className="absolute left-0 right-0 top-[40%] mx-auto max-w-[16rem] text-center text-2xl font-bold text-white sm:left-[10%] sm:right-auto sm:max-w-[25rem] sm:text-left sm:text-3xl xl:max-w-[35rem] xl:text-4xl 2xl:max-w-[50rem] 2xl:text-6xl">
-                    Empowering Your Business with Robotics
+            <section className="container flex h-[100vh] flex-col items-center justify-center space-y-8 py-24 md:py-32">
+                <div className="flex flex-col items-center space-y-4 text-center">
+                    <div className="space-y-2">
+                        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
+                            Welcome to{" "}
+                            <span className="bg-gradient-to-r from-[#71c6cc] to-[#4a9ea3] bg-clip-text text-transparent">
+                                algoup
+                            </span>
+                        </h1>
+                        <p className="text-muted-foreground md:text-xl">
+                            Empowering Your Business with Robotics
+                        </p>
+                    </div>
+                    <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                        <Button
+                            size="lg"
+                            className="bg-[#71c6cc] hover:bg-[#5eb3b9]"
+                        >
+                            Get Started
+                        </Button>
+                        <Button size="lg" variant="outline">
+                            Learn More
+                        </Button>
+                    </div>
                 </div>
+
+                <h2>Trusted by Industry Professionals</h2>
+                <HorizontalScroll />
             </section>
         </main>
     )

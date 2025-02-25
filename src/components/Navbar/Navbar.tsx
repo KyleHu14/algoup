@@ -45,7 +45,7 @@ export default function Navbar() {
                                 <Link key={index} href={linkData.link}>
                                     <Button
                                         size="sm"
-                                        className="bg-algoup-accent px-2 py-0 text-[11px] text-white hover:bg-algoup-accent-dark lg:text-lg"
+                                        className="bg-algoup-accent px-2 py-0 text-[11px] text-base text-white hover:bg-algoup-accent-dark"
                                     >
                                         Contact Us
                                     </Button>

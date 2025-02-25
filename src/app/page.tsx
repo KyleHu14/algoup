@@ -20,7 +20,7 @@ export default function Home() {
                     <div className="space-y-4">
                         <h1 className="text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl">
                             Welcome to{" "}
-                            <span className="bg-gradient-to-r from-[#71c6cc] to-[#4a9ea3] bg-clip-text text-transparent">
+                            <span className="bg-gradient-to-r from-algoup-accent to-[#4a9ea3] bg-clip-text text-transparent">
                                 algoup
                             </span>
                         </h1>
@@ -41,7 +41,7 @@ export default function Home() {
                         </Link>
 
                         <Link href="/contact" className="w-full md:w-fit">
-                            <Button className="flex w-full gap-2 bg-[#71c6cc] px-3 hover:bg-[#5eb3b9] md:px-12">
+                            <Button className="flex w-full gap-2 bg-algoup-accent px-3 hover:bg-[#5eb3b9] md:px-12">
                                 <p>Get in Touch</p>{" "}
                                 <MoveRight className="h-5 w-5" />
                             </Button>

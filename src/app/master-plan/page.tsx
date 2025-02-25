@@ -47,7 +47,11 @@ export default function MasterPlan() {
     return (
         <PageContainer>
             <PageHeader>
-                <PageHeaderTitle>Master Plan</PageHeaderTitle>
+                <PageHeaderTitle>
+                    <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                        Algoup Master Plan
+                    </span>
+                </PageHeaderTitle>
                 <PageHeaderSubTitle>
                     Algoup&apos;s roadmap and goals into the future.
                 </PageHeaderSubTitle>

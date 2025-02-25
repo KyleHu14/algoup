@@ -13,6 +13,7 @@ export default function Home() {
     return (
         <main className="mt-[-75px]">
             <section className="container flex h-[100vh] flex-col items-center justify-center space-y-8 py-24 md:py-32">
+                {/* Main Content */}
                 <div className="flex flex-col items-center space-y-4 text-center">
                     <div className="space-y-2">
                         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">

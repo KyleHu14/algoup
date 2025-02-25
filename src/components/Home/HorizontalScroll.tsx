@@ -4,7 +4,7 @@ import { CUSTOMERS } from "../../data/customers"
 export default function HorizontalScroll() {
     return (
         <div className="inline-flex w-full flex-nowrap overflow-hidden">
-            <ul className="animate-infinite-scroll flex items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-8">
+            <ul className="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-8">
                 {CUSTOMERS.map((partnerSrc, index) =>
                     partnerSrc.includes("volkswagen") ? (
                         <li key={index}>
@@ -19,8 +19,8 @@ export default function HorizontalScroll() {
                         <li key={index}>
                             <Image
                                 src={partnerSrc}
-                                width={150}
-                                height={50}
+                                width={130}
+                                height={20}
                                 alt="Partner Logo"
                             />
                         </li>
@@ -28,7 +28,7 @@ export default function HorizontalScroll() {
                 )}
             </ul>
             <ul
-                className="animate-infinite-scroll flex items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-8"
+                className="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-8"
                 aria-hidden="true"
             >
                 {CUSTOMERS.map((partnerSrc, index) =>
@@ -45,8 +45,8 @@ export default function HorizontalScroll() {
                         <li key={index}>
                             <Image
                                 src={partnerSrc}
-                                width={150}
-                                height={50}
+                                width={130}
+                                height={20}
                                 alt="Partner Logo"
                             />
                         </li>

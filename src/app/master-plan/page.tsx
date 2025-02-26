@@ -48,7 +48,7 @@ export default function MasterPlan() {
         <PageContainer>
             <PageHeader>
                 <PageHeaderTitle>
-                    <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-algoup-accent to-purple-600 bg-clip-text text-transparent">
                         Algoup Master Plan
                     </span>
                 </PageHeaderTitle>

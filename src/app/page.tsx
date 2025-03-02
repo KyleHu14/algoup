@@ -1,5 +1,6 @@
 // Next
 import HorizontalScroll from "@/components/Home/HorizontalScroll"
+import Typewriter from "@/components/TypeWriter"
 import { Button } from "@/components/ui/button"
 import { BookOpenText, MoveRight } from "lucide-react"
 import { Metadata } from "next"
@@ -56,6 +57,15 @@ export default function Home() {
                     </h2>
                     <HorizontalScroll />
                 </div>
+
+                <Typewriter
+                    text={[
+                        "Welcome to my website!",
+                        "I'm a developer.",
+                        "Check out my projects!",
+                    ]}
+                    loop={true}
+                />
             </section>
         </main>
     )

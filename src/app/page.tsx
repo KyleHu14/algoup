@@ -26,7 +26,17 @@ export default function Home() {
                             </span>
                         </h1>
                         <p className="text-muted-foreground sm:text-lg md:text-xl xl:text-2xl">
-                            Empowering Your Business with Robotics.
+                            Empowering Your Business with{" "}
+                            <Typewriter
+                                text={[
+                                    "Robotics.",
+                                    "Artificial Intelligence.",
+                                    "Technology.",
+                                ]}
+                                loop={true}
+                                delay={2000}
+                                speed={100}
+                            />
                         </p>
                     </div>
 
@@ -51,21 +61,13 @@ export default function Home() {
                 </div>
 
                 {/* Trusted by Industry */}
-                <div className="mt-5 w-full text-center">
-                    <h2 className="mb-3 text-xl font-medium text-muted-foreground/90">
-                        Trusted by Industry Leaders
+                <div className="mt-5 flex w-full flex-col items-center text-center">
+                    <h2 className="mb-3 text-xl font-medium 2xl:text-2xl">
+                        Trusted by 10+ Industry Leaders
                     </h2>
+
                     <HorizontalScroll />
                 </div>
-
-                <Typewriter
-                    text={[
-                        "Welcome to my website!",
-                        "I'm a developer.",
-                        "Check out my projects!",
-                    ]}
-                    loop={true}
-                />
             </section>
         </main>
     )

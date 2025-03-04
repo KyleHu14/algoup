@@ -52,7 +52,7 @@ export default function MasterPlan() {
                         <span>{section.title}</span>
                     </PageSectionTitle>
                     <PageSectionText className="text-foreground/70">
-                        {section.description}
+                        {section.content}
                     </PageSectionText>
                 </PageSection>
             ))}

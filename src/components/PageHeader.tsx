@@ -28,11 +28,7 @@ interface PageHeaderSubTitleProps {
     children?: React.ReactNode
 }
 const PageHeaderSubTitle = ({ children }: PageHeaderSubTitleProps) => {
-    return (
-        <p className="text-justify text-lg sm:text-xl 2xl:text-2xl">
-            {children}
-        </p>
-    )
+    return <p className="text-lg sm:text-xl 2xl:text-2xl">{children}</p>
 }
 
 export { PageHeader, PageHeaderTitle, PageHeaderSubTitle }

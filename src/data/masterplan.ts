@@ -1,29 +1,38 @@
+import { Lightbulb, Target, Users, Wrench } from "lucide-react"
+import { ComponentType } from "react"
+
 interface Section {
     title: string
     description: string
     img?: string
+    icon: ComponentType<any>
 }
 
 export const MASTERPLAN_CONTENT: Section[] = [
     {
         title: "Our Vision",
         description:
-            "To improve human lives through harnessing the transformative power of AI.",
+            "We strive to improve global quality of life by utilizing AI.",
         img: "/master-plan/vision.jpg",
+        icon: Lightbulb,
     },
     {
         title: "Our Mission",
-        description: "To enhance human capabilities through advanced AI.",
+        description:
+            "We aim to enhance human capabilities through advanced AI.",
         img: "/master-plan/mission.jpg",
+        icon: Target,
     },
     {
         title: "The Company",
         description:
-            "At ALGOUP, we believe that shaping a positive future for humanity is a profound moral obligation of our time. We are committed to driving transformative change through cutting-edge technologies. As the world enters an era of rapid advancements in AI and robotics, our mission is to pioneer solutions that pave the way for a brighter and more beneficial future. We will create seamless, end-to-end automation solutions powered by advanced robotics, designed to operate without direct human intervention. These innovations aim to enhance communities, empower individuals, and enable people to lead more fulfilling lives.",
+            "We believe that ensuring a positive future for humanity is a profound moral obligation. The most significant impact towards this goal is from our commitment to developing and delivering advanced AI solutions. \n\nOur solutions will contribute toward the current era of rapid advancements in AI and robotics. ALGOUP's objective is to create end-to-end automation solutions and advanced robots that can aid communities. Through these solutions, we will enable individuals to lead more fulfilling lives.",
+        icon: Users,
     },
     {
         title: "The Problem",
         description:
-            "Today, we are confronted with significant challenges, including unprecedented labor shortages and a globally aging population. These factors  will further hinder workforce scalability and slow labor supply growth. It is therefore crucial to prioritize automation as a means to boost productivity, efficiency, and safety.",
+            "Today, we are confronted with significant socioeconomic challenges. Issues such as unprecedented labor shortages and a globally aging population need to be addressed immediately.\n\nIf we do not address these problems, the world will see a steep reduction in workforce scalability and a stagnant labor supply. It is therefore impeartive that we utilize automation to address these pressing challenges.",
+        icon: Wrench,
     },
 ]

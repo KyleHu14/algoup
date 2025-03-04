@@ -47,8 +47,13 @@ export default function MasterPlan() {
 
             {MASTERPLAN_CONTENT.map((section, index) => (
                 <PageSection key={index} spacing="sm">
-                    <PageSectionTitle>{section.title}</PageSectionTitle>
-                    <PageSectionText>{section.description}</PageSectionText>
+                    <PageSectionTitle className="flex items-center gap-3">
+                        <section.icon className="h-7 w-7 text-algoup-accent" />
+                        <span>{section.title}</span>
+                    </PageSectionTitle>
+                    <PageSectionText className="text-foreground/70">
+                        {section.description}
+                    </PageSectionText>
                 </PageSection>
             ))}
         </PageContainer>

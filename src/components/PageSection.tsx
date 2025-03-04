@@ -22,11 +22,14 @@ const PageSection = ({ spacing = "base", children }: PageSectionProps) => {
 
 interface PageSectionTitleProps {
     children: React.ReactNode
+    className?: string
 }
 
-const PageSectionTitle = ({ children }: PageSectionTitleProps) => {
+const PageSectionTitle = ({ children, className }: PageSectionTitleProps) => {
     return (
-        <h2 className="text-xl font-semibold sm:text-2xl md:text-3xl">
+        <h2
+            className={`text-xl font-semibold sm:text-2xl md:text-3xl ${className}`}
+        >
             {children}
         </h2>
     )
@@ -39,7 +42,9 @@ interface PageSectionTextProps {
 
 const PageSectionText = ({ children, className }: PageSectionTextProps) => {
     return (
-        <p className={`text-justify sm:text-lg md:text-xl ${className}`}>
+        <p
+            className={`whitespace-pre-line text-justify sm:text-lg md:text-xl ${className}`}
+        >
             {children}
         </p>
     )

@@ -4,11 +4,8 @@ import { Button } from "@/components/ui/button"
 import { Menu } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
 
 import { NAVLINKS } from "@/data/nav-links"
-import MobileLinkProps from "./MobileLink"
-import NavLink from "./NavLink"
 
 import {
     Sheet,
@@ -16,6 +13,7 @@ import {
     SheetContent,
     SheetHeader,
     SheetTitle,
+    SheetClose,
 } from "../ui/sheet"
 
 export default function Navbar() {
@@ -84,13 +82,14 @@ export default function Navbar() {
                         </SheetHeader>
                         <nav className="mt-4 flex flex-col gap-3">
                             {NAVLINKS.map((linkData, index) => (
-                                <Link
-                                    key={index}
-                                    href={linkData.link}
-                                    className="font-medium transition-colors"
-                                >
-                                    {linkData.text}
-                                </Link>
+                                <SheetClose key={index} asChild>
+                                    <Link
+                                        href={linkData.link}
+                                        className="font-medium transition-colors"
+                                    >
+                                        {linkData.text}
+                                    </Link>
+                                </SheetClose>
                             ))}
                         </nav>
                     </SheetContent>

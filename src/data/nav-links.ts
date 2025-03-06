@@ -5,6 +5,10 @@ interface Link {
 
 export const NAVLINKS: Link[] = [
     {
+        link: "/",
+        text: "Home",
+    },
+    {
         link: "/master-plan",
         text: "Master Plan",
     },

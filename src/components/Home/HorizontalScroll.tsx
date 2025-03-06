@@ -10,8 +10,8 @@ export default function HorizontalScroll() {
                         <li key={index}>
                             <Image
                                 src={partnerSrc}
-                                width={60}
-                                height={40}
+                                width={40}
+                                height={20}
                                 alt="Partner Logo"
                             />
                         </li>
@@ -19,8 +19,8 @@ export default function HorizontalScroll() {
                         <li key={index}>
                             <Image
                                 src={partnerSrc}
-                                width={130}
-                                height={20}
+                                width={110}
+                                height={50}
                                 alt="Partner Logo"
                             />
                         </li>
@@ -36,8 +36,8 @@ export default function HorizontalScroll() {
                         <li key={index}>
                             <Image
                                 src={partnerSrc}
-                                width={60}
-                                height={40}
+                                width={40}
+                                height={20}
                                 alt="Partner Logo"
                             />
                         </li>
@@ -45,8 +45,8 @@ export default function HorizontalScroll() {
                         <li key={index}>
                             <Image
                                 src={partnerSrc}
-                                width={130}
-                                height={20}
+                                width={110}
+                                height={50}
                                 alt="Partner Logo"
                             />
                         </li>

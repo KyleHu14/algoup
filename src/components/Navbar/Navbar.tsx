@@ -17,8 +17,6 @@ import {
 } from "../ui/sheet"
 
 export default function Navbar() {
-    // const [showMobileLinks, setShowMobileLinks] = useState(false)
-
     return (
         <header className="sticky top-0 z-50 w-full border-b bg-background/95">
             <div className="container flex h-16 items-center justify-between">

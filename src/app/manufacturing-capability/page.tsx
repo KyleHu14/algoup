@@ -1,5 +1,4 @@
 // Components
-import FlexImage from "@/components/FlexImage"
 import PageContainer from "@/components/PageContainer"
 import {
     PageHeader,
@@ -17,6 +16,10 @@ import { Metadata } from "next"
 
 // Data
 import { MANUFACTURING_CONTENT } from "@/data/manufacturing"
+import CogAnimation from "@/components/Manufacturing/CogAnimation"
+import RecycleAnimation from "@/components/Manufacturing/RecycleAnimation"
+import ShieldAnimation from "@/components/Manufacturing/ShieldAnimation"
+import { Cog, Recycle, Shield } from "lucide-react"
 
 export const metadata: Metadata = {
     title: "Manufacturing Capabilities",
@@ -38,36 +41,59 @@ export const metadata: Metadata = {
 export default function Manufacturing() {
     return (
         <PageContainer>
-            <PageHeader className="sm:!flex-row">
-                <div className="flex flex-col gap-3">
-                    <PageHeaderTitle>
-                        Manufacturing Capabilities
-                    </PageHeaderTitle>
-                    <PageHeaderSubTitle>
-                        Explore Algoup&apos;s extensive manufacturing
-                        capbilities.
-                    </PageHeaderSubTitle>
-                </div>
-                <FlexImage
-                    className="h-52 w-full xl:h-56 2xl:w-[70%]"
-                    imgSrc="/manufacturing/facility-outer.png"
-                    altText="Photo of facility"
-                />
+            <PageHeader className="text-center">
+                <PageHeaderTitle className="sm:!text-5xl md:!text-6xl lg:!text-7xl">
+                    Manufacturing{" "}
+                    <span className="bg-gradient-to-r from-algoup-accent to-algoup-accent-dark bg-clip-text text-transparent">
+                        Capabilities
+                    </span>
+                </PageHeaderTitle>
+                <PageHeaderSubTitle className="mx-auto max-w-[800px]">
+                    Explore Algoup&apos;sextensive manufacturing infrastructure,
+                    where cutting-edge technology meets precision engineering to
+                    deliver exceptional results.
+                </PageHeaderSubTitle>
             </PageHeader>
 
             {/* Robust Production */}
+
             {MANUFACTURING_CONTENT.map((section, index) => (
-                <PageSection key={index} spacing="lg">
-                    <PageSectionTitle>{section.title}</PageSectionTitle>
+                <PageSection
+                    className="flex gap-12 rounded-sm border border-zinc-300 bg-muted/50 p-4 lg:!flex-row"
+                    key={index}
+                    spacing="lg"
+                >
+                    <div className="flex w-full flex-col justify-center gap-2">
+                        <PageSectionTitle className="flex items-center gap-3">
+                            {section.title === "Robust Production" ? (
+                                <div className="rounded-full bg-[#71c6cc]/10 p-2">
+                                    <Cog className="h-6 w-6 text-[#71c6cc]" />
+                                </div>
+                            ) : section.title === "Sustainability" ? (
+                                <div className="rounded-full bg-[#71c6cc]/10 p-2">
+                                    <Recycle className="h-6 w-6 text-[#71c6cc]" />
+                                </div>
+                            ) : (
+                                <div className="rounded-full bg-[#71c6cc]/10 p-2">
+                                    <Shield className="h-6 w-6 text-[#71c6cc]" />
+                                </div>
+                            )}
 
-                    <PageSectionText>{section.description}</PageSectionText>
+                            <span>{section.title}</span>
+                        </PageSectionTitle>
 
-                    <FlexImage
-                        className="h-48 sm:h-56 lg:h-64 xl:h-72 2xl:h-[30rem]"
-                        imgSrc={section.coverImage}
-                        altText={section.coverImageAltText}
-                        sizes="(max-width: 768px) 100vw, 80vw"
-                    />
+                        <PageSectionText className="text-zinc-700 md:!text-lg">
+                            {section.description}
+                        </PageSectionText>
+                    </div>
+
+                    {section.title === "Robust Production" ? (
+                        <CogAnimation />
+                    ) : section.title === "Sustainability" ? (
+                        <RecycleAnimation />
+                    ) : (
+                        <ShieldAnimation />
+                    )}
                 </PageSection>
             ))}
         </PageContainer>

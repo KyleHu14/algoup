@@ -1,10 +1,13 @@
 interface Props {
+    className?: string
     children: React.ReactNode
 }
 
-export default function PageContainer({ children }: Props) {
+export default function PageContainer({ children, className }: Props) {
     return (
-        <main className="px-5 py-10 sm:px-10 md:px-[10%] md:py-20 lg:px-[15%] xl:px-[20%] xl:py-24">
+        <main
+            className={`px-5 py-10 sm:px-10 md:px-[10%] md:py-20 lg:px-[15%] xl:px-[20%] xl:py-24 ${className}`}
+        >
             {children}
         </main>
     )

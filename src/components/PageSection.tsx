@@ -1,9 +1,14 @@
 interface PageSectionProps {
+    className?: string
     spacing?: "base" | "lg" | "sm"
     children: React.ReactNode
 }
 
-const PageSection = ({ spacing = "base", children }: PageSectionProps) => {
+const PageSection = ({
+    spacing = "base",
+    children,
+    className,
+}: PageSectionProps) => {
     type MarginKeys = "base" | "lg" | "sm"
     const margins: Record<MarginKeys, string> = {
         sm: "md:mb-7 lg:mb-9 xl:mb-10",
@@ -13,7 +18,7 @@ const PageSection = ({ spacing = "base", children }: PageSectionProps) => {
 
     return (
         <section
-            className={`mb-5 flex max-w-[70rem] flex-col gap-3 ${margins[spacing]}`}
+            className={`mb-5 flex max-w-[70rem] flex-col gap-3 ${margins[spacing]} ${className}`}
         >
             {children}
         </section>

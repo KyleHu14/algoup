@@ -14,21 +14,28 @@ const PageHeader = ({ children, className }: PageHeaderProps) => {
 }
 
 interface PageHeaderTitleProps {
+    className?: string
     children?: React.ReactNode
 }
-const PageHeaderTitle = ({ children }: PageHeaderTitleProps) => {
+const PageHeaderTitle = ({ children, className }: PageHeaderTitleProps) => {
     return (
-        <h1 className="text-2xl font-bold sm:text-3xl md:text-4xl 2xl:text-5xl">
+        <h1
+            className={`text-2xl font-bold sm:text-3xl md:text-4xl 2xl:text-5xl ${className}`}
+        >
             {children}
         </h1>
     )
 }
 
 interface PageHeaderSubTitleProps {
+    className?: string
     children?: React.ReactNode
 }
-const PageHeaderSubTitle = ({ children }: PageHeaderSubTitleProps) => {
-    return <p className="text-lg sm:text-xl 2xl:text-2xl">{children}</p>
+const PageHeaderSubTitle = ({
+    children,
+    className,
+}: PageHeaderSubTitleProps) => {
+    return <p className={`text-lg sm:text-xl ${className}`}>{children}</p>
 }
 
 export { PageHeader, PageHeaderTitle, PageHeaderSubTitle }

@@ -2,7 +2,7 @@ import { Cog } from "lucide-react"
 
 export default function CogAnimation() {
     return (
-        <div className="relative aspect-video w-full rounded-lg bg-gradient-to-r from-[#71c6cc]/20 to-zinc-200">
+        <div className="relative aspect-video w-full rounded-lg bg-gradient-to-r from-[#71c6cc]/20 to-zinc-100">
             <div className="absolute inset-0 flex items-center justify-center">
                 <div className="flex space-x-6">
                     {/* Assembly line visualization */}

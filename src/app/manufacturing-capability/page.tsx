@@ -59,7 +59,7 @@ export default function Manufacturing() {
 
             {MANUFACTURING_CONTENT.map((section, index) => (
                 <PageSection
-                    className="flex gap-12 rounded-sm border border-zinc-300 bg-muted/50 p-4 lg:!flex-row"
+                    className="flex gap-24 rounded-sm border border-zinc-300 bg-muted/50 p-4 lg:!flex-row lg:gap-12"
                     key={index}
                     spacing="lg"
                 >

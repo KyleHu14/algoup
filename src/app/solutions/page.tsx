@@ -45,7 +45,11 @@ export default function Solutions() {
     return (
         <PageContainer>
             <PageHeader>
-                <PageHeaderTitle>Solutions</PageHeaderTitle>
+                <PageHeaderTitle>
+                    <span className="bg-gradient-to-r from-algoup-accent to-algoup-accent-dark bg-clip-text text-transparent">
+                        Solutions
+                    </span>
+                </PageHeaderTitle>
                 <PageHeaderSubTitle>
                     Algoup is committed to delivering comprehensive end-to-end
                     solutions to our clients, integrating a diverse range of

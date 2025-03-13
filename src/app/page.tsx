@@ -21,7 +21,7 @@ export default function Home() {
                     <div className="space-y-4">
                         <h1 className="text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl">
                             Welcome to{" "}
-                            <span className="bg-gradient-to-r from-algoup-accent to-[#4a9ea3] bg-clip-text text-transparent">
+                            <span className="bg-gradient-to-r from-algoup-accent to-algoup-accent-dark bg-clip-text text-transparent">
                                 algoup
                             </span>
                         </h1>

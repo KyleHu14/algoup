@@ -16,14 +16,16 @@ import {
     PageHeaderSubTitle,
     PageHeaderTitle,
 } from "@/components/PageHeader"
-import {
-    PageSection,
-    PageSectionText,
-    PageSectionTitle,
-} from "@/components/PageSection"
+import { PageSection, PageSectionTitle } from "@/components/PageSection"
 
 // Icon Imports
-import { ChevronsRight } from "lucide-react"
+import {
+    BotIcon as Robot,
+    ChevronsRight,
+    Zap,
+    Truck,
+    ArrowRight,
+} from "lucide-react"
 
 // Next Imports
 import Image from "next/image"
@@ -31,8 +33,8 @@ import Link from "next/link"
 import { Metadata } from "next"
 
 // Data Imports
-import { agvCategories } from "../../data/product-specs/categories"
-import { ProductCategoryType } from "../../data/product-specs/categories"
+import { agvModels } from "../../data/models/agv-models"
+import AGVProducts from "@/components/Solutions/AGVProducts"
 
 export const metadata: Metadata = {
     title: "Solutions",
@@ -59,99 +61,81 @@ export default function Solutions() {
             </PageHeader>
 
             {/* Humanoid Robot */}
-            <PageSection>
-                <PageSectionTitle>Humanoid Robot</PageSectionTitle>
-                <PageSectionText>
-                    Leveraging years of expertise in robotics research,
-                    development, and deployment across a wide range of use
-                    cases, coupled with cutting-edge embedded AI technologies,
-                    we are developing specialized humanoid robots capable of
-                    performing complex tasks. These robots are designed to
-                    alleviate human workload, allowing individuals to focus on
-                    higher-priority activities.
-                </PageSectionText>
+            <PageSection className="grid gap-4 lg:grid-cols-2">
+                <Card className="p-6">
+                    <div className="flex h-48 items-center justify-center rounded-lg bg-gradient-to-br from-[#71c6cc]/20 to-[#71c6cc]/5">
+                        <Robot className="h-24 w-24 text-[#71c6cc] duration-300 group-hover:scale-110" />
+                    </div>
 
-                <PageSectionText>
-                    Stay tuned for further updates!
-                </PageSectionText>
+                    <div className="mt-4">
+                        <h2 className="flex items-center gap-2 text-xl font-bold">
+                            <div className="rounded-full bg-[#71c6cc]/10 p-1.5">
+                                <Robot className="h-4 w-4 text-[#71c6cc]" />
+                            </div>
+                            <span>Humanoid Robot</span>
+                        </h2>
+
+                        <p className="mt-2 text-muted-foreground">
+                            Leveraging years of expertise in robotics research,
+                            we are developing specialized humanoid robots
+                            capable of performing complex tasks, allowing
+                            individuals to focus on higher-priority activities.
+                        </p>
+
+                        <div className="mt-2">
+                            <span className="inline-flex items-center font-medium text-[#71c6cc]">
+                                Stay tuned for updates
+                                <Zap className="ml-1 h-4 w-4" />
+                            </span>
+                        </div>
+                    </div>
+                </Card>
+
+                <Card className="p-6">
+                    <div className="flex h-48 items-center justify-center rounded-lg bg-gradient-to-br from-[#71c6cc]/20 to-[#71c6cc]/5">
+                        <div className="grid grid-cols-3 gap-4">
+                            {[0, 1, 2].map((i) => (
+                                <Truck
+                                    key={i}
+                                    className="h-12 w-12 text-[#71c6cc] opacity-80 duration-300 group-hover:opacity-100"
+                                    style={{
+                                        transform: `translateY(${i % 2 ? 10 : -10}px)`,
+                                    }}
+                                />
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="relative mt-4">
+                        <h2 className="flex items-center gap-2 text-xl font-bold">
+                            <div className="rounded-full bg-[#71c6cc]/10 p-1.5">
+                                <Truck className="h-4 w-4 text-[#71c6cc]" />
+                            </div>
+                            <span>AGVs & AMRs</span>
+                        </h2>
+
+                        <p className="mt-2 text-muted-foreground">
+                            Our automated guided vehicles and autonomous mobile
+                            robots provide efficient material handling and
+                            logistics solutions for modern warehouses and
+                            manufacturing facilities.
+                        </p>
+
+                        <Link
+                            href="#products"
+                            className="group mt-2 flex items-center text-[#71c6cc] hover:text-[#71c6cc]/80"
+                        >
+                            <span>View all products</span>
+                            <ArrowRight className="h-4 w-4 duration-300 group-hover:translate-x-1" />
+                        </Link>
+                    </div>
+                </Card>
             </PageSection>
 
             <PageSection>
                 <PageSectionTitle>AGVs & AMRs</PageSectionTitle>
-                <CategoryDisplay
-                    title="Autonomous Guided Vehicles"
-                    subTitle="Easy to operate, intuitive controls, and reliable."
-                    categoryData={agvCategories}
-                />
+                <AGVProducts />
             </PageSection>
         </PageContainer>
-    )
-}
-
-// Components used for this page
-interface ProductCardProps {
-    name: string
-    description: string
-    imageSrc: string
-    href: string
-}
-
-function ProductCard({ name, description, imageSrc, href }: ProductCardProps) {
-    return (
-        <Card className="flex flex-col items-center justify-center">
-            <CardHeader>
-                <CardTitle className="text-center text-lg font-semibold">
-                    {name}
-                </CardTitle>
-                <CardDescription>{description}</CardDescription>
-            </CardHeader>
-            <CardContent>
-                <div className="relative flex h-[90px] w-[120px] items-center justify-center">
-                    <Image
-                        className="object-cover"
-                        src={imageSrc}
-                        fill={true}
-                        alt="Category Image"
-                    />
-                </div>
-            </CardContent>
-            <CardFooter className="flex items-center justify-center">
-                {/* <Link href={href}> */}
-                <Link href={href}>
-                    <Button variant="algoup">
-                        View More <ChevronsRight />
-                    </Button>
-                </Link>
-            </CardFooter>
-        </Card>
-    )
-}
-
-interface CategoryDisplayProps {
-    title: string
-    subTitle: string
-    categoryData: ProductCategoryType[]
-}
-
-// prettier-ignore
-function CategoryDisplay({categoryData}: CategoryDisplayProps) {
-    return (
-        <div className="flex flex-col gap-5">
-            {/* AMV Category Card Display */}
-            <div className="flex flex-col flex-wrap gap-7 sm:flex-row ">
-                {categoryData.map((categoryObj, index) => {
-                    return (
-                        <div key={index}>
-                            <ProductCard
-                                name={categoryObj.name}
-                                description={categoryObj.description}
-                                imageSrc={categoryObj.imageSrc}
-                                href={`/solutions/${categoryObj.href}`}
-                            />
-                        </div>
-                    )
-                })}
-            </div>
-        </div>
     )
 }

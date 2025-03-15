@@ -15,11 +15,15 @@ import {
 import { Metadata } from "next"
 
 // Data
-import { MANUFACTURING_CONTENT } from "@/data/manufacturing"
+import {
+    MANUFACTURING_CONTENT,
+    MANUFACTURING_STATS,
+} from "@/data/manufacturing"
 import CogAnimation from "@/components/Manufacturing/CogAnimation"
 import RecycleAnimation from "@/components/Manufacturing/RecycleAnimation"
 import ShieldAnimation from "@/components/Manufacturing/ShieldAnimation"
 import { Cog, Recycle, Shield } from "lucide-react"
+import { Card } from "@/components/ui/card"
 
 export const metadata: Metadata = {
     title: "Manufacturing Capabilities",
@@ -42,7 +46,7 @@ export default function Manufacturing() {
     return (
         <PageContainer>
             <PageHeader className="text-center">
-                <PageHeaderTitle className="sm:!text-5xl md:!text-6xl lg:!text-7xl">
+                <PageHeaderTitle className="!text-4xl sm:!text-5xl md:!text-6xl lg:!text-7xl">
                     Manufacturing{" "}
                     <span className="bg-gradient-to-r from-algoup-accent to-algoup-accent-dark bg-clip-text text-transparent">
                         Capabilities
@@ -55,11 +59,26 @@ export default function Manufacturing() {
                 </PageHeaderSubTitle>
             </PageHeader>
 
+            <PageSection className="py-11 lg:py-16">
+                <div className="grid gap-8 lg:grid-cols-3">
+                    {MANUFACTURING_STATS.map((stat, i) => (
+                        <Card key={i} className="p-6 text-center">
+                            <h3 className="text-3xl font-bold text-algoup-accent">
+                                {stat.value}
+                            </h3>
+                            <p className="mt-2 text-sm text-muted-foreground">
+                                {stat.label}
+                            </p>
+                        </Card>
+                    ))}
+                </div>
+            </PageSection>
+
             {/* Robust Production */}
 
             {MANUFACTURING_CONTENT.map((section, index) => (
                 <PageSection
-                    className="flex gap-24 rounded-sm border border-zinc-300 bg-muted/50 p-4 lg:!flex-row lg:gap-12"
+                    className="flex gap-24 rounded-sm border border-zinc-300 p-6 lg:!flex-row lg:gap-12"
                     key={index}
                     spacing="lg"
                 >

@@ -3,6 +3,11 @@ interface Section {
     description: string
 }
 
+interface Statistic {
+    label: string
+    value: string
+}
+
 export const MANUFACTURING_CONTENT: Section[] = [
     {
         title: "Robust Production",
@@ -19,4 +24,10 @@ export const MANUFACTURING_CONTENT: Section[] = [
         description:
             "Quality and performance are fundamental to meeting our customers' expectations. Through our ISO 9001-certified quality management system, we maintain comprehensive traceability of quality records for each component and manufacturing process. This rigorous framework enables us to consistently drive improvements, ensuring superior quality in the final product.",
     },
+]
+
+export const MANUFACTURING_STATS: Statistic[] = [
+    { label: "Square Feet Facility", value: "100,000+" },
+    { label: "Quality Certified", value: "ISO 9001" },
+    { label: "Production Capacity", value: "24/7" },
 ]

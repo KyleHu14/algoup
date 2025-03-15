@@ -5,7 +5,7 @@ export interface Model {
     href: string
 }
 
-const agvUrl = "/solutions/agv"
+const agvUrl = "/solutions/"
 
 const agvModels: Model[] = [
     {
@@ -53,21 +53,41 @@ const agvModels: Model[] = [
 ]
 
 interface Specifications {
-    dimensions: string
-    weight: string
-    payload: string
-    speed: string
-    accuracy: string
-    slope: string
-    battery: string
-    chargingTime: string
-    wifi: string
-    voiceAlarm: string
-    warningLight: string
-    navigation: string
-    turningRadius?: string
-    liftHeight?: string
-    operatingTemp: string
+    ratedLoad?: string
+    loadCenterDistance?: string
+    liftingHeight?: string
+    forkSize?: string
+    forkWidth?: string
+    minGroundClearance?: string
+    steps?: string
+    slope?: string
+    crossDitch?: string
+    battery?: string
+    heatingFilmTempControl?: string
+    twoDReflectorPanel?: string
+    threeDSlamMid360?: string
+    threeDSlamMid360TwoDReflectorPanel?: string
+    threeDSlamVisualTagNavigation?: string
+    wifi245GHz?: string
+    encryptedDataTransmission?: string
+    opticalCommunication?: string
+    voiceAlarm?: string
+    navigationAndObstacleAvoidance?: string
+    triColorLight?: string
+    warningLight?: string
+    secureEdge?: string
+    twoDObstacleAvoidanceLidar?: string
+    threeDVisualObstacleAvoidanceCamera?: string
+    emergencyStopSwitch?: string
+    forkNibProtection?: string
+    humanMachineInterface?: string
+    pickUpIdentificationFunction?: string
+    releaseIdentificationFunction?: string
+    trayInPlaceDetection?: string
+    rfidReaderWriter?: string
+    codeReader?: string
+    overweightDetection?: string
+    accurateWeighing?: string
 }
 
 interface SpecificationMeta {
@@ -77,79 +97,116 @@ interface SpecificationMeta {
 
 // Metadata for how to display specification fields
 const specificationsMeta: SpecificationMeta[] = [
-    { key: "dimensions", name: "Dimensions" },
-    { key: "weight", name: "Vehicle Weight" },
-    { key: "payload", name: "Max. Payload Weight" },
-    { key: "speed", name: "Max. Speed" },
-    { key: "accuracy", name: "Moving Accuracy" },
+    { key: "ratedLoad", name: "Rated Load" },
+    { key: "loadCenterDistance", name: "Load Center Distance" },
+    { key: "liftingHeight", name: "Lifting Height" },
+    { key: "forkSize", name: "Fork Size" },
+    { key: "forkWidth", name: "Fork Width" },
+    { key: "minGroundClearance", name: "Minimum Ground Clearance" },
+    { key: "steps", name: "Steps" },
     { key: "slope", name: "Slope" },
+    { key: "crossDitch", name: "Cross Ditch" },
     { key: "battery", name: "Battery" },
-    { key: "chargingTime", name: "Charging Time" },
-    { key: "wifi", name: "WiFi" },
+    { key: "heatingFilmTempControl", name: "Heating Film Temperature Control" },
+    { key: "twoDReflectorPanel", name: "2D Reflector Panel" },
+    { key: "threeDSlamMid360", name: "3D Slam (mid360)" },
+    {
+        key: "threeDSlamMid360TwoDReflectorPanel",
+        name: "3D Slam + 2D Reflector Panel",
+    },
+    {
+        key: "threeDSlamVisualTagNavigation",
+        name: "3D Slam + Visual Tag Navigation",
+    },
+    { key: "wifi245GHz", name: "WiFi 2.4/5.8GHz" },
+    { key: "encryptedDataTransmission", name: "Encrypted Data Transmission" },
+    { key: "opticalCommunication", name: "Optical Communication" },
     { key: "voiceAlarm", name: "Voice Alarm" },
+    {
+        key: "navigationAndObstacleAvoidance",
+        name: "Navigation and Obstacle Avoidance",
+    },
+    { key: "triColorLight", name: "Tri-color Light" },
     { key: "warningLight", name: "Warning Light" },
-    { key: "navigation", name: "Navigation Method" },
-    { key: "turningRadius", name: "Turning Radius" },
-    { key: "liftHeight", name: "Lift Height" },
-    { key: "operatingTemp", name: "Operating Temperature" },
+    { key: "secureEdge", name: "Secure Edge" },
+    { key: "twoDObstacleAvoidanceLidar", name: "2D Obstacle Avoidance LIDAR" },
+    {
+        key: "threeDVisualObstacleAvoidanceCamera",
+        name: "3D Visual Obstacle Avoidance Camera",
+    },
+    { key: "emergencyStopSwitch", name: "Emergency Stop Switch" },
+    { key: "forkNibProtection", name: "Fork Nib Protection" },
+    { key: "humanMachineInterface", name: "Human-Machine Interface" },
+    {
+        key: "pickUpIdentificationFunction",
+        name: "Pick Up Identification Function",
+    },
+    {
+        key: "releaseIdentificationFunction",
+        name: "Release Identification Function",
+    },
+    { key: "trayInPlaceDetection", name: "Tray in Place Detection" },
+    { key: "rfidReaderWriter", name: "RFID Reader/Writer" },
+    { key: "codeReader", name: "Code Reader" },
+    { key: "overweightDetection", name: "Overweight Detection" },
+    { key: "accurateWeighing", name: "Accurate Weighing" },
 ]
 
 interface Product {
     id: string
     name: string
     model: string
-    modelNumber: string
     description: string
     specifications: Specifications
 }
 
 const products: Product[] = [
     {
-        id: "tractor",
-        name: "Tractor AGV",
-        model: "T-Series",
-        modelNumber: "AGV-T100",
+        id: "pallet",
+        name: "Pallet AGV",
+        model: "PG-CD16",
         description:
             "Unique design for tracking applications. Perfect for frequent handling of large cargo.",
         specifications: {
-            dimensions: "1100×540×550-1300×600×650 mm",
-            weight: "700 kg",
-            payload: "4 tons",
-            speed: "1 m/s",
-            accuracy: "±10 mm",
-            slope: "≤3°",
-            battery: "24V/100AH Lithium",
-            chargingTime: "2 hours",
-            wifi: "2.4/5.8 GHz",
-            voiceAlarm: "Yes",
-            warningLight: "Yes",
-            navigation: "SLAM/Color Tap/Magnetic",
-            turningRadius: "800 mm",
-            operatingTemp: "-10°C to 45°C",
-        },
-    },
-    {
-        id: "lifting",
-        name: "Lifting AGV",
-        model: "L-Series",
-        modelNumber: "AGV-L200",
-        description:
-            "Advanced lifting capabilities for vertical transport applications.",
-        specifications: {
-            dimensions: "1200×600×800-1500×700×900 mm",
-            weight: "850 kg",
-            payload: "2.5 tons",
-            speed: "0.8 m/s",
-            accuracy: "±8 mm",
-            slope: "≤2°",
-            battery: "48V/150AH Lithium",
-            chargingTime: "3 hours",
-            wifi: "2.4/5.8 GHz",
-            voiceAlarm: "Yes",
-            warningLight: "Yes",
-            navigation: "SLAM/QR Code/Magnetic",
-            liftHeight: "1500 mm",
-            operatingTemp: "-5°C to 40°C",
+            ratedLoad: "1600",
+            loadCenterDistance: "600mm",
+            liftingHeight: "120",
+            forkSize: "173mm",
+            forkWidth: "620, 570",
+            minGroundClearance: "90",
+            steps: "10mm",
+            slope: "3%",
+            crossDitch: "30mm",
+            battery: "48V105Ah",
+            heatingFilmTempControl: "No",
+            twoDReflectorPanel: "Yes",
+            threeDSlamMid360: "Yes",
+            threeDSlamMid360TwoDReflectorPanel: "No",
+            threeDSlamVisualTagNavigation: "Yes",
+            wifi245GHz: "Yes",
+            encryptedDataTransmission: "Yes",
+            opticalCommunication: "Yes",
+            voiceAlarm: "No",
+            navigationAndObstacleAvoidance: "No",
+            triColorLight: "No",
+            warningLight: "Position light",
+            secureEdge: "No",
+            twoDObstacleAvoidanceLidar:
+                "Two 2D laser radars on the front of the robot",
+            threeDVisualObstacleAvoidanceCamera:
+                "1 set; three-dimensional obstacle avoidance in the direction of the front end, 3 sets; Front end direction and both sides",
+            emergencyStopSwitch: "Three sides",
+            forkNibProtection:
+                "Mechanical collision avoidance+photoelectric, Depth camera obstacle avoidance+photoelectric",
+            humanMachineInterface: "Bilingual(Chinese/English)",
+            pickUpIdentificationFunction: "Fork nib camera",
+            releaseIdentificationFunction: "Fork nib camera",
+            trayInPlaceDetection:
+                "Mechanical in place inspection, Non contact in place detection",
+            rfidReaderWriter: "Yes",
+            codeReader: "Yes",
+            overweightDetection: "Yes",
+            accurateWeighing: "Customizable",
         },
     },
 ]

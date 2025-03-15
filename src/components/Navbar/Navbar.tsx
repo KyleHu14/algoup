@@ -18,7 +18,7 @@ import {
 
 export default function Navbar() {
     return (
-        <header className="sticky top-0 z-50 w-full border-b bg-background/95">
+        <header className="sticky top-0 z-50 w-full border-b bg-background">
             <div className="container flex h-16 items-center justify-between">
                 <Link
                     href="/"

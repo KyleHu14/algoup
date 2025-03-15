@@ -28,12 +28,10 @@ import {
 } from "lucide-react"
 
 // Next Imports
-import Image from "next/image"
 import Link from "next/link"
 import { Metadata } from "next"
 
 // Data Imports
-import { agvModels } from "../../data/models/agv-models"
 import AGVProducts from "@/components/Solutions/AGVProducts"
 
 export const metadata: Metadata = {

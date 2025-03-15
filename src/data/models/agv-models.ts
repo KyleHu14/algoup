@@ -165,4 +165,10 @@ export const getSpecificationsArray = (product: Product) => {
         }))
 }
 
-export { products, type Product, type Specifications, specificationsMeta }
+export {
+    products,
+    type Product,
+    type Specifications,
+    specificationsMeta,
+    agvModels,
+}
